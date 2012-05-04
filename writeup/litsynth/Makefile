@@ -1,5 +1,5 @@
 default: writeup.tex ../references.bib
-	rm writeup.aux
+	rm -f writeup.aux
 	pdflatex writeup
 	bibtex writeup
 	pdflatex writeup
