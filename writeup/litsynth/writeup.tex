@@ -39,9 +39,9 @@
     WRITE SHORT PIECE ON GIS
 
 \section{Overview}
-    A workflow management system, also often referred to as
-    Grid Computing, consists of definitions on how a set of
-    tasks should be executed\cite{springerlink:10.1007/BF00136712,vanderAalst2002125}.
+    A workflow management system, consists of definitions
+    on how a set of tasks should be executed
+    \cite{springerlink:10.1007/BF00136712,vanderAalst2002125}.
     The overall procedure gets defined by the following
     components, actors, roles, responsibilities and
     obligations, tasks, activities, conceptual structures
@@ -119,7 +119,7 @@
 
 \section{Implementations}
     There are various products available that can compose
-    scientific workflows. The Trident workbench
+    scientific workflows. \emph{The Trident workbench}
     \cite{Simmhan:2009:BTS:1673063.1673121} is an open
     source workflow management system developed by Microsoft
     Research that also adds middleware services and a
@@ -133,7 +133,8 @@
     Queries on the system can be performed using LINQ.
     \cite{Simmhan2011790}
 
-    Kepler is another scientific workflow management system, that
+    \emph{Kepler} is another scientific workflow
+    management system, that
     provides workflow design and execution. Actors are designed
     to perform independent tasks that can either be atomic or
     composite. Composite actors(subflows) are consists of multiple
@@ -147,19 +148,52 @@
     execution. Actors can easily be exported and shared.
     \cite{Wang:2009:KHG:1645164.1645176}
 
-    Taverna is another scientific workbench that supports
+    \emph{Taverna} is another scientific workbench that supports
     application-level work flow and does not focus on scheduling
-    as much others. Taverna has a stong focus on workflow
+    as much others. Taverna has a strong focus on workflow
     sharing. Taverna is quite popular, since there exists
     a social network, designed to facilitate workflow sharing
     between scientists. Services are linked to the model to
     execute the various tasks. Taverna can be used in such
     a way that it can utilize all the services a client has
     to facilitate the flow by easily adding services. The
-    taverna language is a simple dataflow language called
-    the Simple Conseptual Unified Language(Scufl) that can
-    be encoded to XML. \cite{4721191}
+    taverna language is a simple data-flow language called
+    the Simple Conceptual Unified Language(Scufl) that can
+    be encoded to XML\cite{4721191}.
 
+    In order for these workbenches to be successful there needs
+    to exists a high level of interoperability between the
+    workflow management and the services that are required.
+    However due to the fact that there is a relatively  high
+    chance of failure building this interoperability into the
+    services as a core component is an extremely high risk
+    and therefore is not typically done. Cheaper ways of
+    doing this is providing middleware that can wrap around
+    the service to provide the required interfaces
+    \cite{Shegalov:2001:XWM:767132.767139}.
+    This need for interoperability has lead to the
+    popularisation SOA(Service Orientated Architecture).
+    Although the concept has been around since the 1970s,
+    it has only recently gained favour due to Web services.
+    It should be noted that SOA is not an implementation,
+    but rather an \emph{Architectural Model}
+    SOA refers to a collection of loosely coupled services,
+    that individually carry out a particular process. Each
+    service should have a well defined interface with self
+    contained functionality. It should allow other applications
+    or services to use this functionality without the underlying
+    technical details. These services should be hidden from the
+    end-user and its usage should be platform independent.
+    \cite{Sanders:2008:SSA:1400549.1400595}.
+
+    By using the concepts from SOA, a workflow system can
+    be built that automatically uses these web-services
+    to facilitate both the data and control flow using,
+    well defined interfaces such as XML/JSON.
+    \cite{Shegalov:2001:XWM:767132.767139}. With the
+    advancement of WebGIS, it would seem very promising,
+    that such a system could be developed, to facilitate
+    Geographic Processing tasks.
 
 
 \section{Case Studies}
