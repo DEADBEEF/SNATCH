@@ -39,12 +39,12 @@
     WRITE SHORT PIECE ON GIS
 
 \section{Overview}
-    A workflow management system, also often reffered to as
+    A workflow management system, also often referred to as
     Grid Computing, consists of definitions on how a set of
     tasks should be executed\cite{springerlink:10.1007/BF00136712,vanderAalst2002125}.
     The overall procedure gets defined by the following
     components, actors, roles, responsibilities and
-    obligations, tasks, activities, conseptual stuctures
+    obligations, tasks, activities, conceptual structures
     and resources.
 
     A real life problem or task can then be broken up to these
@@ -84,7 +84,7 @@
     operate on large data sets, as would be the case if
     applied to GIS problems. Workflow systems were found
     to work well in the management of getting this data
-    processed. Applying the consept to Observational
+    processed. Applying the concept to Observational
     astrophysics, it revealed that it could be used
     to identify bottle necks that could be optimised.
     Further it was used to automatically ensure local
@@ -92,8 +92,75 @@
     \cite{Aragon:2009:WMH:1529282.1529491}
 
 \section{Geographic Data}
+    GIS concerns tasks itself with the collection, organisation
+    and query of geographic data. This data includes but
+    is not limited to landscapes, coordinate data, building models,
+    statistics, pictures, textures and routes. This
+    is a very broad set of data, varying from very large to very small,
+    that has no uniform method  of being efficiently dealt with.
+
+    The processing of this data can vary from human, to software
+    processing. Various Web applications have been written
+    to facilitate the tasks that need to be accomplished.
+    These are known as WebGIS\cite{DiMartino:2007:TAG:1341012.1341081}.
+
+    A key realisation with the usage of this data is that
+    is the same data is used across various applications,
+    to create particular abstractions. The core data is
+    seldom change instead a new abstraction layer is added
+    on top of it. This allows that the data can be thought
+    of as a graph. Where the nodes represent either a data,
+    or abstraction element, and the edges represents the
+    functions/task required to create the particular abstraction
+    as a set of topological
+    relationships. This can be effectively used to provide
+    high levels of GIS
+    interoperability\cite{ElAdnani:2001:MLF:512161.512177}.
 
 \section{Implementations}
+    There are various products available that can compose
+    scientific workflows. The Trident workbench
+    \cite{Simmhan:2009:BTS:1673063.1673121} is an open
+    source workflow management system developed by Microsoft
+    Research that also adds middleware services and a
+    composition interface. Trident builds work flows of control
+    and data flows, off of built-in, user defined activities and
+    nested subflows.
+
+    The flows are represented using XOML (XML Specification) while
+    the activities are stored as a set of sub routines. Trident
+    can be used on a local system, remote systems and even clusters.
+    Queries on the system can be performed using LINQ.
+    \cite{Simmhan2011790}
+
+    Kepler is another scientific workflow management system, that
+    provides workflow design and execution. Actors are designed
+    to perform independent tasks that can either be atomic or
+    composite. Composite actors(subflows) are consists of multiple
+    atomic actors bundled together. Actors can consume data and
+    produce output, called tokens. Actors communicate tokens with
+    each other via links. The order of execution and the links are
+    defined by an independent entity called the director. As a
+    consequence the workflow can either be executed in a
+    sequential or parallel manner. Kepler effectively separates
+    the workflow from it's execution allowing for easy batch
+    execution. Actors can easily be exported and shared.
+    \cite{Wang:2009:KHG:1645164.1645176}
+
+    Taverna is another scientific workbench that supports
+    application-level work flow and does not focus on scheduling
+    as much others. Taverna has a stong focus on workflow
+    sharing. Taverna is quite popular, since there exists
+    a social network, designed to facilitate workflow sharing
+    between scientists. Services are linked to the model to
+    execute the various tasks. Taverna can be used in such
+    a way that it can utilize all the services a client has
+    to facilitate the flow by easily adding services. The
+    taverna language is a simple dataflow language called
+    the Simple Conseptual Unified Language(Scufl) that can
+    be encoded to XML. \cite{4721191}
+
+
 
 \section{Case Studies}
 
