@@ -1,6 +1,8 @@
 \documentclass[11pt,twocolumn]{article}
 \usepackage[cm]{fullpage}
 \usepackage{paralist}
+\usepackage{color}
+\usepackage{harvard}
 
 
 \title{Scientific Workbench and Workflow management for GIS workflow}
@@ -19,49 +21,56 @@
     Automated workflow systems have been successfully implemented
     across various disciplines, including Scientific- and business
     workflows. This is an overview of what has has been done
-    in the field of building these systems and pays special attention
-    to building a Scientific Workbench. It focusses of what
-    has been done in the past, highlights some the methods used
-    as well as the lessons learn during these implementations.
+    in the field. Special attention will be given
+    to the building of a Scientific Workbench. It focusses previous efforts, highlighting some the methods used
+    as well as the lessons learnt during the implementations.
 
     It also looks at how these principles could be applied
     specifically to GIS workflow by giving an overview of the
     structure of the field. It seeks to find an appropriate
-    mapping to these systems using known principles of SOA and
-    Grid Computing.
+    mapping to these systems using known principles of SOA.
 
-    This is then illustrates that this solution is highly applicable
+    It is then illustrated that this solution is highly applicable
     to GIS workflow, provided the necessary middle-ware can be built
     to facilitate integration.
 \end{abstract}
 \section{Introduction}
+    Workflow management systems define a complex process in
+    into well formed tasks and coordinates the process
+    completion \cite{1245778}.
     Automated workflow management has been in wide use across
-    various disciplines since the concept was formalised in in
+    various disciplines since the concept was formalised in
     1996\cite{springerlink:10.1007/BF00136712}. Successful systems
     have been implemented across various fields including banking,
     pharmaceuticals and various others
     \cite{Brahe:2007:SWW:1316624.1316661,5407993}.
 
-    This has been shown to be very successful in the field of science as
-    the process can be rerun on different sets of data.\cite{4721191}
+    It has been shown to be very successful in the field
+    of science as the same scientific process can easily
+    be repeated on
+    a different set of data.\cite{4721191}
     This not only aids in reproducibility but also gives
     clear direction and saves time. This is done by efficiently
-    abstracting the operations of the flow and allowing it
+    abstracting the operations in the flow, allowing it
     to be automatically handled.
 
-    Geographic information Systems(GIS) is the field that
+    Geographic Information Systems(GIS) is the field that
     concerns itself with the organisation, representation
     and processing of geographic data, for the purpose of
-    querying it and making considered decissions off of the data
-    \cite{DiMartino:2007:TAG:1341012.1341081}. This would
-    seem to possibly lend itself to being effectively applied
-    in a workflow system.
+    querying it and making decissions off of the data
+    \cite{DiMartino:2007:TAG:1341012.1341081}. The
+    workflow in GIS is very distributed and the set
+    of data that is operated on is large and diverse.
+    Workflow management within GIS has been considered
+    and solutions have been proposed but has not implemented
+    or evaluated\cite{Migliorini:2011:WTG:1999320.1999356}.
+
 
 \section{Overview}
     A workflow management system, consists of definitions
     on how a set of tasks should be executed
     \cite{springerlink:10.1007/BF00136712,vanderAalst2002125}.
-    The overall procedure gets defined by the following
+    The overall procedure is defined by the following
 components: \begin{inparaenum}[(i)] \item actors,
     \item roles, \item responsibilities and
     obligations, \item tasks, \item activities,\item conceptual structures
@@ -71,31 +80,32 @@ components: \begin{inparaenum}[(i)] \item actors,
     components in such a way that the tasks represent a flow
     network. These tasks then connect to the actors and resources
     via the other components\cite[p.~4]{Taylor:2006:WES:1196459}.
-    This aims to give a clear direction to a project.
+    This aims to give a clear direction to a project, and
+    allows task to be executed efficiently in a distributed manor.
 
-    The initial implementations of the system
-    however almost immediately failed due to the fact that
-    these systems were far to rigid and more often than not
-    change within the systems were
-    required that the system was unable to provide\cite{Suchman:1983:OPP:357442.357445}.
+    The initial implementations of a workflow system
+    however, almost immediately failed. The system was
+    too rigid an was unable to accommodate the high levels
+    of change that was required by the users.
+    \cite{Suchman:1983:OPP:357442.357445}.
 
-    These changes come from a number of sources including:
+    These changes come from a number of sources, including:
     ill-specification of initial problems, change in actors
-    or resources, exceptions that occured and new requirements.
+    or resources, exceptions that occurred and new requirements.
     Adaptive workflow systems were proposed to solve this
     problem by providing a mechanism for allowing change in
     the system. This allows processes to be extended,
-    replaced or re-ordered. It also adds the ability change
+    replaced or re-ordered. It also adds the ability to change
     already running tasks by providing restart, transfer and
     proceed options\cite{vanderAalst2002125}.
 
     Scientific workflow management has also been very
-    successful as it fits in very nicely with how experiments
+    successful with how experiments
     are defined, and more importantly reused. Another
     benefit that was quickly discovered was that it also
-    allowed researches to trade work flows making the
+    allowed researchers to trade work flows making the
     replication of results much easier than they were
-    previously. Keys to this success were that the workflow
+    previously. Keys to this success were: that the workflow
     systems were made to fit the researchers, quick responses
     to adding required features when needed, listening
     to user input and making sharing of workflows as easy as
@@ -109,13 +119,14 @@ components: \begin{inparaenum}[(i)] \item actors,
     astrophysics, it revealed that it could be used
     to identify bottle necks that could be optimised.
     Further it was used to automatically ensure local
-    access of large files when it needed to be processed.
+    access of large files that needed to be processed.
     \cite{Aragon:2009:WMH:1529282.1529491}
 
 \section{Geographic Data}
-    GIS concerns tasks itself with the collection, organisation
-    and query of geographic data. This data includes but
-    is not limited to landscapes, coordinate data, building models,
+    GIS concerns itself with the collection, organisation
+    and query of geographic data. \cite{DiMartino:2007:TAG:1341012.1341081}
+    This data includes but  is not limited to landscapes,
+    coordinate data, building models,
     statistics, pictures, textures and routes. This
     is a very broad set of data, varying from very large to very small.
     That variation however means that there exists no uniform method
@@ -125,16 +136,16 @@ components: \begin{inparaenum}[(i)] \item actors,
     processing. Various Web applications have been written
     to facilitate the tasks that need to be accomplished.
     This software is known as WebGIS and is becoming more
-    popular with scientists, it also means that even within
+    popular with scientists; it also means that even within
     the field there is a strong shift toward Web based services
     \cite{DiMartino:2007:TAG:1341012.1341081}.
 
     A key realisation with the usage of this data is that
-    is the same data is used across various applications,
-    to create various amounts of abstractions abstractions.
-    The core data is seldom changed instead a new abstraction
+    the same data is used across various applications,
+    to create various amounts of  abstractions.
+    The core data is seldom changed. Instead a new abstraction
     layer is added on top of it. This allows that the data
-    can be thought of as a graph. Where the nodes represent
+    can be thought of as a graph, where the nodes represent
     either a data- or abstraction element, and the edges
     represents the functions/tasks required to create the
     particular abstraction as a set of topological
@@ -159,22 +170,22 @@ components: \begin{inparaenum}[(i)] \item actors,
     \cite{Simmhan2011790}
 
     \emph{Kepler} is another scientific workflow
-    management system, that provides workflow design and execution.
+    management system that provides workflow design and execution.
     Actors are designed to perform independent tasks that can either
-    be atomic or  composite. Composite actors(subflows) are consists
+    be atomic or  composite. Composite actors(subflows) consist
     of multiple   atomic actors bundled together. Actors can consume data and
     produce output, called tokens. Actors communicate tokens with
     each other via links. The order of execution and the links are
     defined by an independent entity called the director. As a
-    consequence the workflow can either be executed in a
+    consequence, the workflow can either be executed in a
     sequential or parallel manner. Kepler effectively separates
-    the workflow from it's execution allowing for easy batch
+    the workflow from its execution, allowing for easy batch
     execution. Actors can easily be exported and shared.
-    Kepler is very popular due to it's adaptability and easy
+    Kepler is very popular due to its adaptability and easy
     integration. \cite{Wang:2009:KHG:1645164.1645176}
 
     \emph{Taverna} is another scientific workbench that supports
-    application-level work flow and does not focus on scheduling
+    application-level workflow and does not focus on scheduling
     as much others. Taverna has a strong focus on workflow
     sharing. Taverna is quite popular, since there exists
     a social network, designed to facilitate workflow sharing
@@ -189,17 +200,23 @@ components: \begin{inparaenum}[(i)] \item actors,
     In order for these workbenches to be successful there needs
     to exists a high level of interoperability between the
     workflow management and the services that are required.
-    However due to the fact that there is a relatively high
+    However, due to the fact that there is a relatively high
     chance of failure when building this interoperability into the
-    services as a core component is an extremely high risk
+    services as a core component, is an extremely high risk
     and therefore is not typically done. Cheaper ways of
     doing this is providing middleware that can wrap around
     the service to provide the required interfaces
     \cite{Shegalov:2001:XWM:767132.767139}.
-    This need for interoperability has lead to the
+    This need for interoperability has led to the
     popularisation SOA(Service Orientated Architecture).
     Although the concept has been around since the 1970s,
     it has only recently gained favour due to Web services.
+    Web services are software that run on the internet through
+    XML standards-based interfaces. Each service provides
+    a fuctional description using the \emph{Web Services
+    Description Language}(WSDL). This description provides
+    the supported operations, as well as the definition
+    of the input and output messages.\cite{Tai:2004:CCW:1045658.1045680}
     It should be noted that SOA is \emph{not} an implementation,
     but rather an \emph{Architectural Model}
     SOA refers to a collection of loosely coupled services,
@@ -213,13 +230,12 @@ components: \begin{inparaenum}[(i)] \item actors,
     \cite{Sanders:2008:SSA:1400549.1400595}.
 
     By using the concepts from SOA, a workflow system can
-    be built that automatically uses these web-services
-    to facilitate both the data and control flow using,
+    be built that automatically uses these Web Services
+    to facilitate both the data and control flow using
     well defined interfaces in standards such as XML/JSON.
     \cite{Shegalov:2001:XWM:767132.767139}. With the
-    advancement of WebGIS, it would seem very promising,
-    that such a system could be developed, to facilitate
-    Geographic Processing tasks.
+    advancement of WebGIS, a lot  of Web Services already
+    exists that facilitates GIS processing.
 
 
 \section{Case Studies}
@@ -230,60 +246,39 @@ components: \begin{inparaenum}[(i)] \item actors,
     \subsection*{Danske Bank}
       The workflow management system at \emph{Danske bank} was
       incrementally implemented as their system moved
-      from a manual system.
+      from a manual system.\cite{Brahe:2007:SWW:1316624.1316661}
 
-      The system was slowly introduced when the client
-      packages became to time consuming for the customer
-      advisors and was sup-optimal for the customers.
-      This was then replaced by a document that contained
-      a description of the package, this was then shipped
-      off to back office workers that assembled the packages
-      from the document, as a sort of primitive workflow system.
-      This then slowly developed to include web-services,
-      and almost full atomisation. This rapidly expanded
-      to almost every function of the bank and increased
-      productivity drastically.
-
+      This system was developed as an in house solution when
+      the manual system could not cope anymore.
       Several lessons were learned during the process that
       is applicable to other work flow systems. When work
       was divided purely from an efficiency point of view
       the workers became complacent as they felt that they
       did not understand the overall mechanism and felt that
-      they were not involved. They also discovered that the
-      system did not handle change very well. And this change
-      was as expensive as it was inevitable the system had
+      they were not involved. They discovered that the
+      system did not handle change very well. This change
+      was expensive and inevitable. Their system had
       to be adapted to handle this change. The success of the
-      system is mainly attributed to the interruptibility and
+      system is mainly attributed to the interoperability and
       close relationship between the users and the developers
-      \cite{Brahe:2007:SWW:1316624.1316661}.
 
     \subsection*{OrthoSearch}
       \emph{OrophoSearch} is a workflow,
       built on \emph{Kepler} that is designed to work on
-      work on data in the field of Bio Informatics. This
-      was used in the discipline of \emph{Neglected Diseases}
-      which has the potential to kill millions of people.
+      work on data in the field of Bio Informatics.
+      \cite{daCruz:2008:OSW:1363686.1363983}
 
-      A pipeline was was created to represent the workflow
-      of this research. This pipeline was then implemented
-      using \emph{Perl} scripts. This solution did not meet
-      some of the original requirements, nor did it provide
-      the desired level of abstraction.
-
-      The system was moved to \emph{Kepler} as it addressed
-      the requirements better including: \begin{inparaenum}[(i)]
+      A workflow system was implemented in \emph{Kepler}
+      as it addressed the requirements they had
+      including: \begin{inparaenum}[(i)]
       \item Workflow definition and Design; \item workflow execution
-      control; \item fault tolerance; \item intermediate data management;
-      and \item data provenance support. \end{inparaenum}
+      control; \item fault tolerance; \item intermediate
+      data management; and \item data provenance support.
+      \end{inparaenum}
 
-      This approach turned out to be much more successful. With
-      its flexibility, stability and grid enabled features, it
-      addressed most of the problems that the manual system had.
-
-      Although the system was not without its hick-ups and changes
+      Although the system was not without its hiccups and changes;
       the integration with Kepler provided the workflow with the
-      much needed direction and increased overall productivity
-      drastically.\cite{daCruz:2008:OSW:1363686.1363983}
+      direction and increased overall productivity.
 
 
 \section{Conclusion}
@@ -294,22 +289,24 @@ components: \begin{inparaenum}[(i)] \item actors,
    there are a large number of transformations that workflow would
    need to support.
 
-   The work however is done in very distributed manner which allows
-   for a very effective mapping onto a grid based computing solution.
-   Provided middleware can be developed to support the systems that
+   The work however is done in a very distributed manner, which allows
+   for a very effective mapping onto a grid-based computing solution,
+   provided middleware can be developed to support the systems that
    are used. This would allow for an  effective Content Delivery Network
    that provides data on demand where it is needed on the grid
    \cite{Montella:2007:UGC:1272980.1272995}.
 
-   A workflow system would appear to be highly effective in this
-   field, as it supports the nature of the science extremely well,
-   It would allow for effective automatisation of some of the
-   functions and would be able to remove a large amount of the
+   GIS workflow, due to its distributed nature, would map
+   well onto a automated workflow system. The nature of the science
+   is supported well. It would allow for effective automatisation
+   of some of the functions are available. The incorporation of flows
+   would also be effectively deal with
+   the
    problems associated with Content Delivery.
    \cite{Withana:2010:VWE:1851476.1851586}
 
 \bibliography{../references}{}
-\bibliographystyle{acm}
+\bibliographystyle{agsm}
 
 \end{document}
 
