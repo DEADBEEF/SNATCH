@@ -54,9 +54,20 @@ At this point we see no legal/ethical issues
 \section{Project Plan}
 \subsection{Risks}
 \subsubsection*{Network Constraints}
+One of the core functionalities of the system would be to provide
+content delivery of data that is required for a specific task. Providing
+this local data allows the task to get completed without unnessesry
+fetching delays. There is a risk that this content delivery system
+could saturate the network. This would cause the system to be slow
+and unusable.
 \subsubsection*{Middleware}
 For this project to be successful, the WFMS it would have to interface
-heavily with existing software used to perform
+heavily with existing software used to perform GIS operations. This will
+require large amounts of middleware to be developed that understand the
+the input and output formats of this software. Since many of these
+formats are propriatary a significant amount of effort will have to
+be made for the sytem to function. If these formats can not be intergrated
+it presents a huge risk to the project.
 \subsubsection*{Hardware Limitations}
 \subsubsection*{Large Indices}
 When indexing the models we will have to generate a significant amount of data. Given that many of the models are already very large, these indices might become unfeasibly large. Dealing with such large indexes will be an important part of the project and we will have to deal with this risk.
