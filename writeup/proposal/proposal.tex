@@ -20,12 +20,15 @@ University of Cape Town
 \tableofcontents
 \newpage
 
-\section{Introduction}
 \section{Project Description}
+The Zamani project, started by the UCT Department of Geomatics, aims to preserve African cultural heritage by documenting heritage sites and producing laser scanned models.
 \section{Problem Statement}
 \subsection{Architectural Model Streaming}
+The UCT Department of Geomatics has indicated that they have difficulties handling the size of some of their models. These laser scanned models of cultural heritage sites are often very large, some of them containing over 8 billion points. Given this vast scale of data, traditional viewing methods and the current hardware and software systems are not able to cope.  Consequently, before viewing or manipulating the data, one must go through a process of decimating the original data by a factor of 10, 100 or more. This compromise is often unacceptable, as one may often require the full original detail. This level of detail is often necessary for cultural heritage sites in order to view details such as cracks and flaws, with a view to preserving the site and preventing damage.
 \subsection{Workflow and Data Management}
 \section{Procedures and Methods}
+\subsection{Hierarchical Data Structure}
+
 \section{Ethical, Professional and Legal Issues}
 At this point we see no legal/ethical issues
 \section{Related Work}
@@ -34,8 +37,11 @@ At this point we see no legal/ethical issues
 \subsection{Risks}
 \subsubsection*{Network Constraints}
 \subsubsection*{Middleware}
-\subsection*{Hardware Limitations}
+\subsubsection*{Hardware Limitations}
 \subsubsection*{Large Indices}
+When indexing the models we will have to generate a significant amount of data. Given that many of the models are already very large, these indices might become unfeasibly large. Dealing with such large indexes will be an important part of the project and we will have to deal with this risk.
+\subsubsection*{Integration with Existing GIS Software}
+The hierarchical datastructure required as part of this project aims to facilitate level of detail streaming and realtime interaction. However, ideally one should not have to re-implement tools which are already available such as ArcGIS. We aim to integrate our datastructure into a pre-existing software package to prevent unnecessary work. However, this may be difficult and there are several associated risks such as, unavailability of source code, lack of documenation for the software, and potential copyright license infringement.
 \subsubsection*{Implementation Difficulties}
 \subsection{Timeline, including Gantt chart}
 We need a nice program for creating Gantt charts
@@ -52,6 +58,8 @@ Workflow Management System
 \subsection{Milestones}
 \subsubsection{Architectural Model Streaming}
 \subsubsection*{Datastructure Implemented}
+\subsubsection*{System is able to render large models}
+\subsubsection*{System is able to stream large models from the server}
 \subsubsection{Workflow and Data Management}
 \subsubsection{Combined}
 \subsection{Work Allocation}
