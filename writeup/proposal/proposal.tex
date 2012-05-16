@@ -80,6 +80,9 @@ formats are propriatary a significant amount of effort will have to
 be made for the sytem to function. If these formats can not be intergrated
 it presents a huge risk to the project.
 \subsubsection*{Hardware Limitations}
+There is a risk that the hardware available will not be able to cope
+with the load that will be required. Since a distributed system is
+not being proposed there is a risk that the system will become a bottleneck.
 \subsubsection*{Large Indices}
 When indexing the models we will have to generate a significant amount of data. Given that many of the models are already very large, these indices might become unfeasibly large. Dealing with such large indexes will be an important part of the project and we will have to deal with this risk.
 \subsubsection*{Integration with Existing GIS Software}
@@ -92,10 +95,18 @@ We need a nice program for creating Gantt charts
 \subsubsection*{Geographic Data}
 \subsection{Deliverables}
 \subsubsection{GIS Workbench}
-The core of the project is to produce a GIS workbench
+The core of the project is to produce a GIS workbench. This will
+be the framework that ties all the components together. This will involve
+using an existing Workflow System and setting it up to represent the
+flow of a GIS project.
+\subsubsection{Middleware for Core Functionalities}
+Once the GIS workflow is properly understood and modelled, it is
+important to create middleware that interfaces with the systems that are
+currently being used.
 \subsubsection{Data Flow Facilitator}
-\subsubsection{Integration with WFMS}
-Workflow Management System
+To be able produce the content delivery that is required, a dataflow
+facilitator will need to be developed that is integrated with the
+workflow management system.
 \subsubsection{Hierarchical Data Structure}
 \subsubsection{Level of Detail Streaming}
 \subsection{Milestones}
@@ -104,6 +115,11 @@ Workflow Management System
 \subsubsection*{System is able to render large models}
 \subsubsection*{System is able to stream large models from the server}
 \subsubsection{Workflow and Data Management}
+\subsubsection*{Developed a model for basic GIS workflow}
+Understanding how GIS research is vitally important for this part of
+the project. This will allow a model to be developed. This model will
+be the center of the design of the system.
+\subsubsection*{Datastructure Implemented}
 \subsubsection{Combined}
 \subsection{Work Allocation}
 Project is well divided already, we know who's doing what.
@@ -113,5 +129,5 @@ Project is well divided already, we know who's doing what.
 
 
 \bibliographystyle{apalike}
-\bibliography{bibliography.bib}	
+\bibliography{bibliography.bib}
 \end{document}
