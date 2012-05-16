@@ -16,15 +16,12 @@ University of Cape Town
  }
 \title{Spatial Navigation of Cultural Heritage Sites}
 \maketitle
-\abstract{Do we need an abstract?}
-\tableofcontents
-\newpage
 
 \section{Project Description}
 The Zamani project, started by the UCT Department of Geomatics, aims to preserve African cultural heritage by documenting heritage sites and producing laser scanned models.
 
-\section{Problem Statement}
-\subsection{Architectural Model Streaming}
+\section{Problem Statement and Research Questions}
+\subsection{Is it feasible to support real time viewing of models containing billions of points?}
 The UCT Department of Geomatics has indicated that they have difficulties handling the size of some of their models. These laser scanned models of cultural heritage sites are often very large, some of them containing over 8 billion points. Given this vast scale of data, traditional viewing methods and the current hardware and software systems are not able to cope.  Consequently, before viewing or manipulating the data, one must go through a process of decimating the original data by a factor of 10, 100 or more. This compromise is often unacceptable, as one may often require the full original detail. This level of detail is often necessary for cultural heritage sites in order to view details such as cracks and flaws, with a view to preserving the site and preventing damage.
 \subsection{No Central Data Repository}
 The Geomatics Department also mentioned that they have no central storage location for their many models. Some models are stored on a server, but the server does not have sufficient storage capacity for all thier models. Some models are stored on client machines so that the data is immediately available to be viewed and manipulated as required. Lastly, there are some models that are simply stored on external hard drives if there is no space on the server, and if they are not currently being used. This leads to many issues concerning data consistency, data availability and data safety.
@@ -58,6 +55,9 @@ One of the componenets of the project invloves the design and evaluation
 of a user interface. Ideally the design process for this would require
 input from the user as well as testing. This testing requires ethical clearance
 that will have to be obtained.
+\subsection{Data Privacy}
+The Department of Geomatics has indicated that some of the data collected by the Zamani Project is sensitive and is not to be made freely available. It is important to ensure that during the course of this project this wish is respected and that nothing is done to compromise the privacy of sensitive data.
+
 
 
 \section{Related Work}
@@ -91,12 +91,14 @@ not being proposed there is a risk that the system will become a bottleneck.
 When indexing the models we will have to generate a significant amount of data. Given that many of the models are already very large, these indices might become unfeasibly large. Dealing with such large indexes will be an important part of the project and we will have to deal with this risk.
 \subsubsection*{Integration with Existing GIS Software}
 The hierarchical datastructure required as part of this project aims to facilitate level of detail streaming and realtime interaction. However, ideally one should not have to re-implement tools which are already available such as ArcGIS. We aim to integrate our datastructure into a pre-existing software package to prevent unnecessary work. However, this may be difficult and there are several associated risks such as, unavailability of source code, lack of documenation for the software, and potential copyright license infringement.
-\subsubsection*{Implementation Difficulties}
+\subsubsection*{Indexing takes too long}
+In the literature it had been noted that indexing the 3D data requires a significant amount of time \cite{interactivepointclouds}. While it is hoped that this will not be a problem, steps will have to be taken to ensure that the duration of the indexing process does not pose a risk to the completion of our project. It will also be important to allow time for the possible event of a systems failure, in which case we would have to resart the indexing process.
 \subsection{Timeline, including Gantt chart}
 We need a nice program for creating Gantt charts
 \subsection{Resources required}
 \subsubsection*{Hardware}
 \subsubsection*{Geographic Data}
+The Department of Geomatics has indicated that they are willing to make their data available for the purposes of this project. It will be important to obtain the models at an early stage as any delays in obtaining the models will delay the entire project.
 \subsection{Deliverables}
 \subsubsection{GIS Workbench}
 The core of the project is to produce a GIS workbench. This will
