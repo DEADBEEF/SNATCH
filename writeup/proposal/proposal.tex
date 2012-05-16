@@ -22,17 +22,29 @@ University of Cape Town
 
 \section{Project Description}
 The Zamani project, started by the UCT Department of Geomatics, aims to preserve African cultural heritage by documenting heritage sites and producing laser scanned models.
+
 \section{Problem Statement}
 \subsection{Architectural Model Streaming}
 The UCT Department of Geomatics has indicated that they have difficulties handling the size of some of their models. These laser scanned models of cultural heritage sites are often very large, some of them containing over 8 billion points. Given this vast scale of data, traditional viewing methods and the current hardware and software systems are not able to cope.  Consequently, before viewing or manipulating the data, one must go through a process of decimating the original data by a factor of 10, 100 or more. This compromise is often unacceptable, as one may often require the full original detail. This level of detail is often necessary for cultural heritage sites in order to view details such as cracks and flaws, with a view to preserving the site and preventing damage.
+\subsection{No Central Data Repository}
+The Geomatics Department also mentioned that they have no central storage location for their many models. Some models are stored on a server, but the server does not have sufficient storage capacity for all thier models. Some models are stored on client machines so that the data is immediately available to be viewed and manipulated as required. Lastly, there are some models that are simply stored on external hard drives if there is no space on the server, and if they are not currently being used. This leads to many issues concerning data consistency, data availability and data safety.
 \subsection{Workflow and Data Management}
+
 \section{Procedures and Methods}
 \subsection{Hierarchical Data Structure}
+From researching the literature it seems that the most common way of dealing with large point based models containing billions of points is to build a multiresolution datastructure to divide our model into manageable chunks. Initially, we need only a small subset of the number of available points. As we zoom into the model we will need to request more points from the datastructure until the full original detail is available. Using such a level-of-detail structure should enable the Department of Geomatics to view even very large models at interactive frame rates, without having to decimate the original data.
+\subsection{Server with 24TB storage capacity}
+In order to have a central repository for all the models, we aim to obtain a server with around 24TB of storage capacity. This will enable us to keep all the models in a central location.
 
 \section{Ethical, Professional and Legal Issues}
 At this point we see no legal/ethical issues
+
 \section{Related Work}
+\subsection{Hierarchical Data Structure}
+Common methods for structuring 3D data include octrees \cite{interactivepointclouds}, R-trees \cite{rtree}, bounding sphere hierarchies \cite{qsplat}, and Hilbert Space Filling Curves \cite{hilbert}, each with their own advantages and disadvantages. Based on the experimental results of each method, a dynamic octree structure seems to have the best performance \cite{interactivepointclouds}. Using this datastructure the authors were able to achieve interactive walkthroughs of a data set with 2.2 billion points totalling 63.5GB.
+
 \section{Anticipated Outcomes}
+
 \section{Project Plan}
 \subsection{Risks}
 \subsubsection*{Network Constraints}
@@ -64,9 +76,10 @@ Workflow Management System
 \subsubsection{Combined}
 \subsection{Work Allocation}
 Project is well divided already, we know who's doing what.
+
 \section{Conclusion}
 
 
-
-	
+\bibliographystyle{apalike}
+\bibliography{bibliography.bib}	
 \end{document}
