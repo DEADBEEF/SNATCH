@@ -14,18 +14,47 @@ Supervisor: Hussein Suleman \\
 Department of Computer Science \\
 University of Cape Town
  }
-\title{Spatial Navigation of Cultural Heritage Sites}
+\title{Spatial Navigation of African Cultural Heritage Sites}
 \maketitle
 
 \section{Project Description}
-The Zamani project, started by the UCT Department of Geomatics, aims to preserve African cultural heritage by documenting heritage sites and producing laser scanned models.
+The Zamani project, started by the UCT Department of Geomatics, aims to
+preserve African cultural heritage by documenting heritage sites and producing
+laser scanned models. Currently they have documented about 40 sites in 12 African
+countries with close to 100 models. Some of the models are very detailed containg
+billions of points. With a fast growing volume of data the Department of Geomatics
+is facing several challenges ranging from basic storage of the data to viewing and
+interacting with the large models in real-time. This project aims to investigate
+and develop solutions to these problems. Additionally the project will investigate
+various ways of automating GIS workflow with a view to developing a software tool
+to enable more efficient manipulation of GIS data.
 
 \section{Problem Statement and Research Questions}
 \subsection{Is it feasible to support real time viewing of models containing billions of points?}
-The UCT Department of Geomatics has indicated that they have difficulties handling the size of some of their models. These laser scanned models of cultural heritage sites are often very large, some of them containing over 8 billion points. Given this vast scale of data, traditional viewing methods and the current hardware and software systems are not able to cope.  Consequently, before viewing or manipulating the data, one must go through a process of decimating the original data by a factor of 10, 100 or more. This compromise is often unacceptable, as one may often require the full original detail. This level of detail is often necessary for cultural heritage sites in order to view details such as cracks and flaws, with a view to preserving the site and preventing damage.
-\subsection{No Central Data Repository}
-The Geomatics Department also mentioned that they have no central storage location for their many models. Some models are stored on a server, but the server does not have sufficient storage capacity for all thier models. Some models are stored on client machines so that the data is immediately available to be viewed and manipulated as required. Lastly, there are some models that are simply stored on external hard drives if there is no space on the server, and if they are not currently being used. This leads to many issues concerning data consistency, data availability and data safety.
-\subsection{Workflow and Data Management}
+The UCT Department of Geomatics has indicated that they have difficulties
+handling the size of some of their models. These laser scanned models of
+cultural heritage sites are often very large, some of them containing over
+8 billion points. Given this vast scale of data, traditional viewing methods
+and the current hardware and software systems are not able to cope.
+Consequently, before viewing or manipulating the data, one must go through
+a process of decimating the original data by a factor of 10, 100 or more.
+This compromise is often unacceptable, as one may often require the full
+original detail. This level of detail is often necessary for cultural heritage
+sites in order to view details such as cracks and flaws, with a view to
+preserving the site and preventing damage.
+\subsection{Can we provide a central storage repository for the data without the server becoming a bottleneck?}
+The Geomatics Department also mentioned that they have no central
+storage location for their many models. Some models are stored on
+a server, but the server does not have sufficient storage capacity
+for all thier models. Some models are stored on client machines so
+that the data is immediately available to be viewed and manipulated
+as required. Lastly, there are some models that are simply stored on
+external hard drives if there is no space on the server, and if they
+are not currently being used. This leads to many issues concerning
+data consistency, data availability and data safety. Ideally one should
+have a central storage server, but this could introduce a significant
+bottleneck to data access.
+\subsection{Can GIS research be implemented with an automated workflow system?}
 Geographic Information Science involves the capture, storage, manipulation and analysis
 and management of geographic data. This data is very diverse and as such has to be handled
 in quite diverse ways. This data gets abstracted into various forms. This presents a
@@ -46,29 +75,59 @@ increases overall efficiency within the dicipline.
 
 \section{Procedures and Methods}
 \subsection{Hierarchical Data Structure}
-From researching the literature it seems that the most common way of dealing with large point based models containing billions of points is to build a multiresolution datastructure to divide our model into manageable chunks. Initially, we need only a small subset of the number of available points. As we zoom into the model we will need to request more points from the datastructure until the full original detail is available. Using such a level-of-detail structure should enable the Department of Geomatics to view even very large models at interactive frame rates, without having to decimate the original data.
-\subsection{Server with 24TB storage capacity}
-In order to have a central repository for all the models, we aim to obtain a server with around 24TB of storage capacity. This will enable us to keep all the models in a central location.
+From researching the literature it seems that the most common way of dealing
+with large point based models containing billions of points is to build a
+multiresolution datastructure to divide our model into manageable chunks.
+Initially, we need only a small subset of the number of available points.
+As we zoom into the model we will need to request more points from the
+datastructure until the full original detail is available. Using such a
+level-of-detail structure should enable the Department of Geomatics to
+view even very large models at interactive frame rates, without having
+to decimate the original data.
+\subsection{Server with 20TB storage capacity}
+In order to have a central repository for all the models, we aim to obtain a server
+with around 20TB of storage capacity. This will enable us to keep all the models in
+a central location.
+\subsection{Testing and Evaluation}
+The most important evaluation criteria will be to demonstrate that the new system is able to render the large point based models in realtime. Since this functionality was not able previously, it will be a significant success. Additionally it will be important to test whether realtime streaming from the server to client machines is feasible.
 
 \section{Ethical, Professional and Legal Issues}
+\subsection{User Testing}
 One of the componenets of the project invloves the design and evaluation
 of a user interface. Ideally the design process for this would require
 input from the user as well as testing. This testing requires ethical clearance
 that will have to be obtained.
 \subsection{Data Privacy}
-The Department of Geomatics has indicated that some of the data collected by the Zamani Project is sensitive and is not to be made freely available. It is important to ensure that during the course of this project this wish is respected and that nothing is done to compromise the privacy of sensitive data.
+The Department of Geomatics has indicated that some of the data collected by
+the Zamani Project is sensitive and is not to be made freely available. It is
+important to ensure that during the course of this project this wish is respected
+and that nothing is done to compromise the privacy of sensitive data.
 
 
 
 \section{Related Work}
 \subsection{Hierarchical Data Structure}
-Common methods for structuring 3D data include octrees \cite{interactivepointclouds}, R-trees \cite{rtree}, bounding sphere hierarchies \cite{qsplat}, and Hilbert Space Filling Curves \cite{hilbert}, each with their own advantages and disadvantages. Based on the experimental results of each method, a dynamic octree structure seems to have the best performance \cite{interactivepointclouds}. Using this datastructure the authors were able to achieve interactive walkthroughs of a data set with 2.2 billion points totalling 63.5GB.
+Common methods for structuring 3D data include octrees \cite{interactivepointclouds},
+R-trees \cite{rtree}, bounding sphere hierarchies \cite{qsplat}, and Hilbert Space
+Filling Curves \cite{hilbert}, each with their own advantages and disadvantages. Based
+on the experimental results of each method, a dynamic octree structure seems to have
+the best performance \cite{interactivepointclouds}. Using this datastructure the
+authors were able to achieve interactive walkthroughs of a data set with 2.2
+billion points totalling 63.5GB.
 
 \section{Anticipated Outcomes}
 
 \section{Project Plan}
 \subsection{Risks}
+\subsubsection*{Request for Hardware Denied}
+\noindent \textit{Severity: } High \\
+\noindent \textit{Likelihood: } Medium \\
+It is possible that the request for a server will be denied. If this happens
+a considerable amount of restructuring will be required and it would have a
+significant impact on the course of the project.
 \subsubsection*{Network Constraints}
+\noindent \textit{Severity: } Medium \\
+\noindent \textit{Likelihood: } Low \\
 One of the core functionalities of the system would be to provide
 content delivery of data that is required for a specific task. Providing
 this local data allows the task to get completed without unnessesry
@@ -76,6 +135,8 @@ fetching delays. There is a risk that this content delivery system
 could saturate the network. This would cause the system to be slow
 and unusable.
 \subsubsection*{Middleware}
+\noindent \textit{Severity: } High \\
+\noindent \textit{Likelihood: } Low \\
 For this project to be successful, the WFMS it would have to interface
 heavily with existing software used to perform GIS operations. This will
 require large amounts of middleware to be developed that understand the
@@ -84,43 +145,78 @@ formats are propriatary a significant amount of effort will have to
 be made for the sytem to function. If these formats can not be intergrated
 it presents a huge risk to the project.
 \subsubsection*{Hardware Limitations}
+\noindent \textit{Severity: } Medium \\
+\noindent \textit{Likelihood: } Medium \\
 There is a risk that the hardware available will not be able to cope
 with the load that will be required. Since a distributed system is
 not being proposed there is a risk that the system will become a bottleneck.
 \subsubsection*{Large Indices}
-When indexing the models we will have to generate a significant amount of data. Given that many of the models are already very large, these indices might become unfeasibly large. Dealing with such large indexes will be an important part of the project and we will have to deal with this risk.
+\noindent \textit{Severity: } Medium \\
+\noindent \textit{Likelihood: } Low \\
+When indexing the models a significant amount of data will be generated.
+Given that many of the models are already very large, these indices might
+become infeasibly large. Dealing with such large indices will be an important
+part of the project and this risk will have to be handled carefully.
 \subsubsection*{Integration with Existing GIS Software}
-The hierarchical datastructure required as part of this project aims to facilitate level of detail streaming and realtime interaction. However, ideally one should not have to re-implement tools which are already available such as ArcGIS. We aim to integrate our datastructure into a pre-existing software package to prevent unnecessary work. However, this may be difficult and there are several associated risks such as, unavailability of source code, lack of documenation for the software, and potential copyright license infringement.
+\noindent \textit{Severity: } Low \\
+\noindent \textit{Likelihood: } Medium \\
+The hierarchical datastructure required as part of this project aims to facilitate level
+of detail streaming and realtime interaction. However, ideally one should not have to
+re-implement tools which are already available such as ArcGIS. The aim is to integrate
+the datastructure into a pre-existing software package to prevent unnecessary work.
+However, this may be difficult and there are several associated risks such as,
+unavailability of source code, lack of documenation for the software, and potential
+copyright license infringement.
 \subsubsection*{Indexing takes too long}
-In the literature it had been noted that indexing the 3D data requires a significant amount of time \cite{interactivepointclouds}. While it is hoped that this will not be a problem, steps will have to be taken to ensure that the duration of the indexing process does not pose a risk to the completion of our project. It will also be important to allow time for the possible event of a systems failure, in which case we would have to resart the indexing process.
+\noindent \textit{Severity: } High \\
+\noindent \textit{Likelihood: } Low \\
+In the literature it had been noted that indexing the 3D data requires a significant
+amount of time \cite{interactivepointclouds}. While it is hoped that this will not be
+a problem, steps will have to be taken to ensure that the duration of the indexing
+process does not pose a risk to the completion of our project. It will also be important
+to allow time for the possible event of a systems failure, in which case the indexing
+process would have to be restarted.
 \subsection{Timeline, including Gantt chart}
 We need a nice program for creating Gantt charts
 \subsection{Resources required}
 \subsubsection*{Hardware}
+A server will be required for this project to enable central storage of the 3D models.
+A large amount of storage will be required, as the Zamani data is over 20TB. Multiple
+harddrives will be required and this will allow for a certain amount of parallelism in
+data access. Additionally the server will ideally have the processing capacity to index
+the models in a reasonable amount of time.
 \subsubsection*{Geographic Data}
-The Department of Geomatics has indicated that they are willing to make their data available for the purposes of this project. It will be important to obtain the models at an early stage as any delays in obtaining the models will delay the entire project.
+The Department of Geomatics has indicated that they are willing to make their data
+available for the purposes of this project. It will be important to obtain the
+models at an early stage as any delays in obtaining the models will delay the entire project.
 \subsection{Deliverables}
-\subsubsection{GIS Workbench}
+\subsubsection*{GIS Workbench}
 The core of the project is to produce a GIS workbench. This will
 be the framework that ties all the components together. This will involve
 using an existing Workflow System and setting it up to represent the
 flow of a GIS project.
-\subsubsection{Middleware for Core Functionalities}
+\subsubsection*{Middleware for Core Functionalities}
 Once the GIS workflow is properly understood and modelled, it is
 important to create middleware that interfaces with the systems that are
 currently being used.
-\subsubsection{Data Flow Facilitator}
+\subsubsection*{Data Flow Facilitator}
 To be able produce the content delivery that is required, a dataflow
 facilitator will need to be developed that is integrated with the
 workflow management system.
-\subsubsection{Hierarchical Data Structure}
-\subsubsection{Level of Detail Streaming}
+\subsubsection*{Hierarchical Data Structure}
+In order to facilitate level of detail streaming it will be essential to
+implement a hierarchical data structure which can support interactive
+viewing of models containing billions of points.
+\subsubsection*{Streaming Infrastructure}
+A realtime streaming infrastrucutre from the server to client machines will be an important deliverable. This will also need to be implemented as early as possible.
+
 \subsection{Milestones}
-\subsubsection{Architectural Model Streaming}
 \subsubsection*{Datastructure Implemented}
+It will be important to implement the datastructure at an early stage as it forms the basis for several other tasks.
 \subsubsection*{System is able to render large models}
+Once the datastructure has been implemented it will be used to test the rendering of one of the large models supplied by the Geomatics Department. 
 \subsubsection*{System is able to stream large models from the server}
-\subsubsection{Workflow and Data Management}
+Once the system is capable of rendering large models the next important milestone will be to allow streaming of the model from the central server to the client workstation.
 \subsubsection*{Developed a model for basic GIS workflow}
 Understanding how GIS research is vitally important for this part of
 the project. This will allow a model to be developed. This model will
@@ -135,10 +231,11 @@ where it is required.
 The user interface will be the main control mechanism of the sytem. This
 will allow the workflow to be monitored and adjusted according to the users
 requirements.
-\subsubsection{Combined}
+
 \subsection{Work Allocation}
-Project is well divided already, we know who's doing what.
-\section{Conclusion}
+Timothy Trewartha will be implementing the hierarchical data structure to support
+real-time interaction with the Zamani models. Michiel Johan Baird will be developing
+the GIS workbench. A certain amount of integration between the two will also be required.
 
 
 
