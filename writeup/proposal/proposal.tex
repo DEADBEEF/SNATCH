@@ -46,7 +46,7 @@ preserving the site and preventing damage.
 The Geomatics Department also mentioned that they have no central
 storage location for their many models. Some models are stored on
 a server, but the server does not have sufficient storage capacity
-for all thier models. Some models are stored on client machines so
+for all their models. Some models are stored on client machines so
 that the data is immediately available to be viewed and manipulated
 as required. Lastly, there are some models that are simply stored on
 external hard drives if there is no space on the server, and if they
@@ -62,16 +62,16 @@ rather unique challenge in managing the data as it could be used by anyone of th
 staff at any point in the process. This data movement is laborious and could benefit from
 from automisation.
 
-Workflow Management Systems aim to decompose compilated projects and processes into
-small atomic chucks. This decompisition can then be optimised to improve the efficiency.
+Workflow Management Systems aim to decompose complicated projects and processes into
+small atomic chucks. This decomposition can then be optimised to improve the efficiency.
 GIS research projects are generally done with multiperson teams where the work is
 done in a parallel fashion. Under these conditions workflow management systems
 are optimal.
 
 The aim is to provide a workflow management that is applicable for GIS projects.
 This system should be able to: interface with the current systems; track and
-manage the workflow; provide local data availabilty and content delivery; and
-increases overall efficiency within the dicipline.
+manage the workflow; provide local data availability and content delivery; and
+increases overall efficiency within the discipline.
 
 \section{Procedures and Methods}
 \subsection{Hierarchical Data Structure}
@@ -88,12 +88,31 @@ to decimate the original data.
 In order to have a central repository for all the models, we aim to obtain a server
 with around 20TB of storage capacity. This will enable us to keep all the models in
 a central location.
+\subsection{Use an existing workflow management system as a base}
+There already exists various platforms that are designed to manage workflow. These
+systems however need to be adapted for GIS research. As these systems have a lot of
+features writing such a system from the ground up would be a pointless task.
+
+The decision on which system to use is entirely dependent on the requirements
+of the Geomatics department.
+\subsection{Modularise the interfacing components}
+The intent is to make each interfacing component within the workflow management system
+have as little dependencies as possible. By limiting these dependencies
+the system is less likely to fail due to one component. This will also make
+the system extendible if more features are required in the future.
+
 \subsection{Testing and Evaluation}
 The most important evaluation criteria will be to demonstrate that the new
 system is able to render the large point based models in realtime. Since this
 functionality was not able previously, it will be a significant success.
 Additionally it will be important to test whether realtime streaming from the
 server to client machines is feasible.
+
+Further testing and refinement is required for the workbench
+to determine the  following: the speed of the content
+delivery system; the effectiveness of imposed workflow; the
+effectiveness of the user interface; and overall system stability.
+
 
 \section{Ethical, Professional and Legal Issues}
 \subsection{User Testing}
@@ -119,7 +138,14 @@ the best performance \cite{interactivepointclouds}. Using this datastructure the
 authors were able to achieve interactive walkthroughs of a data set with 2.2
 billion points totalling 63.5GB.
 
-\section{Anticipated Outcomes}
+\subsection{Automated Workflow Management}
+Various fields of science have benefited from automated workflow. It has
+seen good increases in productivity \cite{Brahe:2007:SWW:1316624.1316661} and the ability to share
+workflow between colleges has aided quite significantly in th the reproducibility
+of the science\cite{4721191}. GIS has been evaluated to be highly applicable to
+workflow systems\cite{migliorini2011workflow}, some limitations were however noted however that
+various components, such as the modeling and processing of spacial data,
+would need to be added to make it feasible.
 
 \section{Project Plan}
 \subsection{Risks}
