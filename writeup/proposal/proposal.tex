@@ -89,7 +89,11 @@ In order to have a central repository for all the models, we aim to obtain a ser
 with around 20TB of storage capacity. This will enable us to keep all the models in
 a central location.
 \subsection{Testing and Evaluation}
-The most important evaluation criteria will be to demonstrate that the new system is able to render the large point based models in realtime. Since this functionality was not able previously, it will be a significant success. Additionally it will be important to test whether realtime streaming from the server to client machines is feasible.
+The most important evaluation criteria will be to demonstrate that the new
+system is able to render the large point based models in realtime. Since this
+functionality was not able previously, it will be a significant success.
+Additionally it will be important to test whether realtime streaming from the
+server to client machines is feasible.
 
 \section{Ethical, Professional and Legal Issues}
 \subsection{User Testing}
@@ -208,15 +212,88 @@ In order to facilitate level of detail streaming it will be essential to
 implement a hierarchical data structure which can support interactive
 viewing of models containing billions of points.
 \subsubsection*{Streaming Infrastructure}
-A realtime streaming infrastrucutre from the server to client machines will be an important deliverable. This will also need to be implemented as early as possible.
+A realtime streaming infrastrucutre from the server to client machines will be
+an important deliverable. This will also need to be implemented as early as
+possible.
 
 \subsection{Milestones}
+\subsubsection{Project Milestones}
+
+\begin{tabular}{l||l|l|l}
+    Description & Duration & Start & Finish \\
+    \hline  \hline
+    Literature Review & 18 days & 24 April 2012 & 14 May 2012 \\
+    \indent Fist Draft Due & 15 days  & 24 April 2012  & 9 May 2012  \\
+    \indent Second Draft & 3 days & 9 May 2012 & 12 May 2012 \\
+    \hline
+    Project Proposal & 12 days & 10 May 2012  & 21 May 2012 \\
+    \indent First Draft Due & 7 days & 10 May 2012 & 17 May 2012 \\
+    \indent Second Draft Due & 2 days  & 17 May 2012  & 19 May 2012 \\
+    \hline
+    Project Proposal Presentation & 6 days  & 18 May 2012 & 24 May 2012 \\
+    \indent Proposal Dry run & 4 days & 18 May 2012 & 22 May 2012 \\
+    \hline
+    Proposal Revision Completed & 7 days & 4 June 2012 & 11 June 2012 \\
+    \hline
+    Project Web Presence & 18 days  & 25 May 2012 & 12 June 2012 \\
+    \hline
+    Initial Feasibility Demonstration & 48 days & 11 June 2012 & 29 July 2012 \\
+    \indent Design & 10 days & 11 June 2012 & 21 June 2012 \\
+    \indent Implementation & 27 days & 21 June 2012 & 18 July 2012 \\
+    \indent Evaluation & 11 days & 18 July 2012 & 29 July 2012 \\
+    \hline
+    Background Chapter & 28 days & 1 July 2012  & 29 July 2012 \\
+    \indent First Draft Due & 21 days & 1 July 2012 & 22 July 2012 \\
+    \indent Second Draft Due & 4 days  & 22 July 2012 & 26 July 2012 \\
+    \hline
+    Design Chapter & 31 Days & 29 July 2012 & 29 August 2012 \\
+    \indent First Draft Due & 17 days  & 29 July 2012 & 15 August 2012 \\
+    \indent Second Draft Due & 14 days & 15 August 2012  & 26 August 2012 \\
+    \hline
+    First implementation and Writeup & 31 days & 1 July 2012 & 29 August 2012 \\
+    \indent Design & 13 days & 1 July 2012 & 14 July 2012 \\
+    \indent Implementation & 31 days & 14 July 2012 & 15 August 2012 \\
+    \indent Evaluation & 14 days & 15 August 2012 & 26 August 2012  \\
+    \indent Writeup & 29 days & 30 July 2012 & 29 August 2012 \\
+    \hline
+    Final implementation and Writeup & 30 days & 29 August 2012 & 28 September 2012 \\
+    \indent Design & 9 days   & 29 August 2012  & 7 September 2012 \\
+    \indent Implementation & 14 days & 7 Semptember 2012 & 21 September 2012 \\
+    \indent Evaluation & 7 days & 21 September 2012  & 28 September 2012 \\
+    \indent Writeup & 30 days & 29 August 2012 & 28 September 2012 \\
+    \hline
+    Report Outline Complete & 12 days  &28 September 2012 & 10 October 2012 \\
+    \hline
+    Final Complete Draft of Report & 14 days & 10 October 2012 & 24 October 2012 \\
+    \indent First Draft Due & 4 days &10 October 2012 & 14 October 2012 \\
+    \indent Second Draft Due & 4 days &14 October 2012 & 18 October 2012 \\
+    \indent Third Draft Due & 4 days  &18 October 2012 & 22 October 2012 \\
+    \hline
+    Project Report Final Handin & 7 days & 24 October 2012 & 31 October 2012 \\
+    \hline
+    Poster Due & 4 days  & 31 October 2012 & 3 November 2012 \\
+    \hline
+    Webpage & 4 days & 31 October 2012 & 3 November 2012 \\
+    \hline
+    Project Demonstrations & 5 days & 3 November 2012 & 8 November 2012 \\
+    \hline
+    Write Reflection paper &3 days & 8 November 2012 & 11 Noveber 2012 \\
+    \hline
+    Final project presentation & 7 days &11 November 2012 & 18 Noveber 2012 \\
+
+\end{tabular}
+\subsubsection{Implementation Milestones}
+
 \subsubsection*{Datastructure Implemented}
-It will be important to implement the datastructure at an early stage as it forms the basis for several other tasks.
+It will be important to implement the datastructure at an early stage as it
+forms the basis for several other tasks.
 \subsubsection*{System is able to render large models}
-Once the datastructure has been implemented it will be used to test the rendering of one of the large models supplied by the Geomatics Department. 
+Once the datastructure has been implemented it will be used to test the
+rendering of one of the large models supplied by the Geomatics Department.
 \subsubsection*{System is able to stream large models from the server}
-Once the system is capable of rendering large models the next important milestone will be to allow streaming of the model from the central server to the client workstation.
+Once the system is capable of rendering large models the next important
+milestone will be to allow streaming of the model from the central server to
+the client workstation.
 \subsubsection*{Developed a model for basic GIS workflow}
 Understanding how GIS research is vitally important for this part of
 the project. This will allow a model to be developed. This model will
