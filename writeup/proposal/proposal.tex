@@ -52,19 +52,20 @@ preserving the site and preventing damage.
 
 This project will investigate the feasibility of real-time interaction with the Zamani models in their full detail. Answering this research question in the affirmative would enable exploration of these models interactively without decreasing the resolution beforehand.
 \subsection{How effective is an automated workflow system in the GIS context?}
-A LITTLE ON THE VAGUE SIDE
 Developing geographic information systems involves the capture, storage, manipulation, analysis
 and management of geographic data. This data is very diverse and, as such, has to be handled
-in quite diverse ways. This data gets abstracted into various forms. This presents a
+in quite diverse ways. The data gets abstracted into various forms. This presents a
 rather unique challenge in managing the data as it could be used by anyone of the research
-staff at any point in the process. This data movement is laborious and could benefit
+staff at any point in the process. At this point data is manually being moved or copied to
+where they are required, this takes up a lot of time, the movement is laborious and could benefit
 from automation.
 
 Workflow Management Systems aim to decompose complicated projects and processes into
-small atomic chucks. This decomposition can then be optimised to improve the efficiency.
+small atomic chucks \cite{Taylor:2006:WES:1196459}. This decomposition can then be
+optimised to improve the efficiency.
 GIS research projects generally have multi-person teams where the work is
 done in a parallel fashion. Under these conditions workflow management systems
-are optimal [[REF]].
+are optimal.
 
 The aim is to provide a workflow management that is applicable for GIS projects.
 This system should be able to: interface with the current systems, track and
@@ -100,7 +101,7 @@ this structure a value of around 30,000 was found to give good performance
 \subsection{Use an existing workflow management system as a base}
 Various platforms already exist that are designed to manage workflow. These
 systems however need to be adapted for GIS research. As these systems have a lot of
-features writing such a system from the ground up would be a pointless task. 
+features writing such a system from the ground up would be a pointless task.
 
 The decision on which system to use is partly dependent on the requirements
 of the Geomatics department.
@@ -120,7 +121,7 @@ server to client machines is feasible.
 Further testing and refinement is required for the workbench
 to determine the  following: the speed of the content
 delivery system, the effectiveness of imposed workflow, the
-effectiveness of the user interface and overall system stability. 
+effectiveness of the user interface and overall system stability.
 
 \section{Ethical, Professional and Legal Issues}
 \subsection{User Testing}
@@ -162,7 +163,8 @@ There are two key anticipated outcomes from this project. Firstly, the implement
 \begin{itemize}
 \item Can the system render the largest of the Zamani models at interactive frame rates?
 \item Does the system enable streaming of large models from a central server?
-\item (ADD POINTS FOR WORKFLOW)
+\item Can dataflow be automated to provide transparent local access?
+\item Could Geomatics research be mapped to a workbench environment?
 \end{itemize}
 
 \section{Project Plan}
@@ -225,7 +227,14 @@ process does not pose a risk to the completion of our project. It will also be i
 to allow time for the possible event of a system failure, in which case the indexing
 process would have to be restarted.
 \subsection{Timeline, including Gantt chart}
-We need a nice program for creating Gantt charts
+Figure~\ref{gant} shows the anticipated timeline in the form of a Gantt chart.
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=1\textwidth]{gantt1.pdf}
+    \caption{Representation of the first three levels in a multi-resolution data structure.}
+    \label{gant}
+\end{figure}
+
 \subsection{Resources required}
 \subsubsection*{Hardware}
 A server will be required for this project to enable central storage of the 3D models.
