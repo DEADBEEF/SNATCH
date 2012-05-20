@@ -104,16 +104,24 @@ this structure a value of around 30,000 was found to give good performance
 
 \subsection{Use an existing workflow management system as a base}
 Various platforms already exist that are designed to manage workflow. These
-systems however need to be adapted for GIS research. As these systems have a lot of
-features writing such a system from the ground up would be a pointless task.
+systems however need to be adapted for GIS research. As these systems have
+a large number of features, including: flow building toolkits; monitoring;
+flow optimisation; and integration capabilities. Writing such a system
+from the ground up would be a pointless task.
 
 The decision on which system to use is partly dependent on the requirements
-of the Geomatics department.
-\subsection{Modularise the interfacing components}
-The intent is to make each interfacing component within the workflow management system
-have as few dependencies as possible. By limiting these dependencies,
-the system is less likely to fail due to one component. This will also make
-the system extensible if more features are required in the future.
+of the Geomatics department. This will be assessed and discussed. After
+this decision is made the core functionalities would be established.
+
+These components would then be implemented in a modular fashion, on top of
+the existing system. The goal of these components are to address the core
+functionalities that were determined.
+
+The aim is to develop a system that integrates with  the current GIS
+tools. A high level of collaboration with the Geomatics department will
+be required. The feedback will be used to prioritise components and
+functionalities.
+
 
 \subsection{Testing and Evaluation}
 A key evaluation criteria will be to demonstrate that the new
@@ -200,7 +208,7 @@ and unusable.
 \noindent \textit{Likelihood: } Low \\
 For this project to be successful, the workflow management system will have to interface
 heavily with existing software used to perform GIS operations. This will
-require large amounts of middleware to be developed that understand 
+require large amounts of middleware to be developed that understand
 the input and output formats of this software. Since many of these
 formats are proprietary, a significant amount of effort will have to
 be made for the system to function. If these formats can not be integrated,
