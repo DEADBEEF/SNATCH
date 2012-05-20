@@ -28,15 +28,20 @@ is facing several challenges, ranging from basic storage of the data to viewing 
 interacting with the large models in real-time.
 
 There are two main components to this project. The first is to develop a system to
-enable real-time interaction with the models as well as real-time streaming of the
-models from a central server. The second is to investigate
-various ways of automating GIS workflow with a view to developing a software tool
-to enable more efficient manipulation of GIS data. These two distinct components
-are related in that the real-time streaming infrastructure will be integrated into
-the software developed for workflow automation.
+enable both viewing and streaming of the Zamani models in their full detail, at
+interactive frame rates. The second is to investigate various ways of automating
+GIS (Geographic Information Systems) workflow. The aim is to develop a software tool
+to enable more efficient manipulation of GIS data. The real-time streaming
+infrastructure will additionally be integrated into the software developed for
+workflow automation, as shown in the following diagram.
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.8\textwidth]{projectDiagram.png}
+    \caption{Interface between various project components}
+\end{figure}
 
 \section{Problem Statement and Research Questions}
-This project aims to tackle two key issues faced by the Geomatics Department: the inability to interact with large models in real-time as well as the lack of tools enabling workflow to be automated. As such the following key research questions have been proposed.
+This project aims to tackle two key issues faced by the Geomatics Department: the inability to interact with large models in real-time as well as the lack of tools enabling workflow to be automated. As such, the following key research questions have been proposed.
 \subsection{Is it feasible to support real time viewing of models containing billions of points?}
 The UCT Department of Geomatics has indicated that they have difficulties
 handling the sizes of some of their models. These laser scanned models of
@@ -56,16 +61,15 @@ Developing geographic information systems involves the capture, storage, manipul
 and management of geographic data. This data is very diverse and, as such, has to be handled
 in quite diverse ways. The data gets abstracted into various forms. This presents a
 rather unique challenge in managing the data as it could be used by anyone of the research
-staff at any point in the process. At this point data is manually being moved or copied to
-where they are required, this takes up a lot of time, the movement is laborious and could benefit
-from automation.
+staff at any point in the process. Currently, data is being manually moved or copied to
+where it is required. This takes up a lot of time, the movement is laborious, and it could benefit from automation.
 
 Workflow Management Systems aim to decompose complicated projects and processes into
 small atomic chucks \cite{Taylor:2006:WES:1196459}. This decomposition can then be
 optimised to improve the efficiency.
 GIS research projects generally have multi-person teams where the work is
 done in a parallel fashion. Under these conditions workflow management systems
-are optimal.
+are particularly effective.
 
 The aim is to provide a workflow management that is applicable for GIS projects.
 This system should be able to: interface with the current systems, track and
@@ -73,13 +77,13 @@ manage the workflow, provide local data availability and content delivery, and
 increase overall efficiency within the discipline.
 
 \section{Procedures and Methods}
-Given the above problems the following procedures and methods are being proposed:
+Given the above problems, the following procedures and methods are being proposed:
 \subsection{Implement a Hierarchical Data Structure}
 From researching the literature it seems that the most common way of dealing
 with large point based models containing billions of points is to build a
 multiresolution data structure to divide our model into manageable chunks.
-Initially, we need only a small subset of the number of available points.
-As we zoom into the model we will need to request more points from the
+Initially, only a small subset of the number of available points is required.
+As one zooms into the model, additional points are fetched from the
 data structure until the full original detail is available. Using such a
 level-of-detail structure should enable the Department of Geomatics to
 view even very large models at interactive frame rates, without having
@@ -91,11 +95,11 @@ representations. Additionally the data structure imposes the constraint that no 
 node should contain more than a specified number of points. This number of points is
 a parameter in the system which will need to be determined experimentally, but for
 this structure a value of around 30,000 was found to give good performance
-\cite{interactivepointclouds}.
+\cite{interactivepointclouds}. The following figure shows the first three levels in such an octree structure, for a given point based model of a sphere.
 \begin{figure}[h!]
 \centering
     \includegraphics[width=0.5\textwidth]{oct.png}
-    \caption{Representation of the first three levels in a multi-resolution data structure.}
+    \caption{Each level of the octree structure provides greater detail}
 \end{figure}
 
 \subsection{Use an existing workflow management system as a base}
@@ -112,10 +116,10 @@ the system is less likely to fail due to one component. This will also make
 the system extensible if more features are required in the future.
 
 \subsection{Testing and Evaluation}
-The most important evaluation criteria will be to demonstrate that the new
+A key evaluation criteria will be to demonstrate that the new
 system is able to render the large point based models in real-time. Since this
 functionality was not available previously, it will be a significant success.
-Additionally it will be important to test whether real-time streaming from the
+Additionally, it will be important to test whether real-time streaming from the
 server to client machines is feasible.
 
 Further testing and refinement is required for the workbench
@@ -126,13 +130,13 @@ effectiveness of the user interface and overall system stability.
 \section{Ethical, Professional and Legal Issues}
 \subsection{User Testing}
 One of the components of the project involves the design and evaluation
-of a user interface. Ideally the design process for this would require
+of a user interface. Ideally, the design process for this would require
 input from the user as well as testing. This testing requires that ethical clearance
 be obtained.
 \subsection{Data Privacy}
 The Department of Geomatics has indicated that some of the data collected by
 the Zamani Project is sensitive and is not to be made freely available. It is
-important to ensure that during the course of this project this wish is respected
+important to ensure that, during the course of this project, this wish is respected
 and that nothing is done to compromise the privacy of sensitive data. As such, the
 data, once received, will only be stored on the server used as part of the project.
 Special permission will be required if the data is requested for testing at an
@@ -146,9 +150,9 @@ Common methods for structuring 3D data include octrees \cite{interactivepointclo
 R-trees \cite{rtree}, bounding sphere hierarchies \cite{qsplat}, and Hilbert Space
 Filling Curves \cite{hilbert}, each with their own advantages and disadvantages. Based
 on the experimental results of each method, a dynamic octree structure seems to have
-the best performance \cite{interactivepointclouds}. Using this data structure the
-authors were able to achieve interactive walkthroughs of a data set with 2.2
-billion points totaling 63.5GB.
+the best performance \cite{interactivepointclouds}. Wand et al. demonstrated its
+ability to handle large models efficiently by using this data structure to achieve
+interactive walkthroughs of a data set containing over 2.2 billion points.
 
 \subsection{Automated Workflow Management}
 Various fields of science have benefited from automated workflow. It has
@@ -159,19 +163,26 @@ workflow systems\cite{migliorini2011workflow}. However, some limitations were no
 would need to be added to make it feasible.
 
 \section{Anticipated Outcomes}
-There are two key anticipated outcomes from this project. Firstly, the implementation of a multi-resolution data structure to enable real-time interaction with large point based models. Secondly, the development of a software system to enable automated GIS workflow. It is expected that if both of these outcomes are achieved, the results could have a significant impact in the Department of Geomatics. It will enable the viewing of models in full detail without decimation and could greatly increase the efficiency in Geomatics research. Key evaluation criteria are:
+There are two key anticipated outcomes from this project. First is the
+implementation of a multi-resolution data structure to enable real-time interaction
+with large point based models. Second is the development of a software system to
+enable automated GIS workflow. It is expected that if both of these outcomes are
+achieved, the results could have a significant impact in the Department of
+Geomatics. It will enable the viewing of models in full detail without decimation
+and could greatly increase the efficiency in Geomatics research. Key evaluation
+criteria are:
 \begin{itemize}
 \item Can the system render the largest of the Zamani models at interactive frame rates?
 \item Does the system enable streaming of large models from a central server?
-\item Can dataflow be automated to provide transparent local access?
-\item Could Geomatics research be mapped to a workbench environment?
+\item Has dataflow been automated to provide transparent local access?
+\item Has Geomatics research been successfully mapped to a workbench environment?
 \end{itemize}
 
 \section{Project Plan}
 \subsection{Risks}
 \subsubsection*{Request for Hardware Denied}
 \noindent \textit{Severity: } High \\
-\noindent \textit{Likelihood: } Medium \\
+\noindent \textit{Likelihood: } Low \\
 It is possible that the request for a server will be denied. If this happens,
 a considerable amount of restructuring will be required and it would have a
 significant impact on the course of the project.
@@ -187,9 +198,9 @@ and unusable.
 \subsubsection*{Middleware}
 \noindent \textit{Severity: } High \\
 \noindent \textit{Likelihood: } Low \\
-For this project to be successful, the workflow management system would have to interface
+For this project to be successful, the workflow management system will have to interface
 heavily with existing software used to perform GIS operations. This will
-require large amounts of middleware to be developed that understand the
+require large amounts of middleware to be developed that understand 
 the input and output formats of this software. Since many of these
 formats are proprietary, a significant amount of effort will have to
 be made for the system to function. If these formats can not be integrated,
@@ -199,7 +210,10 @@ it presents a huge risk to the project.
 \noindent \textit{Likelihood: } Medium \\
 There is a risk that the hardware available will not be able to cope
 with the load that will be required. Since a distributed system is
-not being proposed, there is a risk that the system will become a bottleneck.
+not being proposed, there is a risk that the system will become a bottleneck. In
+such an eventuality either the scale of the project would have to be decreased, or
+a solution would have to be proposed. Such a solution would most likely involve
+distributing the data on multiple servers.
 \subsubsection*{Large Indices}
 \noindent \textit{Severity: } Medium \\
 \noindent \textit{Likelihood: } Low \\
@@ -214,9 +228,8 @@ The hierarchical data structure required as part of this project aims to facilit
 of detail streaming and real-time interaction. However, ideally, one should not have to
 re-implement tools which are already available, such as ArcGIS. The aim is to integrate
 the data structure into a pre-existing software package to prevent unnecessary work.
-However, this may be difficult and there are several associated risks such as,
-unavailability of source code, lack of documentation for the software, and potential
-copyright license infringement.
+However, this may be difficult and there are several associated risks including
+unavailability of source code and lack of documentation for the software.
 \subsubsection*{Indexing takes too long}
 \noindent \textit{Severity: } High \\
 \noindent \textit{Likelihood: } Low \\
@@ -231,7 +244,7 @@ Figure~\ref{gant} shows the anticipated timeline in the form of a Gantt chart.
 \begin{figure}[h!]
 \centering
     \includegraphics[width=1\textwidth]{gantt1.pdf}
-    \caption{Representation of the first three levels in a multi-resolution data structure.}
+    \caption{Project Schedule}
     \label{gant}
 \end{figure}
 
@@ -263,7 +276,7 @@ facilitator will need to be developed that is integrated with the
 workflow management system.
 \subsubsection*{Hierarchical Data Structure}
 In order to facilitate level of detail streaming, it will be essential to
-implement a hierarchical data structure which can support interactive
+implement a hierarchical data structure that can support interactive
 viewing of models containing billions of points.
 \subsubsection*{Streaming Infrastructure}
 A real-time streaming infrastructure from the server to client machines will be
@@ -340,7 +353,7 @@ possible.
 \subsection{Work Allocation}
 Timothy Trewartha will be implementing the hierarchical data structure to support
 real-time interaction with the Zamani models. Michiel Johan Baird will be developing
-the GIS workbench. A certain amount of integration between the two will also be required.
+the GIS workbench.
 
 
 
