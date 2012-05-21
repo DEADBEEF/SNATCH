@@ -15,7 +15,7 @@ Supervisor: Hussein Suleman \\
 Department of Computer Science \\
 University of Cape Town
  }
-\title{Spatial Navigation of African Cultural Heritage Sites}
+\title{Display and Management of Geomatics Research Data}
 \maketitle
 
 \section{Project Description}
@@ -41,7 +41,7 @@ workflow automation, as shown in the following diagram.
 \end{figure}
 
 \section{Problem Statement and Research Questions}
-This project aims to tackle two key issues faced by the Geomatics Department: the inability to interact with large models in real-time as well as the lack of tools enabling workflow to be automated. As such, the following key research questions have been proposed.
+This project aims to tackle two key issues faced by the Geomatics Department: the inability to interact with large models in real-time as well as the lack of tools enabling workflow to be automated. As such, the following key research questions have been proposed:
 \subsection{Is it feasible to support real time viewing of models containing billions of points?}
 The UCT Department of Geomatics has indicated that they have difficulties
 handling the sizes of some of their models. These laser scanned models of
@@ -57,7 +57,7 @@ preserving the site and preventing damage.
 
 This project will investigate the feasibility of real-time interaction with the Zamani models in their full detail. Answering this research question in the affirmative would enable exploration of these models interactively without decreasing the resolution beforehand.
 \subsection{How effective is an automated workflow system in the GIS context?}
-Developing geographic information systems involves the capture, storage, manipulation, analysis
+Developing a geographic information system involves the capture, storage, manipulation, analysis
 and management of geographic data. This data is very diverse and, as such, has to be handled
 in quite diverse ways. The data gets abstracted into various forms. This presents a
 rather unique challenge in managing the data as it could be used by anyone of the research
@@ -81,7 +81,7 @@ Given the above problems, the following procedures and methods are being propose
 \subsection{Implement a Hierarchical Data Structure}
 From researching the literature it seems that the most common way of dealing
 with large point based models containing billions of points is to build a
-multiresolution data structure to divide our model into manageable chunks.
+multiresolution data structure to divide the model into manageable chunks.
 Initially, only a small subset of the number of available points is required.
 As one zooms into the model, additional points are fetched from the
 data structure until the full original detail is available. Using such a
@@ -104,9 +104,9 @@ this structure a value of around 30,000 was found to give good performance
 
 \subsection{Use an existing workflow management system as a base}
 Various platforms already exist that are designed to manage workflow. These
-systems however need to be adapted for GIS research. As these systems have
-a large number of features, including: flow building toolkits; monitoring;
-flow optimisation; and integration capabilities. Writing such a system
+systems, however, need to be adapted for GIS research. As these systems already
+have a large number of features, such as, flow building toolkits, flow optimisation,
+integration capabilities and monitoring, writing such a system
 from the ground up would be a pointless task.
 
 The decision on which system to use is partly dependent on the requirements
@@ -114,7 +114,7 @@ of the Geomatics department. This will be assessed and discussed. After
 this decision is made the core functionalities would be established.
 
 These components would then be implemented in a modular fashion, on top of
-the existing system. The goal of these components are to address the core
+the existing system. The goal of these components is to address the core
 functionalities that were determined.
 
 The aim is to develop a system that integrates with  the current GIS
@@ -244,7 +244,7 @@ unavailability of source code and lack of documentation for the software.
 In the literature it had been noted that indexing the 3D data requires a significant
 amount of time \cite{interactivepointclouds}. While it is hoped that this will not be
 a problem, steps will have to be taken to ensure that the duration of the indexing
-process does not pose a risk to the completion of our project. It will also be important
+process does not pose a risk to the completion of the project. It will also be important
 to allow time for the possible event of a system failure, in which case the indexing
 process would have to be restarted.
 \subsection{Timeline, including Gantt chart}
@@ -268,28 +268,6 @@ being finalised.
 The Department of Geomatics has indicated that they are willing to make their data
 available for the purposes of this project. It will be important to obtain the
 models at an early stage as any delays in obtaining the models will delay the entire project.
-\subsection{Deliverables}
-\subsubsection*{GIS Workbench}
-A key component of the project is to produce a GIS workbench. This will
-be the framework that ties all the components together. This will involve
-using an existing Workflow System and setting it up to represent the
-flow of a GIS project.
-\subsubsection*{Middleware for Core Functionalities}
-Once the GIS workflow is properly understood and modeled, it is
-important to create middleware that interfaces with the systems that are
-currently being used.
-\subsubsection*{Data Flow Facilitator}
-To be able produce the content delivery that is required, a dataflow
-facilitator will need to be developed that is integrated with the
-workflow management system.
-\subsubsection*{Hierarchical Data Structure}
-In order to facilitate level of detail streaming, it will be essential to
-implement a hierarchical data structure that can support interactive
-viewing of models containing billions of points.
-\subsubsection*{Streaming Infrastructure}
-A real-time streaming infrastructure from the server to client machines will be
-an important deliverable. This will also need to be implemented as early as
-possible.
 
 \subsection{Milestones}
 \subsubsection{Project Milestones}
@@ -348,7 +326,7 @@ possible.
     \hline
     Poster Due & 4 days  & 31 October 2012 & 3 November 2012 \\
     \hline
-    Webpage & 4 days & 31 October 2012 & 3 November 2012 \\
+    Website & 4 days & 31 October 2012 & 3 November 2012 \\
     \hline
     Project Demonstrations & 5 days & 3 November 2012 & 8 November 2012 \\
     \hline
@@ -357,7 +335,28 @@ possible.
     Final project presentation & 7 days &11 November 2012 & 18 November 2012 \\
 
 \end{tabular}
-
+\subsection{Deliverables}
+\subsubsection*{GIS Workbench}
+A key component of the project is to produce a GIS workbench. This will
+be the framework that ties all the components together. This will involve
+using an existing Workflow System and setting it up to represent the
+flow of a GIS project.
+\subsubsection*{Middleware for Core Functionalities}
+Once the GIS workflow is properly understood and modeled, it is
+important to create middleware that interfaces with the systems that are
+currently being used.
+\subsubsection*{Data Flow Facilitator}
+To be able produce the content delivery that is required, a dataflow
+facilitator will need to be developed that is integrated with the
+workflow management system.
+\subsubsection*{Hierarchical Data Structure}
+In order to facilitate level of detail streaming, it will be essential to
+implement a hierarchical data structure that can support interactive
+viewing of models containing billions of points.
+\subsubsection*{Streaming Infrastructure}
+A real-time streaming infrastructure from the server to client machines will be
+an important deliverable. This will also need to be implemented as early as
+possible.
 \subsection{Work Allocation}
 Timothy Trewartha will be implementing the hierarchical data structure to support
 real-time interaction with the Zamani models. Michiel Johan Baird will be developing
