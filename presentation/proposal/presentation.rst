@@ -98,11 +98,17 @@ Relevant Literature
 * Common approaches to structuring large 3D models include octrees,
   R-trees, bounding sphere hierachies, and Hilbert Space Filling
   Curves
-* Bounding Sphere Hierachy (Rusinkiewicz and Levoy, 2000) largest
-  model 8 million points
-* Conformal hierarchy of tetrahedra (Cigoni et al., 2008) largest model over
-  300 million points
-* Octree (Wand et al., 2007) largest model 2.2 billion points
+
++---------------------------+------------------------+--------------------------------+
+| Data Structure            | Largest model rendered | Reference                      |
++===========================+========================+================================+
+| Bounding Sphere Hierachy  | 8 million points       | (Rusinkiewicz and Levoy, 2000) |
++---------------------------+------------------------+--------------------------------+
+| Hierarchy of Tetrahedra   | 300 million points     | (Cigoni et al., 2008)          |
++---------------------------+------------------------+--------------------------------+
+| Octree                    | 2.2 billion points     | (Wand et al., 2007)            |
++---------------------------+------------------------+--------------------------------+
+
 
 ----
 
