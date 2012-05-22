@@ -54,8 +54,8 @@ Solution Approach
 
 ----
 
-Dynamic Viewing of Large 3D Models - Tim
-----------------------------------------
+Dynamic Viewing of Large 3D Models
+----------------------------------
 
 * The Department of Geomatics has indicated that they have difficulties
   handling the sizes of some of their models
@@ -64,8 +64,6 @@ Dynamic Viewing of Large 3D Models - Tim
   of the original model must be decreased manually beforehand
 * This compromise is often unacceptable
 
-.. image :: greatzimbabwe.jpg
-   :scale: 40 %
 
 ----
 
@@ -77,6 +75,9 @@ Research Question
 * Answering this question in the affirmative would enable exploration
   of the Zamani models in their full detail
 * It would have a significant impact in the Geomatics department
+
+.. image :: greatzimbabwe.jpg
+   :scale: 40 %
 
 ----
 
