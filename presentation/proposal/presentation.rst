@@ -54,6 +54,17 @@ Solution Approach
 
 ----
 
+Division of Work
+----------------
+
+* Tim will be implementing the hierachical datastructure to enable
+  real-time interaction with the large 3D models.
+* Michiel will be implementing a Scientific workbench that is
+  specialised for GIS research. This will pay special attention
+  to data movement and intergration with existing GIS tools.
+
+----
+
 Dynamic Viewing of Large 3D Models
 ----------------------------------
 
@@ -111,6 +122,8 @@ Relevant Literature
 +---------------------------+------------------------+--------------------------------+
 
 
+.fx: tim
+
 ----
 
 Proposed Datastructure
@@ -144,7 +157,7 @@ Workbench - Michiel
 
 How effective is an automated workflow solution in GIS context?
 
-.. image :: workflow.png
+.. image :: projectDiagram.png
 
 
 ----
@@ -183,16 +196,6 @@ Testing Criteria
 
 ----
 
-Division of Work
-----------------
-
-* Tim will be implementing the hierachical datastructure to enable
-  real-time interaction with the large 3D models.
-* Michiel will be implementing a Scientific workbench that is
-  specialised for GIS research. This will pay special attention
-  to data movement and intergration with existing GIS tools.
-
-----
 
 Deliverables
 ------------

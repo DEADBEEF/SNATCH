@@ -43,6 +43,14 @@
 	font-size: 120%;
 }
 
+.tim section * {
+	font-size: 120%;
+}
+
+.tim section li {
+    font-size: 150%;
+}
+
 .timeline table {
     border-collapse:collapse;
 }
