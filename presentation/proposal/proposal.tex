@@ -44,7 +44,10 @@
 \date{24 May 2012}
 
 \pgfdeclareimage[height=20pt]{university-logo}{images/uct}
+\pgfdeclareimage[height=20pt]{mapt}{images/timDiagram.png}
+\pgfdeclareimage[height=20pt]{mapm}{images/michielDiagram.png}
 \logo{\pgfuseimage{university-logo}}
+
 
 %\AtBeginSection[]{
 %  \begin{frame}<beamer>{Outline}
@@ -127,6 +130,17 @@
     \end{center}
 \end{frame}
 
+{
+\setbeamertemplate{sidebar left} {
+    \vfill
+    \rlap{\hskip0.1cm%
+        {\pgfuseimage{mapt}}}%
+    \vskip2pt%
+    \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+    \vskip2pt%
+
+}
+
 \section{Dynamic Point Cloud Streaming}
 \subsection{Tim Trewartha}
 \begin{frame}{Dynamic Viewing of Large 3D Models}
@@ -208,26 +222,61 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
   models of varying sizes
 \end{itemize}
 \end{frame}
+}
 
+{
+\setbeamertemplate{sidebar left} {
+    \vfill
+    \rlap{\hskip0.1cm%
+        {\pgfuseimage{mapm}}}%
+    \vskip2pt%
+    \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+    \vskip2pt%
+
+}
 
 \section{GIS Workbench}
 \subsection{Michiel Baird}
-\begin{frame}{Research Question}
+
+\begin{frame}{Scientific Workflow System}
+
+    \begin{columns}
+        \begin{column}{0.6\linewidth}
+            \begin{itemize}
+            \item A series of composed computational or data
+                  manipulation steps
+            \item These steps are composed to represent a flow
+            \item The system executes and monitors this workflow
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\linewidth}
+    \includegraphics[width=\linewidth]{images/workflow.png}
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
+\begin{frame}{Research Questions}
 
 \begin{itemize}
-\item How effective is an automated workflow solution in GIS context?
+\item How effective is an automated workflow solution in Geomatics context?
+\item Can data management be implemented using a workflow system?
+\item This would aid in reproducability of the research as well
+      as address the data management issues
 \end{itemize}
 \end{frame}
 
 
 
-\begin{frame}{}
+\begin{frame}{Related Work}
 \begin{itemize}
-\item Various fields of science has adopted and implemented
-  workflow systems
-\item These systems have increased efficiency and research output
-\item GIS research has been shown to be applicable to an automated
-  workflow system; this has not however been implemented
+\item Workflow Systems have been sucessfully implemented across other scienfic
+        fields
+\item Shown to increase efficiency, research output and
+      reproducibility
+\item Shown to be applicable to GIS
+\item Has not been implemented
 \end{itemize}
 \end{frame}
 
@@ -235,24 +284,22 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
 \begin{frame}{Proposed Solution}
 
 \begin{itemize}
-\item Use an existing workflow system as various platforms already
-  exist
-\item Design a workflow that is applicable to GIS
-\item Write middleware to integrate with existing GIS tools
-\item Software that automatically transfers data as it is needed down
-  the pipeline
+\item Adapt an existing workflow
+\item Design a workflow model applicable to GIS
+\item Implement Middleware
+\item Integrated data management system
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{Evaluation Criteria}
 \begin{itemize}
-\item How much does the content delivery system decrease waiting time?
-\item How effective is the workflow system based on the analytics that
-  will be generated be the system.
+\item How extensible is the functionality?
+\item System usability
+\item Efficiency of the system
 \end{itemize}
 \end{frame}
-
+}
 
 \section{Deliverables and Timeline}
 \subsection{}
