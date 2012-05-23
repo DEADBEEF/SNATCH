@@ -70,13 +70,14 @@
 \begin{columns}
 \begin{column}{.65\linewidth}
 \begin{itemize}
-    \item Started by the UCT Department of Geomatics in 2004
-    \item Aims to preserve cultural heritage
+    \item Started by the UCT Department of Geomatics
+    \item Aims to preserve cultural heritage by documenting heritage sites
+    \item Documenting a site involves producing:
     \begin{itemize}
-    \item Plans
-    \item Laser scans
-    \item Photos
-    \item Videos
+    \item Detailed Laser scans
+    \item Photographs
+    \item Video Tours
+    \item Geographical Information Systems
     \end{itemize}
 \end{itemize}
 \end{column}
@@ -92,9 +93,10 @@
 \begin{columns}
 \begin{column}{.65\linewidth}
 \begin{itemize}
-    \item Over 100 models of sites in various African countries
-    \item These models are big
-    \item Containing upwards of a billion points
+	\item To create the model a point cloud is generated using a laser scanner
+    \item The project has produced close to 100 models of sites in various African countries
+    \item Some of the models are very large
+    \item Many contain over a billion points
 \end{itemize}
 \end{column}
 \begin{column}{.35\linewidth}
@@ -105,11 +107,11 @@
 
 \end{frame}
 
-\begin{frame}{Problems Faced}
+\begin{frame}{Problems Faced by the Geomatics Department}
 \begin{itemize}
     \item Fast-growing volume of data
     \item Difficulty in storing the data
-    \item Difficulty with viewing the large models in real-time
+    \item Difficulty with viewing the large models
     \item Data management issues
     \item Data locality issues
 \end{itemize}
@@ -118,7 +120,7 @@
 
 \begin{frame}{Problems Approached}
     \begin{itemize}
-        \item Difficulty with viewing the large models in real-time
+        \item Difficulty with viewing the large models
         \item Data management issues
     \end{itemize}
 \end{frame}
@@ -147,7 +149,7 @@
 
 \section{Dynamic Point Cloud Streaming}
 \subsection{Tim Trewartha}
-\begin{frame}{Dynamic Viewing of Large 3D Models}
+\begin{frame}{Dynamic Point Cloud Streaming}
 \begin{itemize}
 \item The Department of Geomatics has indicated that they have difficulties
   handling the sizes of some of their models
@@ -158,36 +160,31 @@
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Current System}
+\includegraphics[scale=1.4]{images/laser.jpg}
+\end{frame}
 
-\begin{frame}{Research Question}
+\begin{frame}{Proposed System}
+\includegraphics[scale=1.4]{images/laser2.jpg}
+\end{frame}
+
+
+\begin{frame}{Research Questions}
 \begin{itemize}
-\item Is it feasible to support real time viewing of models containing
-  billions of points?
-\item Answering this question in the affirmative would enable exploration
+\item Is it feasible to support viewing of models containing
+  billions of points at interactive frame rates?
+\item Can the level-of-detail data structure implemented facilitate streaming of
+  the models from a central server to clients?
+\item Answering these questions in the affirmative would enable exploration
   of the Zamani models in their full detail
 \item It would have a significant impact in the Geomatics department
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Proposed Solution}
-
-\begin{itemize}
-\item Implement a multi-resolution data structure to divide our model into
-  manageable chunks
-\item Initially only a subset of the points is available
-\item As one zooms into the model and greater detail is required, we dynamically
-  fetch additional points from our data structure until the full original
-  detail is available
-\end{itemize}
-\end{frame}
-
-
 \begin{frame}{Relevant Literature}
 
 \begin{itemize}
-\item Common approaches to structuring large 3D models include octrees,
-  R-trees, bounding sphere hierachies, and Hilbert Space Filling
-  Curves
+\item Common approaches to structuring large 3D models include octrees and bounding sphere hierachies, as well as many others.
 \end{itemize}
 {\scriptsize
 \begin{tabular}{l|c|l}
@@ -203,27 +200,43 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
 
 \end{frame}
 
-
-\begin{frame}{Proposed DataStructure}
+\begin{frame}{Proposed Solution}
 
 \begin{itemize}
-\item From researching the literature it seems that octrees have the best
+\item Implement a multi-resolution data structure to divide our model into
+  manageable chunks
+\item Initially only a subset of the points is available
+\item As one zooms into the model and greater detail is required, we dynamically
+  fetch additional points from our data structure until the full original
+  detail is available
+\item The actual data can either be stored locally or streamed from a server
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Data Structure}
+
+\begin{itemize}
+\item From the literature it seems that octrees have the best
   performance
 \item All data is stored in the leaf nodes
 \item Inner nodes provide simplified multi-resolution representations
 \item No leaf node should contain more than a specified number of points
-\item Empirically, it seems that a value of around 30,000 gives good performance
+\item Empirically, it seems that a value of around 30,000 points gives good performance
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Octree DataStructure}
+\includegraphics[scale=0.35]{oct.png}
 \end{frame}
 
 
 \begin{frame}{Evaluation Criteria}
 \begin{itemize}
-\item Can the system render the largest of the Zamani models at interactive
-  frame rates?
+\item Has the hierarchical data structure successfully facilitated level-of-detail
+ streaming of the Zamani models?
+\item We will evaluate this by testing multiple models of varying sizes
 \item If this goal is achieved the system will be a success
-\item Varying degrees of success can also be determined by testing smaller
-  models of varying sizes
 \end{itemize}
 \end{frame}
 }
@@ -266,7 +279,7 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
 \begin{itemize}
 \item How effective is an automated workflow solution in Geomatics context?
 \item Can data management be implemented using a workflow system?
-\item This would aid in reproducability of the research as well
+\item This would aid in reproducibility of the research as well
       as address the data management issues
 \end{itemize}
 \end{frame}
