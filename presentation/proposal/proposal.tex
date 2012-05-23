@@ -17,7 +17,7 @@
 %\usepackage{times}
 %\usepackage[T1]{fontenc}
 \usepackage{tikz}
-%\usepackage{graphicx}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor=,urlcolor=blue}%
 
@@ -60,58 +60,75 @@
 \section{Overview}
 \subsection{}
 \begin{frame}{Zamani Project}
-
+\begin{columns}
+\begin{column}{.65\linewidth}
 \begin{itemize}
     \item Started by the UCT Department of Geomatics in 2004
-    \item Aims to preserve cultural heritage by documenting sites
-      and producing laser scanned models
-    \item Over 100 models of sites in various African countries including
-      South Africa, Zimbabwe, Kenya and Tanzania
-    \item Some of the models are very large and contain billions of points
+    \item Aims to preserve cultural heritage
+    \begin{itemize}
+    \item Plans
+    \item Laser scans
+    \item Photos
+    \item Videos
+    \end{itemize}
 \end{itemize}
+\end{column}
+\begin{column}{.35\linewidth}
+\includegraphics[width=\linewidth]{images/zamani1.jpg} \\
+\includegraphics[width=\linewidth]{images/zamani2.jpg}
+\end{column}
+\end{columns}
 
+\end{frame}
+
+\begin{frame}{Zamani Project}
+\begin{columns}
+\begin{column}{.65\linewidth}
+\begin{itemize}
+    \item Over 100 models of sites in various African countries
+    \item These models are big
+    \item Containing upwards of a billion points
+\end{itemize}
+\end{column}
+\begin{column}{.35\linewidth}
+\includegraphics[width=\linewidth]{images/zamani3.jpg} \\
+\includegraphics[width=\linewidth]{images/zamani4.jpg}
+\end{column}
+\end{columns}
 
 \end{frame}
 
 \begin{frame}{Problems Faced}
-
-
 \begin{itemize}
     \item Fast-growing volume of data
     \item Difficulty in storing the data
     \item Difficulty with viewing the large models in real-time
+    \item Data management issues
     \item Data locality issues
-    \item Large number of users interact with the data
 \end{itemize}
-
 \end{frame}
 
-\begin{frame}{Solution Approach}
 
-\begin{itemize}
-\item To enable viewing of the large 3D models at interactive frame
-  rates we will implement a hierachical multi-resolution data
-  structure
-\item A server with a large amount of storage will be procured; this will
-  be used to store the models and GIS data, and support the core
-  functionalities of the solution.
+\begin{frame}{Problems Approached}
+    \begin{itemize}
+        \item Difficulty with viewing the large models in real-time
+        \item Data management issues
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Division of Work}
+\begin{frame}{Solution Overview}
 
 \begin{itemize}
-\item Tim will be implementing the hierachical datastructure to enable
-  real-time interaction with the large 3D models.
-\item Michiel will be implementing a Scientific workbench that is
-  specialised for GIS research. This will pay special attention
-  to data movement and intergration with existing GIS tools.
-\end{itemize}
+\item Enable dynamic high density model streaming
+\item Create a GIS workbench that facilitates the research
+    \end{itemize}
+    \begin{center}
+    \includegraphics[width=0.8\linewidth]{images/mainDiagram.png}
+    \end{center}
 \end{frame}
 
-
 \section{Dynamic Point Cloud Streaming}
-\subsection{}
+\subsection{Tim Trewartha}
 \begin{frame}{Dynamic Viewing of Large 3D Models}
 \begin{itemize}
 \item The Department of Geomatics has indicated that they have difficulties
@@ -194,7 +211,7 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
 
 
 \section{GIS Workbench}
-\subsection{}
+\subsection{Michiel Baird}
 \begin{frame}{Research Question}
 
 \begin{itemize}
