@@ -48,7 +48,11 @@
 \pgfdeclareimage[height=20pt]{mapm}{images/michielDiagram.png}
 \logo{\pgfuseimage{university-logo}}
 
-
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+    \end{beamercolorbox}%
+}
 %\AtBeginSection[]{
 %  \begin{frame}<beamer>{Outline}
 %    \tableofcontents[currentsection,currentsubsection]
@@ -308,7 +312,7 @@ Octree          & 2.2 billion points& (Wand et al., 2007)    \\
 \begin{itemize}
 \item GIS workbench
 \item Middleware for core functionalities
-\item Data Flow Facilitator
+\item Data Flow Manager
 \item Hierarchical Data Structure
 \item Streaming Infrastucture
 \end{itemize}
