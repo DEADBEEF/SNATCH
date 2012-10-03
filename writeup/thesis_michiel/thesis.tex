@@ -680,11 +680,103 @@ it will not be discussed further.
 
 \subsubsection{Workflow Framework}
 The underlying workflow system is implemented using \emph{Python}\footnote{Python: www.python.org}, within
-the Django framework.
+the Django framework. Tasks are executed asynchronously. Each job type is handled separately.
+\begin{description}
+\item[Server Job - One to One] \hfill \\
+    This job type executed a given script on all the input files. The system generates a list of
+    absolute paths and executes the script given two parameters, the input file, and the output
+    directory. This is done for all the files input files of the task.
+\item[Server Job - Many to One] \hfill \\
+    This job type executes nearly identically to the \emph{One to One} task, however instead
+    of the script being run run multiple times, it is run once, here however all input files
+    are passed in as arguments, along with the output directory. Both server jobs can use
+    any script or applications available on the system. With applications where the parameter
+    structure does not match the required utility wrapper scripts can be used.
+\item[User Job] \hfill \\
+    This type of job is split into multiple parts. Since there is a distinct separation between
+    the server and the execution of type of task, the goal is to ensure the effective communication
+    between workstations and servers. The goal is to be able to transfer large amounts of files
+    with minimal redundancy. For this reason \emph{rsync}\footnote{Rsync Incremental file
+    transfer: rsync.samba.org} is used. This only transfers files that have not been been transfered
+    yet, as such redundancy is greatly reduced, and enables efficient recovery in case of network failure.
+
+    Figure~\ref{user_task_impl2} shows the components used to execute a user task. Each of these components
+    are built using an asynchronous object. Note that the transfer components can be used at any point
+    during the task's life cycle.
+\end{description}
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.4]{figures/user_impl2.pdf}
+    \end{center}
+    \caption{Components that support user jobs}
+    \label{user_task_impl2}
+\end{figure}
+    Once a task is finished it passes on to finalisation. All tasks follow this model. It
+    is assumed that all the appropriate files are present on the server at this point and
+    that the task has completed successfully. At this the output directory is scanned for
+    files recursively, new files are indexed and added to the database. The new files are then
+    added to the input files of all successor tasks. If all the dependencies of a successor
+    task is met the task is then launched.
+
+\subsubsection{User Interface}
+The interface was implemented using \emph{HTML} served using the View subsystem in Django.
+These views aim to create a usable system. These are based on the designs that were created
+during the \emph{PICTIVE} session. Slight alterations were made to the design to support required
+functionality that was not considered during the session. The interface comprises out of several
+views.
+\begin{description}
+\item[Task Overview] \hfill \\
+    This view has the purpose showing a user which tasks are outstanding. As well as show what is
+    happening within the team. This also provides links to the task control page for each task.
+    An additional feature that was implemented allows users to filter tasks based on a choice
+    of sites.
+\item[Task Control] \hfill \\
+    This is the view that non-privileged users will be interacting with most often. It provides
+    a detailed overview of what is required to be done with the task. Privileged users also
+    get a link to edit the task. This page also contains tools to allow users to download
+    and upload required files. Once a user is finished with the task at hand he/she can
+    simply press on the \emph{Finish Task} button. This triggers the transfer back routine
+    and queues the task for verification. Users who are able to verify the task will use the
+    same view however the \emph{Finish Task} button is replaced with two buttons that will
+    accept or reject the task. Logging information is also made visible to ensure that the
+    complete task history is visible.
+
+    This view is also used for server tasks. In this case the emphasis is on failure control.
+    With the log visible user can trace the source of the failure and rerun the task as soon
+    as it is has been dealt with.
+
+\item[Task Editing] \hfill \\
+    During the initial task setup the parameters of a task need to be set. This screen enables
+    the user to set the who the task is assigned to, what the input files are, and what the task
+    depends on. Note that the dependencies can also be set on in a friendly way on the task interface.
+    When something goes wrong with a tasks privileged users are also able to edit these setting
+    when the workflow is already active. The workflow should be able to dynamically adapt in this case.
+\item[Site View] \hfill \\
+    This view is dominated by the visualisation of the site. The visualisation was implemented using
+    \emph{jsPlumb}\footnote{jsPlumb Graph UI: jsPlumb.org}. This an API based that builds interactive
+    graphs. Each node provides and overview of the task. Dependencies are represented with edges
+    while the colour of the node indicates the status of task. Red indicates that there is a
+    problem with the task, grey indicates that the task has not been run, blue indicates the
+    task is in progress and green indicates that the task has been successfully completed. Dependencies
+    can be added by dragging an edge from corner to another task.
+
+    Below the visualisation is a list of the tasks in the site. This gives an overview
+    similar to the task overview screen. A privileged user can tasks off given jobs
+    from here which will then forward to the task editing screen.
+    As soon as the tasks in a site has been set up, the workflow can be started from this view.
+
+    The final set of components is there to add/edit jobs and categories in the system. These
+    are not specifically linked to a site and as such can be used throughout the system allowing
+    for easy reuse.
+\end{description}
+In addition to \emph{jsPlumb}, \emph{jQuery} and \emph{jQuery UI} is used extensively to build
+the client side interface.
+\subsection{Evaluation}
 
 
 
-\section{Iterataion 3\label{iteration3}}
+
+\section{Iteration 3\label{iteration3}}
 
 
 \bibliography{bibliography}{}
