@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="754.39258"
+   height="281.02542"
+   viewBox="1.95 5.905 22.649611 11.795313"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="data_flow.svg">
+  <metadata
+     id="metadata72">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs70" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1215"
+     inkscape:window-height="1000"
+     id="namedview68"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.0790034"
+     inkscape:cx="362.17814"
+     inkscape:cy="22.037452"
+     inkscape:window-x="65"
+     inkscape:window-y="37"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <line
+     x1="0.21253419"
+     y1="7.1795106"
+     x2="0.21253419"
+     y2="7.2295103"
+     id="line4"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <line
+     x1="0.21253419"
+     y1="9.2295103"
+     x2="0.21253419"
+     y2="13.17951"
+     id="line6"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <rect
+     x="-0.13746572"
+     y="7.2295103"
+     width="0.69999999"
+     height="2"
+     id="rect8"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="-0.13746572"
+     y="7.2295103"
+     width="0.69999999"
+     height="2"
+     id="rect10"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <line
+     x1="21.812534"
+     y1="7.0795102"
+     x2="21.812534"
+     y2="9.1795101"
+     id="line12"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <line
+     x1="21.812534"
+     y1="13.17951"
+     x2="21.812534"
+     y2="13.52951"
+     id="line14"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <rect
+     x="21.462534"
+     y="9.1795101"
+     width="0.69999999"
+     height="4"
+     id="rect16"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="21.462534"
+     y="9.1795101"
+     width="0.69999999"
+     height="4"
+     id="rect18"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polyline
+     points="4.450,9.100 14.900,9.100 14.900,9.050 25.126,9.050 "
+     id="polyline20"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <polyline
+     points="24.738,9.300 25.238,9.050 24.738,8.800 "
+     id="polyline22"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <rect
+     x="3.4674795"
+     y="8.6845102"
+     width="14.857032"
+     height="0.74800003"
+     id="rect24"
+     style="fill:#ffffff;stroke:none" />
+  <text
+     x="3.584177"
+     y="9.4740067"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text26"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">Transfer Required Files to User Host</text>
+  <text
+     x="25.197268"
+     y="10.147148"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text28"
+     style="font-size:0.7261247px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans"
+     transform="scale(0.90765584,1.1017392)">Create derivative</text>
+  <text
+     x="25.606791"
+     y="10.807402"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text30"
+     style="font-size:0.71938974px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans"
+     transform="scale(0.89923716,1.1120537)">data elements</text>
+  <line
+     x1="0.21253419"
+     y1="9.2295103"
+     x2="0.21253419"
+     y2="13.77951"
+     id="line32"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <line
+     x1="0.21253419"
+     y1="15.77951"
+     x2="0.21253419"
+     y2="17.57951"
+     id="line34"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <rect
+     x="-0.13746572"
+     y="13.77951"
+     width="0.69999999"
+     height="2"
+     id="rect36"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="-0.13746572"
+     y="13.77951"
+     width="0.69999999"
+     height="2"
+     id="rect38"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polyline
+     points="25.800,15.600 15.125,15.600 15.125,15.650 4.674,15.650 "
+     id="polyline40"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <polyline
+     points="5.062,15.400 4.562,15.650 5.062,15.900 "
+     id="polyline42"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <rect
+     x="5.6512475"
+     y="15.28451"
+     width="11.047551"
+     height="0.74800003"
+     id="rect44"
+     style="fill:#ffffff;stroke:none" />
+  <text
+     x="6.0402393"
+     y="15.996207"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text46"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">Transfer over created files</text>
+  <line
+     x1="21.812534"
+     y1="13.17951"
+     x2="21.812534"
+     y2="13.22951"
+     id="line48"
+     style="stroke:#000000;stroke-width:0.05;stroke-dasharray:0.4, 0.4" />
+  <line
+     x1="21.812534"
+     y1="14.22951"
+     x2="21.812534"
+     y2="17.24049"
+     id="line50"
+     style="stroke:#000000;stroke-width:0.04393308;stroke-dasharray:0.35146462, 0.35146462" />
+  <rect
+     x="21.462534"
+     y="13.22951"
+     width="0.69999999"
+     height="1"
+     id="rect52"
+     style="fill:#ffffff;stroke:none" />
+  <rect
+     x="21.462534"
+     y="13.22951"
+     width="0.69999999"
+     height="1"
+     id="rect54"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polyline
+     points="25.350,13.600 14.900,13.600 14.900,13.650 4.674,13.650 "
+     id="polyline56"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <polyline
+     points="5.062,13.400 4.562,13.650 5.062,13.900 "
+     id="polyline58"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8874659,0.12951021)" />
+  <rect
+     x="5.4454646"
+     y="13.33451"
+     width="10.907628"
+     height="0.74800003"
+     id="rect60"
+     style="fill:#ffffff;stroke:none" />
+  <text
+     x="6.4568448"
+     y="13.890611"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text62"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">Signal task completion</text>
+  <text
+     x="-1.8985667"
+     y="6.9796033"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text64"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">Workflow Server</text>
+  <text
+     x="20.112534"
+     y="6.7795105"
+     font-size="0.80"
+     font-style="normal"
+     font-weight="400"
+     id="text66"
+     style="font-size:0.80000001px;font-style:normal;font-weight:400;text-anchor:start;fill:#000000;font-family:sans">User Host</text>
+</svg>

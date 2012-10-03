@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="29cm" height="16cm" viewBox="36 95 565 306" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <path style="fill: #ffffff" d="M 297 104.333 C 305,98.8333 309,97 317,97 C 325,97 329,98.8333 337,104.333 L 337,133.667 C 329,139.167 325,141 317,141 C 309,141 305,139.167 297,133.667 L 297,104.333z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 297 104.333 C 305,98.8333 309,97 317,97 C 325,97 329,98.8333 337,104.333 L 337,133.667 C 329,139.167 325,141 317,141 C 309,141 305,139.167 297,133.667 L 297,104.333"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 297 104.333 C 305,109.833 309,111.667 317,111.667 C 325,111.667 329,109.833 337,104.333"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="317" y="126.667">
+      <tspan x="317" y="126.667"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="172" y="125">
+    <tspan x="172" y="125"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="368" y="126">
+    <tspan x="368" y="126">Database</tspan>
+  </text>
+  <g>
+    <ellipse style="fill: #ffffff" cx="146.187" cy="302.015" rx="77.2058" ry="29.3293"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="146.187" cy="302.015" rx="77.2058" ry="29.3293"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="146.187" y="305.915">
+      <tspan x="146.187" y="305.915">Kepler Task Model</tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="155" y="251">
+    <tspan x="155" y="251">Poll</tspan>
+    <tspan x="155" y="267">Task Status</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="44" y="254">
+    <tspan x="44" y="254">Set task</tspan>
+    <tspan x="44" y="270">In Progress</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="38" y="185" width="563" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="38" y="185" width="563" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="319.5" y="207.9">
+      <tspan x="319.5" y="207.9">Database Interface</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="317.807" y1="146.422" x2="318.781" y2="179.566"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="323.033,154.035 317.741,144.187 313.037,154.329 "/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="313.555,171.953 318.847,181.802 323.551,171.659 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="146.113" y1="271.687" x2="146.011" y2="229.472"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="151.03,237.224 146.005,227.236 141.03,237.248 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="116.641" y1="274.918" x2="116.057" y2="229.472"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="121.157,237.171 116.029,227.236 111.158,237.299 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="356.925" y="285" width="51.15" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="356.925" y="285" width="51.15" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="382.5" y="307.9">
+      <tspan x="382.5" y="307.9">User</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="369.918" y1="284.029" x2="334.465" y2="227.755"/>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="342.834,231.658 333.273,225.863 334.373,236.989 "/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="352" y="255">
+    <tspan x="352" y="255">Update Task Status</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="103.75" y="360" width="62.5" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="103.75" y="360" width="62.5" height="38"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="135" y="382.9">
+      <tspan x="135" y="382.9">Kepler</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="141.788" y1="332.285" x2="137.907" y2="358.993"/>
+  <g>
+    <ellipse style="fill: #ffffff" cx="269.5" cy="374.5" rx="74.5" ry="25.5"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="269.5" cy="374.5" rx="74.5" ry="25.5"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="269.5" y="378.4">
+      <tspan x="269.5" y="378.4">File Copy Model</tspan>
+    </text>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="167.254" y1="377.921" x2="194.353" y2="377.014"/>
+</svg>
