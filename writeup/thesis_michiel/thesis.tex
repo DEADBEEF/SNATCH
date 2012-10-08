@@ -4,7 +4,7 @@
 \usepackage{paralist}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \title{Workflow thing}
 
 \author{Michiel Johan Baird \\
@@ -14,8 +14,7 @@
     \\   \small{Supervisor: Dr. Hussein Suleman} }
 
 \begin{document}
-\maketitle
-\newpage
+\input{title}
 \tableofcontents
 \newpage
 \listoffigures
@@ -706,7 +705,7 @@ the Django framework. Tasks are executed asynchronously. Each job type is handle
 \end{description}
 \begin{figure}[!h]
     \begin{center}
-        \includegraphics[scale=0.4]{figures/user_impl2.pdf}
+        \includegraphics[scale=0.35]{figures/user_impl2.pdf}
     \end{center}
     \caption{Components that support user jobs}
     \label{user_task_impl2}
@@ -726,11 +725,25 @@ functionality that was not considered during the session. The interface comprise
 views.
 \begin{description}
 \item[Task Overview] \hfill \\
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[scale=0.4]{figures/task_overview_impl2.png}
+        \end{center}
+        \caption{First implementation of the task overview screen}
+        \label{task_overview_impl2}
+    \end{figure}
     This view has the purpose showing a user which tasks are outstanding. As well as show what is
     happening within the team. This also provides links to the task control page for each task.
     An additional feature that was implemented allows users to filter tasks based on a choice
     of sites.
 \item[Task Control] \hfill \\
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[scale=0.35]{figures/task_control_impl2.png}
+        \end{center}
+        \caption{Task Control Implementation}
+        \label{task_control_impl2}
+    \end{figure}
     This is the view that non-privileged users will be interacting with most often. It provides
     a detailed overview of what is required to be done with the task. Privileged users also
     get a link to edit the task. This page also contains tools to allow users to download
@@ -751,7 +764,21 @@ views.
     depends on. Note that the dependencies can also be set on in a friendly way on the task interface.
     When something goes wrong with a tasks privileged users are also able to edit these setting
     when the workflow is already active. The workflow should be able to dynamically adapt in this case.
+    \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[scale=0.35]{figures/task_edit_impl2.png}
+        \end{center}
+        \caption{Task Edit Implementation}
+        \label{task_edit_impl2}
+    \end{figure}
 \item[Site View] \hfill \\
+        \begin{figure}[!h]
+        \begin{center}
+            \includegraphics[scale=0.35]{figures/site_view_impl2.png}
+        \end{center}
+        \caption{Site View Implementation}
+        \label{site_view_impl2}
+    \end{figure}
     This view is dominated by the visualisation of the site. The visualisation was implemented using
     \emph{jsPlumb}\footnote{jsPlumb Graph UI: jsPlumb.org}. This an API based that builds interactive
     graphs. Each node provides and overview of the task. Dependencies are represented with edges
@@ -768,6 +795,7 @@ views.
     The final set of components is there to add/edit jobs and categories in the system. These
     are not specifically linked to a site and as such can be used throughout the system allowing
     for easy reuse.
+
 \end{description}
 In addition to \emph{jsPlumb}, \emph{jQuery} and \emph{jQuery UI} is used extensively to build
 the client side interface.
