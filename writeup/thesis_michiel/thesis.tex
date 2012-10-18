@@ -49,7 +49,8 @@ Section~\ref{iteration2} follows the design and implementation of the
 first functional product, this product is then evaluatated and continues
 on the next iteration. Section~\ref{iteration3} follows the critisisms that
 were highlighted in the evaluation in Section~\ref{iteration2} and makes
-improvements on the design where certain functionality can
+improvements on the design where certain functionality can be improved
+or added.
 
 
 \section{Design Considerations\label{design_consdierations}}
@@ -660,7 +661,9 @@ are a list of features that were implement during this design iteration.
         feature is added that copies over the structure of an existing site, and then
         just requires the files to be chosen.
 \end{description}
+
 \subsection{Implementation}
+
 The system was implemented using the \emph{Django framework}. This was done in 3 parts:
 \begin{inparaenum}
 \item database setup
@@ -800,11 +803,114 @@ views.
 In addition to \emph{jsPlumb}, \emph{jQuery} and \emph{jQuery UI} is used extensively to build
 the client side interface.
 \subsection{Evaluation}
+To evaluate the second iteration the system was given to five Computer Science honours students.
+They were then asked to critically evaluate the system. The purposes was to highlight any major
+issues that were missed. By fixing these issues at this stage of the process it avoids that it
+becomes a sticking issue when further user testing is done, which would cause the User Experience
+testing to be less effective.
+
+This brought up a number of issues are present during this iteration. The issues found are
+as follows:
+\begin{description}
+    \item[Aesthetic Appeal]\hfill \\
+        Universally the system is brought down due to it's lack of aesthtic apeal, which distracts
+        from the  task at hand.
+    \item[Lack of logical Flow]\hfill \\
+        Some controls seem to be out of place making there purpose hard to figure out, this
+        would require some reordering.
+    \item[Site Filter is confusing] \hfill \\
+        The site filter appears like a button and as such it's purpose is misleading.
+    \item[Technical Namings] \hfill \\
+        The use of technical language makes the system unsuited to a user without
+        a Computer Science background. Naming should be changed to better include
+        a wider audience.
+    \item[Cycles aren't being checked] \hfill \\
+        The system uses a \emph{Directed Acyclic Graph} to represent the workflow however when the
+        workflow is updated cycle checking is not done. This could lead a workflow to enter an
+        unsatisfyable state.
+    \item[Allow User Specified ordering] \hfill\\
+        It was noted that users cannot order tasks which makes things difficult to find.
+    \item[File Picker is too simple] \hfill \\
+        The file picker is severely lacking and would be aided by using a more standard
+        tree view.
+\end{description}
+
+
+
+\section{Final Design Iteration\label{iteration3}}
+This iteration builds on Section~\ref{iteration2}, addression the issues raised during the evaluation
+phase. This iterations aims to improve usability issues, encountered in the previous iteration. The
+system is then evaluated for user experience by performing a user experience study with several users.
+\subsection{Design}
+In order to improve the usability of the system the design of the system was altered to include a
+number of changes. In order to improve the overall aethestics of the system a templated style sheet
+will be used. To improve the layout of the system some components will need to be to reordered, and
+changed to fit a more standard interface.
+
+The task overview interface will also be reworked, the site filter will be removed as it caused too
+much confusion, to aid, sorting controls will be added to the tasklist, allowing tasks to be located
+easier. The user facing terminology will be reworded in such a way that the terms a more general
+and understandable to users without a technology background.
+
+The last focus of the design is to avoid unintentional user errors. When a user is setting up task dependencies
+cycle checking will be done to ensure that cycles are not created. To further improve the usability of the
+system the \emph{File Picker} will be changed to a more intuitive component.
+
+\subsection{Implementation}
+
+During this phase several features were improved upon from the previous iteration.
+These changes were all made on client side of the application and the focus was
+to increase the usability and make the system more understandable.
+
+The most noticible change of the system is that the style sheet was changed. The theme that
+was chosen is called is \emph{Blue Nile Admin} and was designed by \emph{Portnine}
+\footnote{Portnine: http://www.portnine.com/bootstrap-themes}. This is a two panel design
+that roughly matches the orginal design. This theme also includes a range of icons which
+overall makes the system more appealling.
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.22]{figures/final-overview.png}
+    \end{center}
+    \caption{Final Implementation: Task Overview}
+    \label{final:overview}
+\end{figure}
+
+The task overview screen was altered to make tasks more clear. Figure~\ref{final:overview}
+shows the implementation of this. Instead of using a two table design this is expanded to
+using separate tables tasks that have different statuses. Since \emph{outstanding tasks}
+are the main points of action for users these tasks are placed in a large table on top.
+Task that are \emph{awaiting validation} are placed in a smaller table below, priveledged
+users will also have tasks from other users appear here in order to easily see which tasks
+needs validartion. Tables for \emph{tasks with unmet dependencies}; and
+\emph{completed tasks}, are also included. The team overview task has been filtered
+to only include tasks that are currently in progress. All tables are are sortable
+using \emph{JQuery: TableSorter}\footnote{tablesorter: tablesorter.com}. Tasks can
+also be filtered by site.
+
+The file interface was changed to be more appealing and usable. \emph{JQuery Widgets}
+\footnote{JQWidgets http://www.jqwidgets.com/} was used for this purpose, specifically
+the \emph{JqxTree} widget. This allows users to easily select and view files in a hierarchical
+mannor. Figure~\ref{final:tree_view} shows how files can be selected and views.
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.22]{figures/final-interface.png}
+    \end{center}
+    \caption{Final Implementation: File interface}
+    \label{final:overview}
+\end{figure}
 
 
 
 
-\section{Iteration 3\label{iteration3}}
+
+
+
+
+
+
+\chapter{Evaluation}
 
 
 \bibliography{bibliography}{}
