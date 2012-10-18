@@ -662,7 +662,7 @@ are a list of features that were implement during this design iteration.
         just requires the files to be chosen.
 \end{description}
 
-\subsection{Implementation}
+\subsection{Implementation\label{iter2_impl}}
 
 The system was implemented using the \emph{Django framework}. This was done in 3 parts:
 \begin{inparaenum}
@@ -885,32 +885,62 @@ users will also have tasks from other users appear here in order to easily see w
 needs validartion. Tables for \emph{tasks with unmet dependencies}; and
 \emph{completed tasks}, are also included. The team overview task has been filtered
 to only include tasks that are currently in progress. All tables are are sortable
-using \emph{JQuery: TableSorter}\footnote{tablesorter: tablesorter.com}. Tasks can
+using \emph{JQuery: TableSorter}\footnote{Tablesorter: tablesorter.com}. Tasks can
 also be filtered by site.
 
 The file interface was changed to be more appealing and usable. \emph{JQuery Widgets}
 \footnote{JQWidgets http://www.jqwidgets.com/} was used for this purpose, specifically
 the \emph{JqxTree} widget. This allows users to easily select and view files in a hierarchical
-mannor. Figure~\ref{final:tree_view} shows how files can be selected and views.
+mannor. Figure~\ref{final:tree_view} shows how files can be views and how files can also be
+selected. The selection and view interfaces are similar to be consistant throught the system.
 
 \begin{figure}[!h]
     \begin{center}
-        \includegraphics[scale=0.22]{figures/final-interface.png}
+        \includegraphics[scale=0.45]{figures/final-interface.png}
     \end{center}
     \caption{Final Implementation: File interface}
-    \label{final:overview}
+    \label{final:tree_view}
 \end{figure}
 
+The task visualisation was changed to be visible on both the site interface, as well as the 
+edit interface. This allows for the removal of the unintuitive predecessor selector that
+was present in Section~\ref{iter2_impl}. In the task edit interface a
+specific task is selected. To indicate this the selected task will be 
+coloured in such a way that its stands out. The visualisation was also
+changed such that task positions are static and persistent. This allows
+for the tasks to be arranged by users. Figure~\ref{final:visual} shows
+how the visualisation interface was changed.
 
 
-
-
-
-
-
-
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.45]{figures/final-visual.png}
+    \end{center}
+    \caption{Final Implementation: Site visualisation}
+    \label{final:tree_view}
+\end{figure}
 
 \chapter{Evaluation}
+
+For the system to be successfully utilized, within the project
+it needs to accomplish the following goals: 
+\begin{enumerate}
+\item It needs to be able to integrate the daily tasks of the users
+      without it being a burden. 
+\item It needs to effectively be able to manage the data items and
+      coordinate the tasks between the users and the system. 
+\end{enumerate}
+
+In order to answer these questions \emph{User Experience} evaluations
+were performed and the system was tested to see if if could perform
+a subset of the required tasks. Due to time constraints a full 
+system integration could not be performed. 
+
+\section{User Experience Evaluation}
+\subsection{Aim}
+\subsection{Methodology}
+\subsection{Results}
+\subsection{Analysis}
 
 
 \bibliography{bibliography}{}
