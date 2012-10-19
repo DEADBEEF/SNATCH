@@ -917,7 +917,7 @@ how the visualisation interface was changed.
         \includegraphics[scale=0.45]{figures/final-visual.png}
     \end{center}
     \caption{Final Implementation: Site visualisation}
-    \label{final:tree_view}
+    \label{final:visual}
 \end{figure}
 
 \chapter{Evaluation}
@@ -941,11 +941,137 @@ Users and their experience of the system is becoming a critical component
 in designing software system\cite{Forlizzi:2004:UEI:1013115.1013152}. This
 process needs to understand the experience of a user. In order to do this user
 engagement needs to be tested on both a visual and emotional level. This is
-used to link the the needs of the users to the functionality provided by the
-system.  
+used to link the needs of the users to the functionality provided by the
+system. The usability is of the system is would heavily tied in to the 
+productivity to users \cite{nielsen2003usability}. Usability studies were 
+performed to ensure that the system is provides a good user experience. 
 
 \subsection{Aim}
+The aim of the usability test is to assess the quality of the system. This 
+assesses the users ability to complete required tasks efficiently while
+remaining satisfied with the system\cite{bevan1995measuring}. This is done in
+order to determine how suitable the solution is in context of the user.
+
+The Usability of the system will be rated using the following attributes
+\cite{doi:10.1207/s15327590ijhc1803_3}:
+\begin{description}
+\item[Learnability] Relates to the capability of the software to enable a user
+	to learn how to use it. This is a goal for the system as the this would
+	enable users to quickly start using the software effectively.
+\item[Efficiency] Efficiency of a system refers to the time it takes to for the
+	user to complete a certain goal or task.
+\item[Satisfaction] measures the attitude of the users towards software. This
+	includes: \begin{inparaenum}[(i)]\item Difficulty;\item Confidence; and
+        \item Like/Dislike towards the system\end{inparaenum}.
+	
+\item[Error] Number of errors that a user makes, including deviations from 
+	the intended path. 
+\item[Effectiveness] This tests users efficiency based on a predetermined level
+	in terms of speed, number of errors and steps.
+\item[Simplicity] Amount of effort that is required for a user to complete a
+	task. This can be traced in terms of number of selections, time taken to
+	search for a function.
+\end{description}
+
+To measure the user experience however simple performance evaluation is not
+enough. We need to be able to gain insight to how users feel about the system
+\cite{vermeeren2010user}. This requires that the emotional state of the user be
+evaluated.
+
 \subsection{Methodology}
+In order to determine the attributes mentioned above a \emph{User Experience}
+quantitative experiment was set up. Users were asked to complete two task using
+the system. The system was designed to support a workflow this involves two main
+user activities: \begin{inparaenum}[(i)] \item Management of individual tasks;
+and \item Setting up workflows \end{inparaenum}. The tasks were designed to test
+these operations. Their experiences were recorded and then evaluated. The detailed
+process is outlined below.
+
+\subsubsection{Task Setup}
+Tasks were set up for users to complete. The aim of these tasks were to simulate
+the main activities of the system. This lead to the formalisation of two tasks
+that are described as follows.
+\begin{description}
+\item[Complete a set of tasks as a user] \hfill \\
+	The first part was to simulate the actions of an underprivileged user
+	that is required to do outstanding tasks.  A Site was created containing three
+	tasks. These tasks were assigned to the test user. Since the system aims to
+	support tasks that are executed on the user's workstation the tasks were
+	designed to be as simple as possible. Since the general usability of the system
+	was to be evaluated the tasks were not related to processing digital cultural
+	artifacts.
+
+	Three \emph{Python} programs were set up to represent the user tasks
+	that were to be executed. For the \emph{Task one} and \emph{Task two}
+	the user was simply required to run the desktop application. The third
+	task however aims to test the user's under standing of the system by
+	asking the user questions about the task. These questions are:
+	\begin{inparaenum}[(a)] \item What is the output directory for the
+	task?;  and \item Please select the input files that are used in this
+	task\end{inparaenum}?   The task descriptions all convey what the purposes
+	of the tasks are. As soon as the user completes a task the need to
+	indicate on the system that the task has been completed. 
+\item[Build a simple workflow] \hfill \\
+	For the second part the user had to simulate the role of a privileged
+	user, and had to set up a sample workflow. The tasks represent a workflow
+	that produces a PDF file starting with a text file. This was given as a
+	diagram to the users. The diagram can be seen in Figure~\ref{eval:workflow}.
+        The user was given very little instructions, on how to complete the task. 
+ 	This allows them to explore the system and intuitively complete the task.
+	
+\end{description}
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[scale=0.45]{figures/workflow.png}
+    \end{center}
+    \caption{Workflow that needed to be recreated}
+    \label{eval:workflow}
+\end{figure}
+To ensure that each user experienced the system the same way, it was restored to
+its previous state after each test. 
+
+\subsubsection{Questionnaire}
+The primary method used to evaluate the \emph{User Experience} of the system was
+using a questionnaire. Questionnaires have been used for a long time and attempt
+to obtain the subjective feelings of the user towards the
+system\cite{Chin:1988:DIM:57167.57203}. In order to measure the experience the
+emotional response of the user also has to be obtained. The USE questionnaire
+was chosen to evaluate the User Experience \cite{lund2001measuring}. This
+questionnaire is designed to determine the usability attributes in terms of:
+\begin{inparaenum}[(i)]\item Usefulness;\item Ease of Use; \item Ease of learning; and \item
+Satisfaction \end{inparaenum}. It is designed in such a way that an
+emotional response is triggered. In order to avoid \emph{Acquiescence Response Bias}
+the questionnaire was duplicates responses in such a way that the they were
+phrased both negatively and positively\cite{schriesheim1981controlling}. 
+In order to save on paper the survey was conducted using \emph{Lime
+Survey}\footnote{Lime Survey: http://www.limesurvey.org/}
+The questionnaire used can be found in Appendix~\ref{appendix:questionnaire}.
+
+\subsubsection{Monitoring and Pilot Tests}
+During the tests the users were monitored and their actions noted. This was to
+determine what the overall process was that each of the users followed. All
+questions; actions; and errors were also noted during this process. These events
+were noted by time to produce the remaining usability attributes namely:
+\begin{inparaenum}[(i)]\item Efficiency; \item Error; \item Effectiveness; and \item
+Simplicity  \end{inparaenum}
+
+After the tasks were set up the user tests were run using two users. This was
+used to determine problems that would adversely affect the results before it was
+run using a larger test group. The results of the pilot test identified some
+minor issues regarding how the questions were worded, that distracted the users
+from the task at hand. This was fixed before the full tests were conducted.
+
+\subsubsection{User Selection}
+The participants chosen from the user experiment, were not the users that would
+be interacting with the system on a daily basis. This is to avoid bias
+introduced by the potential gain that the stakeholders have with the system
+making them more likely to forgive failures or shortcoming of the system.
+CITATION
+
+The participants varied in age ranging from X to Y. Due to cost and time
+constraints however all subjects tested were however students. The level of
+technical competence varied from novice to expert. 
+
 \subsection{Results}
 \subsection{Analysis}
 
