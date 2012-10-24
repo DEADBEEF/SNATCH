@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="25cm" height="8cm" viewBox="35 -5 498 146" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="289.5" cy="68" rx="83.5" ry="71.75"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="289.5" cy="68" rx="83.5" ry="71.75"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="227.5" y="58">
+      <tspan x="227.5" y="58">Workflow System</tspan>
+      <tspan x="227.5" y="74">Manages a set of</tspan>
+      <tspan x="227.5" y="90">arbitrary processes</tspan>
+    </text>
+    <g>
+      <rect style="fill: #ffffff" x="37" y="28.75" width="134" height="74"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="37" y="28.75" width="134" height="74"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="65" y="61.75">
+      <tspan x="65" y="61.75">Core set of</tspan>
+      <tspan x="65" y="77.75">Data Items</tspan>
+    </text>
+    <g>
+      <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="171.989" y1="66.5747" x2="192.803" y2="66.8271"/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="192.742,71.8268 202.802,66.9484 192.863,61.8275 "/>
+    </g>
+    <g>
+      <rect style="fill: #ffffff" x="407" y="41.75" width="126" height="57"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="407" y="41.75" width="126" height="57"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="434" y="65.25">
+      <tspan x="434" y="65.25">Output </tspan>
+      <tspan x="434" y="81.25">Data Items</tspan>
+    </text>
+    <g>
+      <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="373.988" y1="69.0532" x2="393.768" y2="69.2997"/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="393.706,74.2994 403.767,69.4244 393.83,64.3001 "/>
+    </g>
+    <g>
+      <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 451.536,40.7593 A 97.6992,97.6992 0 0 0 358.349,11.0928"/>
+      <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="356.515,5.6344 348.76,13.6873 359.855,15.0601 "/>
+    </g>
+  </g>
+</svg>
