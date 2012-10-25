@@ -18,17 +18,78 @@
 \begin{document}
 \input{title}
 \pagenumbering{roman}
+\begin{abstract}
+Workflow Management Systems have been highly successful in managing complicated
+tasks and procedures, both for business and scientific applications. This
+research project follows the development of an \emph{Automatic Workflow System}
+designed to meet the needs of the tasks tasks that are present within the
+\emph{Zamani Project}. This is developed to handle very large files which is a
+common within the project. The system was developed in three design iterations
+built from the requirements and considerations from the group. A web interface
+is used to control the system. This was built in Python using the \emph{Django}
+framework along with JQuery and other front-end libraries.
+
+Both automated and user tasks are supported in the system. For user tasks, the
+required files are automatically copied to the user's workstation. This is done
+using \emph{rsync} to reduce transfer times as well as protect effectively
+against network failure that can occur. Once the task has been completed the
+process is transfer process is initiated in the opposite direction. To improve
+the quality of the work all user tasks requires being validated by senior
+members on the team. Simple error recovery was built into the system allowing
+users to inspect the logging information to determine the cause of the failure
+allowing the tasks to be restarted as soon as the problem has been alleviated.
+
+The system was evaluated by implementing a subsection of the Zamani tasks into the
+system. These tasks were successfully completed using the system. User
+Experience test were conducted that shows that users found that users were
+satisfied with the system. It was also found that the system was easy to use and
+easy to learn.
+
+
+\end{abstract}
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+First of all I would like to thank my supervisor in the project, Dr. Hussein
+Suleman. Your advice and leadership was instrumental throughout this entire
+project. Thank you so much for the early mornings spent reviewing drafts, the
+advice given when I had no idea of the direction that I needed to go in. Your
+ability to keep conversation interesting helped me keep my sanity through this
+process. For that I thank you.
+
+To the National Research Foundation(NRF), thank you for the financial assistance
+given towards this degree and in particular the project. This made the process
+a lot more comfortable and enjoyable. To the members of the Zamani Project I
+interacted with: Professor Heinz Ruther, Stephan Wessels and Ralf Schroeder. 
+Thank you for the time and effort that you put in to help make this project
+happen. The use of your data is highly appreciated and valued. A special thank 
+to Roshan Bhurtha, who was my main point of contact within the team. Thank you
+for the quick responses when I had any queries.
+
+To my project partner Tim: thanks for being one of the most exceptional people I
+have ever met. I really look up to you. Your intelligence is only matched by
+your kindness. Thank you for an amazing year and I will treasure your friendship
+always. To the rest of the CS Honours class of 2012, it has been a great
+experience getting to know you guys; sharing in both the fun and hard times. 
+A special thank you to Simba Nyatsanga and Marco Lawrence. For
+the long nights spent in the laboratory, the food runs, the jokes, the emotional
+support. Thank you for making this project enjoyable. To Kaitlyn Crawford and 
+Henk Joubert thank you for being the exceptional people you are. Your friendship
+during this year has been great. I look forward to working with you next year.
+
+Lastly I would like to thank my parents: John and Wilma Baird. Without you I
+literally would not have been here. Thank you for all the support both
+emotionally and financially. It was quite convenient being able to phone you up
+at 3am in the mornings. Thank you for being the best parents anyone could ask
+for. I am extremely proud to be called your son. I love you, and I will always
+strive to make you proud.
+
+
+
 \tableofcontents
 \newpage
 \listoffigures
 \newpage
-\begin{abstract}
-
-\end{abstract}
 \pagenumbering{arabic}
-\chapter*{Acknowledgements}
-\addcontentsline{toc}{chapter}{Acknowledgements}
-So long and thanks for all the fish!
 \chapter{Introduction}
     Workflow Management Systems are systems designed to facilitate and manage
     tasks within an organisation. These tasks are topologically organised, in
@@ -141,7 +202,7 @@ So long and thanks for all the fish!
         \item[User Experience Testing] \hfill \\
             Even the most effective system can fail if it cannot
             be successfully be adopted be users. Therefore the system's
-            user experience was tested. This allows problems to be detected and
+            user experience was tested. This allowed problems to be detected and
             shortcomings of the system to be identified\cite{tullis2008measuring}.
     \end{description}
 
@@ -151,9 +212,13 @@ So long and thanks for all the fish!
     or be extended there would not be any legal issues. The core
     of the system is written using the Django Framework, using Python
     These are respectively licenced by the Django Licence and the PSF
-    license. Further tools used during the implementation include Javascript,
-    JQuery, JsPlumb, and tablesorter. Which is licenced under LGPL,
-    MIT license and GPL version 2.
+    license. Further tools used during the implementation include Javascript
+    which is licenced under the LGPL.
+    JQuery, JsPlumb, and tablesorter, are dual licenced the  MIT license 
+    and GPL, Version 2.
+
+    Further data and information was obtained from the Zamani Project for
+    testing the application. Permission was obtained to use this data
 
     User testing was also done during the course of the project, from
     this purposes Ethical clearance was granted from the Faculity of
@@ -170,8 +235,10 @@ So long and thanks for all the fish!
     This is then followed by the Design and Implementation of the system
     in Chapter~\ref{chap2}. The considerations for the design are defined
     before the full system design is reported throughout the three design
-    iterations.  The system in then evaluated in Chapter~\ref{chap3}.
-
+    iterations.  The final system in then evaluated in Chapter~\ref{chap3}.
+    The report is then concluded in Chapter~\ref{chap4} where the system is 
+    reviewed. Here possible future avenues of research is discussed that could
+    be used to build on the project.
 
 \chapter{Background\label{chap1}}
     Workflow management systems define a complex process in into well formed
@@ -1771,16 +1838,59 @@ system would need to be distributed to include multiple processing servers this
 was unfortunately outside the scope of the project.
 
 
-\chapter{Conclusion}
+\chapter{Conclusion\label{chap4}}
+This research project was concluded with the successful implementation of a
+Workflow Management System. This system can successfully manage a complex set
+of tasks with arbitrary dependencies. Tasks could be either be fully automated
+by the system or could be completed by users. When user tasks are started the 
+required files are incrementally transferred to the desktop host of the user
+using \emph{rsync} to only transfer files that have not been transfered or are 
+out of date. To enforce quality and accuracy a feature was added that enforces
+that user tasks be validated by experienced members of the team before the task
+can be labelled as complete.
+
+Automated tasks are executed on the
+server due to the fact that these task operate on very large files. By executing
+them locally data does not need to be transferred which would be an expensive
+process. Tasks are automatically started when all dependencies are met. 
+
+In the event that a task fails the system also allows the user to inspect the
+logging information that is generated during the execution of the task. Once the
+problem is identified the tasks can then be manually restarted.  The design and
+implementation was done in three iterations. This is was explained in depth in 
+Chapter~\ref{chap2}.
+
+
+The system was then successfully evaluated in Chapter~\ref{chap3} both for it's
+usability and it's effectiveness at solving the problem. The following positive
+results was obtained during the evaluation of the system:
+\begin{enumerate}
+    \item The system was successfully able to implement and execute a portion of
+        the workflow in the modelling section of the modelling tasks that are
+        present in the Zamani-Project. This sample workflow used a mix of system
+        and user task.
+    \item The system was positively evaluated using a sample group of 24 users.
+        This evaluation revealed that users found the system useful, easy to
+        use and users were satisfied using the system. User responses and the 
+        observations made during the test it was found that the system is
+        effective and is very easy to learn. 
+\end{enumerate}
+
+This system was however not implemented within the Zamani Project. This was
+mainly due to time constraints, caused by the scale and time required to
+implement it. Functionally the system could be implemented however this process
+could be significantly simplified by the addition of some features. These are
+mentioned in the future work session.
+
+
 \section{Future Work}
 During the implementation of the workflow system various possible extensions
 that could be added to the system however due to constraints on time these could
 not be implemented. These features would improve the system both in terms of
-performance, usability and set up time.
-
+performance, usability and set up time. 
 \begin{description}
 \item[Hierarchical Workflows]\hfill \\
-To allow better control and reusability over tasks, workflows should be
+To allow better control and re usability over tasks, workflows should be
 abstracted to include a hierarchy. Such a hierarchy would allow entire workflows
 to be represented as singular nodes. These workflows, could then be repackaged
 and reused in different sites, or even the same site. This would also allow the
