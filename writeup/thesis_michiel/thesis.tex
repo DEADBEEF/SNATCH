@@ -33,12 +33,23 @@ So long and thanks for all the fish!
     Workflow Management Systems are systems designed to facilitate and manage
     tasks within an organisation. These tasks are topologically organised, in
     terms the its direct requirements. The system then executes the workflow
-    such that all task dependencies are met.
-    \section{Zamani Project and Cultural Heritage}
-    The \emph{Zamani Project}\footnote{Zamani Project:http://www.zamani-project.org/} 
+    such that all task dependencies are met. Such a system would allow a user to
+    set up, monitor and execute tasks \cite{slot2005workflow}.
+
+    Workflow systems have been successfully implemented in various
+    business and Scientific fields \cite{Brahe:2007:SWW:1316624.1316661}
+    This has not only increased productivity but in the field of
+    science has allowed that the reproducibility of results be greatly
+    increased\cite{4721191}.
+
+
+
+
+\section{Zamani Project and Cultural Heritage}
+    The \emph{Zamani Project}\footnote{Zamani Project:http://www.zamani-project.org/}
     was started out of the Geomatics Department at the University of Cape Town.
     This project aims to accurately record the physical and architectural nature
-    and dimensions of African Heritage sites. 
+    and dimensions of African Heritage sites.
 
     Heritage sites are mapped using highly sophisticated technology which are
     used to create a variety of digital objects which include:
@@ -54,12 +65,43 @@ So long and thanks for all the fish!
     the vast amount of data items that needs to be processed. The size of these
     data items provides a challenge to traditional workflow systems that are
     currently available.
-    \section{System Outline}
-    This project to created a Workflow system that could effectively
+
+
+\section{Problem Statement}
+    To document these heritage sites a great deal of effort. The process includes
+    the capture, storage, manipulation, analysis and management of this geographic,
+    architectural and photographic data. This data is very large and diverse. It gets
+    used in very diverse ways. This involves processes abstracting these data
+    items into various forms. Managing the data in such a way that it is accessible
+    at any point presents a challenge due to the size of the data.
+
+    Currently the documentation process of the heritage sites, involve the data being
+    manually copied to each point where it is required. This is an extremely slow and
+    tiring process. By automating this process time could be saved.
+
+    Workflow management systems decompose complicated procedures into small atomic tasks
+    that are dependent on each other\cite{Taylor:2006:WES:1196459}. This decomposition
+    often leads to an increase in overall efficiency of the process. Workflow Systems
+    are particularly efficient in instances where there are multi-person teams and work
+    is done in a mostly independent of one another. These are the exact conditions that
+    are present within the Zamani-project.
+
+    The aim of this project is to develop and evaluate a system that is is applicable
+    to workflows similar to those found within the Zamani Project. This should allow the
+    system to: \begin{inparaenum} \item iterface with existing systems; \item manage the
+    work both at a site and a user level; \item provide local data availability when users
+    require it for a task; and \item increase the overall efficiency of the process
+    \end{inparaenum}
+
+
+
+
+\section{System Outline}
+    This project to created a Workflow Management system that could effectively
     automate the management of the heritage preservation processes.
 	This would manage the process starting from the raw scans and photographs
 	through the creation of all the digital artifacts. Figure~\ref{intro:basic}
-	shows the simplified working of the system. 	
+	shows the simplified working of the system.
 	\begin{figure}[!h]
 		\begin{center}
 			\includegraphics[scale=0.34]{figures/basic_system.pdf}
@@ -68,22 +110,70 @@ So long and thanks for all the fish!
 		\label{intro:basic}
 	\end{figure}
 
-	\noindent The system starts with with 
-	core set of input file. The workflow is then executed which initiates a set
-	of topological tasks. The processes then generates output data items.
-	
-	The tasks that are required in order to produce these data items
-	could either be tasks executed by a users or it can be
-	automatically completed by the server. The system aims to automate these
-	tasks to the maximum extent possible.
+	\noindent The system would starts with with
+	core set of input files. The workflow is then executed which initiates a set
+	of topological tasks. These tasks would then be executed in order, such that
+    the processes then generate the full set of output data items.
+
+    These processes can be ordered into two main categories:
+    \begin{inparaenum}[i)]
+        \item tasks that can be automatically be executed by the system and
+        \item tasks that need to be completed by a user
+    \end{inparaenum}. The system aims to coordinate an automate these tasks to
+    the maximum extent possible whilst managing the information at this
+    scale.
+
+    Executing these processes involves using a various software packages.
+    This functionality can not be replaced by the system so it would need
+    to be integrated in a very general way.
+
+\section{System Evaluation}
+    In order to determine the applicability of the proposed solution, the system
+    was evaluated in the following way:
+
+    \begin{description}
+        \item[Partial Integration]\hfill \\
+            In order to determine whether the proposed system
+            would be applicable to the problem at hand, a portion of the workflow
+            of and existing site was implemented and tested within the system. This
+            test provides a mean to determine whether the problem could be solved
+            by the proposed system.
+        \item[User Experience Testing] \hfill \\
+            Even the most effective system can fail if it cannot
+            be successfully be adopted be users. Therefore the system's
+            user experience was tested. This allows problems to be detected and
+            shortcomings of the system to be identified\cite{tullis2008measuring}.
+    \end{description}
+
+\section{Legal and Ethical Issues}
+    All the software used in the development of the workflow system
+    is either free or open source. If this project were to continue
+    or be extended there would not be any legal issues. The core
+    of the system is written using the Django Framework, using Python
+    These are respectively licenced by the Django Licence and the PSF
+    license. Further tools used during the implementation include Javascript,
+    JQuery, JsPlumb, and tablesorter. Which is licenced under LGPL,
+    MIT license and GPL version 2.
+
+    User testing was also done during the course of the project, from
+    this purposes Ethical clearance was granted from the Faculity of
+    Science Research Ethics Committee. Access to UCT Students was also
+    granted by the Department of student affairs.
+
+\section{Document Outline}
+    This report outlines the design, implementation and evaluation
+    of \emph{Zamani Workflow} a workflow system that sets out to
+    solve the data management problem experienced within the
+    Zamani Project. The report starts with a review of the literature in
+    Chapter~\ref{chap1}.
+
+    This is then followed by the Design and Implementation of the system
+    in Chapter~\ref{chap2}. The considerations for the design are defined
+    before the full system design is reported throughout the three design
+    iterations.  The system in then evaluated in Chapter~\ref{chap3}.
 
 
-
-    \section{System Testing}
-    \section{Ethical Considerations}
-    \section{Document Outline}
-\chapter{Background}
-
+\chapter{Background\label{chap1}}
     Workflow management systems define a complex process in into well formed
     tasks and coordinates the process completion \cite{1245778}.  Automated
     workflow management has been in wide use across various disciplines since
@@ -295,17 +385,17 @@ used\cite{Montella:2007:UGC:1272980.1272995}. This would allow for an
 effective Content Delivery Network that provides data on demand where it is
 needed on the grid.
 
-Workflow for geomatics processes, due to its distributed nature, would map well
+Workflow for Geomatics processes, due to its distributed nature, would map well
 onto a automated workflow system
 
 \cite{Withana:2010:VWE:1851476.1851586}. The nature of the science is supported
-well. It would allow for effective automatisation of some of the functions are
+well. It would allow for effective automation of some of the functions are
 available.
 
-\chapter{Design}
+\chapter{Design\label{chap2}}
 \section{Introduction}
 The  system was implemented in three design iterations. These iterations are
-as follows: \begin{inparaenum}[(i)] \item Feasability design;
+as follows: \begin{inparaenum}[(i)] \item Feasibility design;
 \item Workflow system design; and \item User Interface design.
 \end{inparaenum} The methodology used was to design, implement
 and evaluate the system at each iterations. The evaluation at
@@ -330,8 +420,6 @@ group of test users.
 The final design iteration was done by correcting the criticisms that test
 experiences with the system. During Section~\ref{iteration3} the final
 improvements and features were added in order to solve the question posed.
-
-
 
 \section{Design Considerations\label{design_consdierations}}
 This system is developed for the Zamani Project. This requires
@@ -846,7 +934,7 @@ Each task is defined as an independent activity that can be executed by the serv
 by a user. Each task has a list of dependencies that need to be satisfied in order
 for the task to be executed. When a task is complete its successors are then checked,
 and run if all the dependencies are met. In order to ensure that this can be
-done efficiently, 
+done efficiently,
 both the predecessors and the successors are stored in the table. The \emph{Id} field is
 used for task identification in URLs. Each task also has time information, the execution
 time of a
@@ -924,7 +1012,7 @@ are a list of features that were implement during this design iteration.
         completed, either by verification or the script finishing, the task is finalised.
         This process involves adding all the generated files to the database, updating the
         input files of the successors. If all the dependencies of a successor
-	are met that task is then started. When a task fails, however, a user is able to 
+	are met that task is then started. When a task fails, however, a user is able to
 	make the required changes and restart the process.
     \item[Logging] \hfill \\
         Logging is added to help with identifying and controlling task failures. Within
@@ -1011,7 +1099,7 @@ the Django framework. Tasks are executed asynchronously. Each job type is handle
 \subsubsection{User Interface}
 The interface was implemented using \emph{HTML} served using the View subsystem in Django.
 These views aim to create a usable system. These are based on the designs that were created
-during the \emph{PICTIVE} session. Slight alterations were made to the design to support 
+during the \emph{PICTIVE} session. Slight alterations were made to the design to support
 necessary functionality that was not considered during the session. The interface comprises of several
 views.
 \begin{description}
@@ -1115,7 +1203,7 @@ as follows:
         a wider audience.
     \item[Cycles aren't being checked] \hfill \\
         The system uses a \emph{Directed Acyclic Graph} to represent the
-	workflow however; when the workflow is updated cycle checking is not done. 
+	workflow however; when the workflow is updated cycle checking is not done.
 	This could lead a workflow to enter an   unsatisfiable state.
     \item[Allow User Specified ordering] \hfill\\
         It was noted that users cannot order tasks. This could make specific
@@ -1142,7 +1230,7 @@ much confusion. Sorting controls was added to the task-list, allowing tasks to b
 easier. The user facing terminology was changed such that the terms a more general
 and understandable to users without background in technology.
 
-The last focus of the design was to avoid unintentional user errors. 
+The last focus of the design was to avoid unintentional user errors.
 When a user is setting up task dependencies cycle checking is be done to ensure that cycles
 are not created. To further improve the usability of the system the \emph{File
 Picker} was changed to a more intuitive component.
@@ -1193,10 +1281,10 @@ selected. The selection and view interfaces are similar to be consistent through
     \label{final:tree_view}
 \end{figure}
 
-The task visualisation was changed to be visible on both the site interface, as well as the 
+The task visualisation was changed to be visible on both the site interface, as well as the
 edit interface. This allows for the removal of the unintuitive predecessor selector that
 was present in Section~\ref{iter2_impl}. In the task edit interface a
-specific task is selected. To indicate this the selected task will be 
+specific task is selected. To indicate this the selected task will be
 coloured in such a way that its stands out. The visualisation was also
 changed such that task positions are static and persistent. This allows
 for the tasks to be arranged by users. Figure~\ref{final:visual} shows
@@ -1211,15 +1299,15 @@ how the visualisation interface was changed.
     \label{final:visual}
 \end{figure}
 
-\chapter{Evaluation}
+\chapter{Evaluation\label{chap3}}
 
 For the system to be successfully utilized, within the project
-it needs to accomplish the following goals: 
+it needs to accomplish the following goals:
 \begin{enumerate}
 \item It needs to be able to integrate the daily tasks of the users
-      without it being a burden. 
+      without it being a burden.
 \item It needs to effectively be able to manage the data items and
-      coordinate the tasks between the users and the system. 
+      coordinate the tasks between the users and the system.
 \end{enumerate}
 
 In order to answer these questions, the system needed to be evaluated on two
@@ -1228,23 +1316,23 @@ system could be easily adopted by users if implemented.
 
 The system was then tested further to see if it could perform
 a subset of the tasks it would be required to perform if implemented within
-the \emph{Zamani Project}. Due to time constraints a full 
+the \emph{Zamani Project}. Due to time constraints a full
 system integration, to support the Zamani activities could not be performed.
 
 \section{User Experience Evaluation}
 Users and their experience of the system is becoming a critical component
-in designing a software system\cite{Forlizzi:2004:UEI:1013115.1013152}. 
+in designing a software system\cite{Forlizzi:2004:UEI:1013115.1013152}.
 
 User Experience evaluations aim to understand the needs and experiences of a user.
 In order to do this, user engagement needs to be tested on both a visual and emotional level.
 These evaluations are used to link the needs of the users to the functionality provided by the
 system. The benefit gained from having a usable system is that the productivity
-of the users is greatly increased\cite{nielsen2003usability}. 
+of the users is greatly increased\cite{nielsen2003usability}.
 User Experience experiments were performed to ensure that the system
-provides a good, usable interface. 
+provides a good, usable interface.
 
 \subsection{Aim}
-The aim of the usability test is to assess the quality of the system. This 
+The aim of the usability test is to assess the quality of the system. This
 assesses the user's ability to complete required tasks efficiently while
 remaining satisfied with the system\cite{bevan1995measuring}. This is done in
 order to determine how suitable the solution is for the user.
@@ -1260,9 +1348,9 @@ The usability of the system will be rated using the following attributes
 \item[Satisfaction] Measures the attitude of the users towards software. This
     includes: \begin{inparaenum}[(i)]\item Difficulty;\item Confidence; and
         \item Like/Dislike towards the system\end{inparaenum}.
-    
-\item[Error] Number of errors that a user makes, including deviations from 
-    the intended path. 
+
+\item[Error] Number of errors that a user makes, including deviations from
+    the intended path.
 \item[Effectiveness] This tests user's efficiency based on a predetermined level
     in terms of speed, number of errors and steps.
 \item[Simplicity] Amount of effort that is required for a user to complete a
@@ -1307,15 +1395,15 @@ that are described as follows.
     task?;  and \item Please select the input files that are used in this
     task\end{inparaenum}?   The task descriptions all convey what the purposes
     of the tasks are. As soon as the user completes a task they need to
-    indicate on the system that the task has been completed. 
+    indicate on the system that the task has been completed.
 \item[Build a simple workflow] \hfill \\
     For the second part the user had to simulate the role of a privileged
     user, and had to set up a sample workflow. The tasks represent a workflow
     that produces a PDF file starting with a text file. This was given as a
     diagram to the users. The diagram can be seen in Figure~\ref{eval:workflow}.
-        The user was given very little instruction on how to complete the task. 
+        The user was given very little instruction on how to complete the task.
     This allows them to explore the system and intuitively complete the task.
-    
+
 \end{description}
 \begin{figure}[!h]
     \begin{center}
@@ -1325,7 +1413,7 @@ that are described as follows.
     \label{eval:workflow}
 \end{figure}
 To ensure that each user experienced the system the same way, it was restored to
-its previous state after each test. 
+its previous state after each test.
 
 \subsubsection{Questionnaire}
 The primary method used to evaluate the \emph{User Experience} of the system was
@@ -1339,7 +1427,7 @@ questionnaire is designed to determine the usability attributes in terms of:
 Satisfaction \end{inparaenum}. It is designed in such a way that an
 emotional response is triggered. In order to avoid \emph{Acquiescence Response Bias}
 the questionnaire duplicates responses in such a way that the they were
-phrased both negatively and positively. 
+phrased both negatively and positively.
 In order to save on paper the survey was conducted using \emph{Lime
 Survey}\footnote{Lime Survey: http://www.limesurvey.org/}
 The questionnaire used can be found in Appendix~\ref{appendix:questionnaire}.
@@ -1368,7 +1456,7 @@ The participants varied in age ranging from 18 to 24. Due to cost and time
 constraints all subjects tested were students. The level of
 technical competence varied from novice to expert. The students were highly
 diverse in terms of \emph{Field of Study}, being drawn from four faculties:
-Economics; Engineering; Science; and Humanities. 
+Economics; Engineering; Science; and Humanities.
 
 \subsection{Results}
 The user evaluation produced a number of results. Users were on average able to
@@ -1385,8 +1473,8 @@ Ease of Learning; and \item Satisfaction \end{inparaenum}. Values with a high
 amount of variance were not considered to be significant.\\
 
 \subsubsection{Execute Simple Tasks}
-The participants were asked to evaluate their experiences with regard to 
-completing the tasks. The survey, along with the observations was used to 
+The participants were asked to evaluate their experiences with regard to
+completing the tasks. The survey, along with the observations was used to
 rate the experience in terms of the following categories:
 \begin{description}
     \item[Usefulness] \hfill \\
@@ -1397,10 +1485,10 @@ rate the experience in terms of the following categories:
 
     	From observation it seemed that users were easily able to use the system
     	to indicate the tasks. There appeared to be very little confusion as to
-    	what the purpose of the buttons on the interface were for. 
+    	what the purpose of the buttons on the interface were for.
 
     	There was a slight delay, for about $30\%$ of users, between the
-	completion of the first task and 
+	completion of the first task and
     	when the users started the second task since the task screen displayed
     	either that \emph{data was being transferred back} or that the task
     	was \emph{awaiting validation}. They seemed to wait for the system to
@@ -1410,7 +1498,7 @@ rate the experience in terms of the following categories:
     	required.
     \item[Ease of use] \hfill \\
     	The number of steps required to complete the task was considered to be
-    	minimal by $80\%$ of the users, and very few inconsistencies were 
+    	minimal by $80\%$ of the users, and very few inconsistencies were
 	noted. $71\%$ of participants agreed that the system was easy
 	and simple to
     	use. The system was described as flexible and users were able to
@@ -1440,7 +1528,7 @@ rate the experience in terms of the following categories:
         them to complete the tasks with relative ease. Users emotionally
         responded to the system in the following way: \begin{inparaenum}[(i)]
     	\item it was pleasant to use; and \item that the system was
-        wonderful\end{inparaenum}. 
+        wonderful\end{inparaenum}.
 
         Some users showed clear signs of satisfaction when they started getting
         used to the interface. At no point did any of the participants appear
@@ -1451,8 +1539,8 @@ rate the experience in terms of the following categories:
         findings are based on the observations of the users. Users took an
         average time of $7$ minutes in completing the first task. The slowest
         time taken was $12$ minutes. The interquartile range was determined
-        to be between $5$ minutes and $8$ minutes, showing that most of the 
-        users were able to efficiently accomplish the tasks provided. 
+        to be between $5$ minutes and $8$ minutes, showing that most of the
+        users were able to efficiently accomplish the tasks provided.
 
         Some efficiency issues were noted in the hesitance of participants
         after completing the first task, before starting the second task.
@@ -1465,7 +1553,7 @@ Experience} of the system. Layout issues were identified that caused users
 to navigate to unexpected places, but users were quickly able to recover from
 this without needing assistance. The learnability tests showed that the system
 was very easy to learn and it required very little effort on the part of the
-participants to use it successfully. 
+participants to use it successfully.
 
 \subsubsection{Build Simple Workflow\label{eval:simple}}
 For this task the participants were asked to build a simple workflow, that had
@@ -1481,7 +1569,7 @@ participants were required to determine how to complete the task on their own.
 
     Users found that the system gave them good control over what they were doing and
     made the task relatively easy to complete, and felt the number of steps
-    involved were appropriate. 
+    involved were appropriate.
 
     Observations of the participants revealed that the participants quickly
     understood what was expected and were able to use the system to
@@ -1490,7 +1578,7 @@ participants were required to determine how to complete the task on their own.
 \item[Ease of Use] \hfill \\
     $85\%$ of participants indicated that they found the system simple and easy to use.
     They believed that the number of steps were minimal to complete the tasks
-    that were required. Inconsistencies within the system was not noted by 
+    that were required. Inconsistencies within the system was not noted by
     the participants. $75\%$ of users felt like they were easily able to recover after
     making an error. They were confident that the system was being used
     successfully. In addition, $75\%$ users commented very favourably on
@@ -1501,8 +1589,8 @@ participants were required to determine how to complete the task on their own.
     \emph{User Task} and be confused that the option for the \emph{Server Task}
     was  not available. Several users were directed to the cancel button. This
     indicates that the option should be combined and indication as to what the
-    task type is should appear in the combobox. 
-    
+    task type is should appear in the combobox.
+
     Users did seem to intuitively understand that the tasks could be dragged
     within
     the visualisation. Furthermore, since the creation of a task placed the node
@@ -1511,7 +1599,7 @@ participants were required to determine how to complete the task on their own.
     should be added to indicate that drag options are available. Nodes should
     also initially be randomly placed to avoid confusion. A similar problem was
     noted in dragging the \emph{arrow icon} to indicate dependencies.
-    
+
     A rather significant problem was encountered during the testing. While
     the users were navigating the page to determine what to do they encountered
     the Jobs section, believing this is where they needed to add tasks, this
@@ -1524,19 +1612,19 @@ participants were required to determine how to complete the task on their own.
     the task progressed. This is also validated by $85\%$ the responses in
     the survey.
     Participants did not hesitate between tasks and quickly added all the
-    required nodes. 
+    required nodes.
 \item[Satisfaction] \hfill \\
     $90\%$ of users were very satisfied with the system; and $57\%$ agreed
     that the  system was fun to use.
     Participants felt that the system worked the way
     they expected it to work. Emotional responses, that give a better indication of the user
     experience, indicated that a significant portion of the users believed the
-    system to be wonderful and that they need to have it. Overall $80\%$ 
+    system to be wonderful and that they need to have it. Overall $80\%$
     users found
     the system pleasant to use.
-    
+
     During the experiment the users were noted to express excitement and
-    happiness was expressed when they realised how the system works. 
+    happiness was expressed when they realised how the system works.
 
 
 \item[Efficiency] \hfill \\
@@ -1646,12 +1734,12 @@ successfully. Figure~\ref{eval:zamani_impl} shows the workflow being executed.
 \end{figure}
 
 \noindent This successful integration shows that the system is able to support the
-workflow required by the Zamani project. 
+workflow required by the Zamani project.
 
 
 \subsection{Filtering}
 The system can successfully implement the workflow required for the Zamani
-Project, however filtering workflow at a site level is not ideal. Many workflows 
+Project, however filtering workflow at a site level is not ideal. Many workflows
 get replicated at a building level and beyond this the artifact creation can
 also be distinguished by category. In order for the workflows built within the
 system to be more reusable, it would need to be extended to store workflows at
@@ -1663,7 +1751,7 @@ experimentation would be required to determine the effect on User Experience.
 \subsection{Performance}
 The movement and processing of data is regarded as being the most expensive
 portion of the process. The data movement is directly offloaded to \emph{rsync},
-whereas the data processing is offloaded to the native applications. The system 
+whereas the data processing is offloaded to the native applications. The system
 management of these activities outperform these tasks. As such the system's
 performance is bounded by these activities. This offloading procedure is
 illustrated in Figure~\ref{eval:offload}.
@@ -1688,7 +1776,7 @@ was unfortunately outside the scope of the project.
 During the implementation of the workflow system various possible extensions
 that could be added to the system however due to constraints on time these could
 not be implemented. These features would improve the system both in terms of
-performance, usability and set up time. 
+performance, usability and set up time.
 
 \begin{description}
 \item[Hierarchical Workflows]\hfill \\
@@ -1704,7 +1792,7 @@ another. This change does not necessarily affect the \emph{Task type}, however
 with the current implementation of the system the change would need to be made
 at this point. This can be greatly improved by allowing a \emph{Task} to send
 parameters to the job. This would require the Task Subsystem to allow parameters
-dynamically be sent to the \emph{Task Type}. 
+dynamically be sent to the \emph{Task Type}.
 \item[Rule Based File Filters]\hfill \\
 Currently within the system all the files in the output directory of a task is
 treated as input to successor tasks. Tasks often times only use a portion of the
@@ -1732,17 +1820,17 @@ In this regard the server node would become a significant bottleneck in
 processing \emph{Server Tasks}. In order to alleviate this problem the system
 would need to become distributed. This would present its own set of problems
 as data would need to be efficiently distributed between the computation nodes
-to ensure efficiency. 
+to ensure efficiency.
 
 \end{description}
 
 \bibliography{bibliography}{}
 \bibliographystyle{apalike}
-%\appendix
-%\includepdf[pages=-,picturecommand*={%
-%     \put(42,760){%
-%              \parbox{\textwidth}{\chapter{Questionnaire}\label{appendix:questionnaire}}
-%	      }}]{survey.pdf}
+\appendix
+\includepdf[pages=-,picturecommand*={%
+     \put(42,760){%
+              \parbox{\textwidth}{\chapter{Questionnaire}\label{appendix:questionnaire}}
+	      }}]{survey.pdf}
 
 
 \end{document}
