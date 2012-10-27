@@ -12,6 +12,22 @@
     science has allowed that the reproducibility of results be greatly
     increased\cite{4721191}.
 
+    In recent years scientific discovery has move towards being more data-driven\cite{gray2007escience}.
+    This has created a process where large amounts of data is collected, processed 
+    and then analysed to produce results. Where in the past results were based in simulating
+    and evaluating experimental models, it has become important that results are based in 
+    data. This method has been highly affective across various fields including: Pharmacology\cite{harpaz2012novel},
+    Astrohysics\cite{thomas2011synapps} and Bioinformatics\cite{greene2010integrative}. 
+    In order to support these processes sophisticated tools are required to process
+    and analyse this data\cite{shneiderman2002inventing}. 
+
+    Management of this data is an extremely important process that ensures the
+    ability to produce these scientific results\cite{gray2005scientific}. Workflow 
+    Management Systems, is an important component in this as it provides a means
+    to very accurately record the scientific process followed  \cite{davidson2007provenance}.
+    Effective management of the data allows for complex analysis to be performed
+    with ultimately leads to scientific discovery\cite{ludascher2009scientific}.
+
 
 
 
@@ -36,8 +52,6 @@
     data items provides a challenge to traditional workflow systems that are
     currently available.
 
-
-\section{Problem Statement}
     To document these heritage sites require a great deal of effort. The process includes
     the capture, storage, manipulation, analysis and management of this geographic,
     architectural and photographic data. This data is very large and diverse. It gets
@@ -48,6 +62,50 @@
     Currently, the documentation process of the heritage sites involves the data being
     manually copied to each point where it is required. This is an extremely slow and
     laborious process. By automating this process time could be saved.
+
+
+
+\section{General Outline}
+    The project is divided into two major components. The first is a
+    workflow management system developed by Michiel Johan Baird. The
+    second is an indexing and streaming system for large point clouds
+    developed by Timothy Trewartha. These two components aim to solve some
+    of the challenges faced by the members of the Zamani Project.
+    \subsection{Workflow Managment System}
+        In order to assists with the difficulty in managing the data and the tasks involved
+        in creating the heritage data, a Workflow Management System was developed using
+        the requirements of the team.
+
+        This system is able to handle both automated and manual user tasks. The
+        aim is to increase the efficiency of the task execution and improving
+        reusability between different heritage sites sites.
+      
+    \subsection{Point Cloud Indexing}
+        The other component tackles the difficulty involved in managing large
+        point clouds. The approach taken is to build an index for the point cloud. This index
+        allows for efficient region extraction. It also allows the user to specify the resolution at which
+        they wish the extraction to be performed.
+        The system also enables the extractions from the point cloud index to
+        be streamed from a central server. For example, using the index a low resolution
+        representation can be efficiently extracted and sent to the client. Alternatively, the user may request
+        a high resolution extraction of a subregion.
+\\
+
+    \noindent These two separate components can interact in a number of ways. For
+        example, at various
+        stages the Workflow Management System requires point clouds as input
+        to certain processes.
+        This input can be efficiently extracted from the indexed point cloud
+        using the point cloud
+        streaming system. Alternatively, if the Workflow Managment System
+        produces a point cloud
+        as output (after cleaning for example) it can be sent to the indexer
+        so it can be more efficiently
+        accessed further down the workflow pipeline. System.
+    
+    This report discusses the development and evaluation of the Workflow Management System.
+
+\section{Problem Statement}
 
     Workflow management systems decompose complicated procedures into small atomic tasks
     that are dependent on one an other\cite{Taylor:2006:WES:1196459}. This decomposition
@@ -62,9 +120,6 @@
     work both at a site and a user level; \item provide local data availability when users
     require it for a task; and \item increase the overall efficiency of the process
     \end{inparaenum}
-
-
-
 
 \section{System Outline}
     This project is about a Workflow Management system that could effectively

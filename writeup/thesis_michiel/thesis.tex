@@ -5,6 +5,7 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{changepage}
 \usepackage{scrextend}
 \usepackage[nottoc,chapter]{tocbibind}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -23,25 +24,25 @@ Workflow Management Systems have been highly successful in managing complicated
 tasks and procedures, both for business and scientific applications. This
 research project follows the development of an \emph{Automatic Workflow System}
 designed to meet the needs of the tasks tasks that are present within the
-\emph{Zamani Project}. This is developed to handle very large files which is a
+\emph{Zamani Project}. This is developed to handle very large files, which is a
 common within the project. The system was developed in three design iterations
-built from the requirements and considerations from the group. A web interface
-is used to control the system. This was built in Python using the \emph{Django}
+built from the requirements and considerations of the group. A Web interface
+is used to control the system. The system was built in Python using the \emph{Django}
 framework along with JQuery and other front-end libraries.
 
 Both automated and user tasks are supported in the system. For user tasks, the
 required files are automatically copied to the user's workstation. This is done
-using \emph{rsync} to reduce transfer times as well as protect effectively
+using \emph{rsync} to reduce transfer times; as well as protect effectively
 against network failure that can occur. Once the task has been completed the
-process is transfer process is initiated in the opposite direction. To improve
+transfer process is initiated in the opposite direction. To improve
 the quality of the work all user tasks requires being validated by senior
 members on the team. Simple error recovery was built into the system allowing
 users to inspect the logging information to determine the cause of the failure
 allowing the tasks to be restarted as soon as the problem has been alleviated.
 
-The system was evaluated by implementing a subsection of the Zamani tasks into the
-system. These tasks were successfully completed using the system. User
-Experience test were conducted that shows that users found that users were
+The system was evaluated by implementing a subsection of the Zamani tasks.
+These tasks were successfully completed within the system. A User
+Experience evaluation was conducted that shows that users found that users were
 satisfied with the system. It was also found that the system was easy to use and
 easy to learn.
 
@@ -58,10 +59,12 @@ process. For that I thank you.
 
 To the National Research Foundation(NRF), thank you for the financial assistance
 given towards this degree and in particular the project. This made the process
-a lot more comfortable and enjoyable. To the members of the Zamani Project I
+a lot more comfortable and enjoyable.
+
+To the members of the Zamani Project I
 interacted with: Professor Heinz Ruther, Stephan Wessels and Ralf Schroeder. 
 Thank you for the time and effort that you put in to help make this project
-happen. The use of your data is highly appreciated and valued. A special thank 
+possible. The use of your data is highly appreciated and valued. A special thank 
 to Roshan Bhurtha, who was my main point of contact within the team. Thank you
 for the quick responses when I had any queries.
 

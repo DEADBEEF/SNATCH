@@ -20,7 +20,20 @@
     very distributed and the set of data that is operated on is large and
     diverse.  Workflow management within Geomatics has been considered and
     solutions have been proposed, but not implemented or
-    evaluated\cite{Migliorini:2011:WTG:1999320.1999356}.
+    evaluated\cite{Migliorini:2011:WTG:1999320.1999356}. 
+ 
+    This chapter presents a discussion on Workflow Systems. Firstly presenting
+    an overview of what these systems are and briefly looking into the histories
+    of these systems. This is followed by a review of the factors that have influenced
+    the success an failure of theses systems.
+
+    Section~\ref{geo:data} does a review of the data and processing involved within
+    the field of Geomatics. 
+
+    This is then followed in Section~\ref{example:sys} by a review of existing implementations
+    of Workflow Management Systems namely: Kepler, Trident and Taverna. A variety of Case Studies
+    ar presented in Section~\ref{casestudy}.
+
 
 
 \section{Overview}
@@ -67,7 +80,7 @@ identify bottlenecks that could be optimised \cite{Aragon:2009:WMH:1529282.15294
 automatically ensure local access of large files that needed to be processed.
 
 
-\section{Geographic Data}
+\section{Geographic Data\label{geo:data}}
 Geomatics concerns itself with the collection, organisation and query of
 geographic data \\  \cite{DiMartino:2007:TAG:1341012.1341081}.  This data includes
 but  is not limited to landscapes, coordinate data, building models,
@@ -89,14 +102,13 @@ thought of as a graph, where the nodes represent either a data or abstraction
 element, and the edges represent the functions/tasks required to create the
 particular abstraction as a set of topological relationships. 
 
-\section{Implementations}
+\section{Implementations\label{example:sys}}
 There are various products available that can compose scientific workflows.
 \emph{The Trident workbench} \cite{Simmhan:2009:BTS:1673063.1673121} is an open
 source workflow management system developed by Microsoft Research that also
 adds middleware services and a graphical composition interface. Trident builds
 workflows of control and data flows, off of built-in, user defined activities
 and nested subflows.
-
 The flows are represented using XOML, an XML Specification, while the
 activities are stored as a set of sub-routines\cite{Simmhan2011790}. Trident
 can be used on a local system, remote systems and even clusters.  Queries on
@@ -160,7 +172,7 @@ With the advancement of WebGIS, a lot
 of Web Services that facilitate Geomatics processing already exist.
 
 
-\section{Case Studies}
+\section{Case Studies\label{casestudy}}
 The next section will look at two instances where workflow management systems
 were implemented and used.  These case studies will look at both a business and
 a scientific application.
@@ -195,20 +207,39 @@ a scientific application.
       integration with Kepler provided the workflow with increased overall
       productivity.
 
+    \subsection*{Sunfall}
+      \emph{Sunfall} is a workflow system that was created to assist in locating
+      supernovas from large amount of telescope data\cite{Aragon:2009:WMH:1529282.1529491}.
+       
+      Sunfall consists of four components: \begin{inparaenum}[(i)]\item Search, \item 
+      Workflow Status Monitor, \item Data Forklift and \item Supernova Warehouse.\end{inparaenum} 
+      
+      The Search component is responsible for coordinating the tasks responsible for 
+      coordinating tasks involved in finding supernovas, within the data. The system
+      is also tasked with dealing with an enormous amount of data, up to 100TB. The
+      data movement is carried out using the \emph{Data Forklift} component.
 
-\section{Implication}
-The field of Geomatics concerns itself with a vast amount of geographic data.
-This data comes in various sizes and as such different methods of handling and
-would need to be used to facilitate dataflows within the system.
+      This project used a Parallel File system, to aid in data replication within the
+      project and used middle ware to interface with legacy software.
 
-The work, however, is done in a very distributed manner, which allows for a very
-effective mapping onto a grid-based computing solution, provided middleware can
-be developed to support the systems that are
-used\cite{Montella:2007:UGC:1272980.1272995}.
+      Sunfall was deemed a great success as it not only successfully improved the
+      efficiency and identified bottlenecks within the process
 
-Workflow for Geomatics processes, due to its distributed nature, would map well
-onto a automated workflow system
 
-\cite{Withana:2010:VWE:1851476.1851586}. The nature of the science is supported
-well. It would allow for effective automation of some of the functions are
-available.
+\section{Summary}
+This chapter reviewed the appropriate literature for Workflow Management Systems
+and the data variety and processing within Geomatics. This has provided the necessary
+insight to determine what components would be required in order to build such a Workflow
+System for the Zamani Project.
+
+The process to create the heritage artifacts from the raw-scans and photographs
+generates a large amount of varied data. A Workflow Management System would need
+to be able to specifically cater for this constraint similarly to the large scaled
+data involved in the implementation of both \emph{OrthoSearch} and \emph{Sunfall}.
+
+
+Since the tasks are however a mixture between automated and manual tasks. Such a
+system would be able to map to a more grid-based approach and was shown to be done
+at \emph{Danske Bank}. Middleware would need to be provided in order for the system 
+to uniformly integrate with applications required throughout the process\cite{Montella:2007:UGC:1272980.1272995}.
+The model has been shown to be able to be effectively automated using a Workflow Management System\cite{Withana:2010:VWE:1851476.1851586}. 

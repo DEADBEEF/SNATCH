@@ -262,8 +262,9 @@ complete understanding of the problem.
 
 \subsubsection{Dropping Kepler}
 Kepler is rather bulky and the user task model is ill-suited to the system.
-The Zamani Project's tasks fit better to an operational model, whereas Kepler
-is suited to more of scientific data processing model.
+The Zamani Project's tasks fit better to an operational model, where user activities
+are core to the creation of the data,  whereas Kepler is suited to a more automated scientific
+data processing model. 
 
 Kepler also does not integrate very well from an interface point of view.
 As such, it was decided that Kepler would not be used in the next iteration. This
@@ -481,13 +482,13 @@ workflow to be managed.
 \caption{Job Schema}
 \end{wrapfigure}
 
-\noindent\textbf{Job:} This table was created to help tasks to be more reusable.
+\noindent\textbf{Job:} This table was created to improve the reusability of tasks.
 The purpose of a given task will be determined by the \emph{Job} that the task
 is linked to. This table supports three main type of jobs, namely:
 \begin{inparaenum}[(i)] \item User Jobs; \item Server Job: one-to-one; and \item
-Server Job many-to-one.\end{inparaenum} This is represented by the type field.
-For server tasks the \emph{Script} field is set to a path that contains the
-server side script that will execute on the input files defined within a \emph{task}.
+Server Job: many-to-one.\end{inparaenum} This is represented by the type field.
+For server tasks, the \emph{Script} field is set to a path that contains the
+server-side script that will execute on the input files defined within a \emph{task}.
 For one-to-one tasks  the script is executed once per input file, while it
 is executed only once for many-to-one jobs. Information about the job is stored
 in the \emph{description} field. The rest of the fields are used to facilitate
@@ -539,11 +540,11 @@ is. The second field links a file to the site that it belongs to.
 \noindent \textbf{Task:} This controls how the workflow is put together in the system.
 Each task is defined as an independent activity that can be executed by the server or
 by a user. Each task has a list of dependencies that need to be satisfied in order
-for the task to be executed. When a task is complete its successors are then checked,
+for the task to be executed. When a task is complete, its successors are then checked,
 and run if all the dependencies are met. In order to ensure that this can be
 done efficiently,
 both the predecessors and the successors are stored in the table. The \emph{Id} field is
-used for task identification in URLs. Each task also has time information, the execution
+used for task identification in URLs. Each task also has time information. The execution
 time of a
 
 \begin{wrapfigure}{l}{7cm}
@@ -570,7 +571,7 @@ time of a
 \end{wrapfigure}
 \noindent task can be calculated by subtracting the start time from the end time. Each
 task is based on a \emph{Job}: this allows jobs to be reused in various tasks, making the
-system easier to use. A task is explicitly assigned to a user; for automatics tasks a
+system easier to use. A task is explicitly assigned to a user; for automatic tasks a
 dummy user named ``server'' is used to ensure database consistency. The input-files of
 a task is defined in a ``Many-to-Many''\footnote{MTM refers to Many-To-Many Field}
 field; this enables the system to only transfer
@@ -578,7 +579,7 @@ required files to workstations as well as running the script on appropriate data
 a task is executing, the system expects the output files to be placed in the output folder
 field, this allows the system to manage the file dependencies of the successor tasks.
 
-Along with the system being failure tolerant, it also needs to be able to determine what
+Along with the system being failure-tolerant, it also needs to be able to determine what
 has happened when a failure has occurred. For this reason a \emph{Log} field was
 added. This field stored all the activity that a task performs. This includes the transfer logs as
 well as any output generated during the execution of the server scripts. Tasks are also
@@ -595,15 +596,16 @@ for a task are:
 \end{inparaenum}
 
 \subsubsection{Features}
-All these components were put together to support the required features of the system. Below
+The combination of the interface, the and the database provides the required components
+to support the features of the system. Below
 are a list of features that were implement during this design iteration.
 \begin{description}
     \item[File Transfer] \hfill \\
         User tasks are able to transfer files to the user workstations, from the input
-        file list. As soon as a user task is triggered the file list is retrieved
-        from the task entry. The server then connects to to the host and copies over all
+        file list. As soon as a user task is triggered, the file list is retrieved
+        from the task entry. The server then connects to the host and copies over all
         the required files. Since a user can have more than one host, this transfer can also
-        be manually triggered by the user. When a task is then completed the server will
+        be manually triggered by the user. When a task is then completed, the server will
         again initialise the file transfer but in the opposite direction. This
 	will upload all files that are present in the \emph{Output Directory}. In order
 	to support switching of workstations,
@@ -614,21 +616,21 @@ are a list of features that were implement during this design iteration.
         The system's ability to facilitate workflows is entirely dependent on its ability
         to automate tasks. This is done by adding a control system within the server
         that works out which tasks have no unmet dependencies. As soon as these tasks
-        have been determined an asynchronous task is launched to run the task. Depending on
-        the type of job, either files are transfered or a script is run. When a task is
+        have been determined, an asynchronous task is launched to run the task. Depending on
+        the type of job, either files are transferred or a script is run. When a task is
         completed, either by verification or the script finishing, the task is finalised.
         This process involves adding all the generated files to the database, updating the
         input files of the successors. If all the dependencies of a successor
-	are met that task is then started. When a task fails, however, a user is able to
+	are met, that task is then started. When a task fails, however, a user is able to
 	make the required changes and restart the process.
     \item[Logging] \hfill \\
         Logging is added to help with identifying and controlling task failures. Within
         the automation framework all events happening with the task are added to an
-        append only log field. This includes the transfer logs for user tasks, and both
+        append-only log field. This includes the transfer logs for user tasks, and both
         \emph{stdout} and \emph{stderr}.
     \item[Site Visualisation] \hfill \\
         The tasks for a site can be represented as a \emph{Directed-Acyclic-Graph}. To
-        make the system  more usable, the tasks will be represented as
+        make the system  more usable, the tasks will be represented as a
         graph within the interface. This is done by calculating the graph of
         the sites and then applying a layout algorithm to it. For the purposes of this
         visualisation, a spring layout is used. The nodes are then joined by edges. A
@@ -641,7 +643,7 @@ are a list of features that were implement during this design iteration.
         creating a new workflow for each site would be very time consuming. An additional
         feature is added that copies over the structure of an existing site.
 	Once the new site has been built, a user would just be required to
-	select the input files an assign tasks to users.
+	select the input files and assign tasks to users.
 \end{description}
 
 \subsection{Implementation\label{iter2_impl}}
@@ -653,18 +655,20 @@ The system was implemented using the \emph{Django framework}. This was done in t
 \item user interface.
 \end{inparaenum}
 
+\subsubsection{Database}
 The \emph{database} was set up using the model subsystem in \emph{Django}, from the chosen schema.
 This is a system that defines the database using Python; this allows the schema
 to be implemented without needing to worry about the database system being used. For the
 purpose of this iteration, \emph{SQLite}\footnote{SQLite: www.sqlite.org} was used to
-support the database. This can however easily be changed to a more robust system as the demand
+support the database. This can, however, easily be changed to a more robust system as the demand
 on the system grows. User data was implemented using the authentication module in Django. This
-module manages users and permissions on the system. As the schema was discussed in Section~\ref{db_schema}
+module manages users and permissions on the system. As the schema was discussed in Section~\ref{db_schema},
 it will not be discussed further.
 
 \subsubsection{Workflow Framework}
 The underlying workflow system is implemented using \emph{Python}\footnote{Python: www.python.org}, within
 the Django framework. Tasks are executed asynchronously. Each job type is handled separately.
+\begin{adjustwidth}{2em}{0em}
 \begin{description}
 \item[Server Job - One to One] \hfill \\
     This job type executed a given script on all the input files. The system generates a list of
@@ -673,7 +677,7 @@ the Django framework. Tasks are executed asynchronously. Each job type is handle
 \item[Server Job - Many to One] \hfill \\
     This job type executes nearly identically to the \emph{One to One} task;
     however, instead
-    of the script being run run multiple times, it is run once. Here however all input files
+    of the script being run run multiple times, it is run once. Here, however, all input files
     are passed in as arguments, along with the output directory. Both server jobs can use
     any script or applications available on the system. With applications where the parameter
     structure does not match the required utility, wrapper scripts can be used.
@@ -682,13 +686,14 @@ the Django framework. Tasks are executed asynchronously. Each job type is handle
     the server and the execution type task, the goal is to ensure the effective communication
     between workstations and servers. The goal is to be able to transfer large amounts of files
     with minimal redundancy. For this reason \emph{rsync}\footnote{Rsync Incremental file
-    transfer: rsync.samba.org} is used. This only transfers files that have not been been transfered
+    transfer: rsync.samba.org} is used. This only transfers files that have not been transfered
     yet. Redundancy is greatly reduced, and this enables efficient recovery in case of network failure.
 
     Figure~\ref{user_task_impl2} shows the components used to execute a user task. Each of these components
     are built using an asynchronous object. Note that the transfer components can be used at any point
     during the task's life cycle.
 \end{description}
+\end{adjustwidth}
 \begin{figure}[!h]
     \begin{center}
         \includegraphics[scale=0.35]{figures/user_impl2.pdf}
@@ -699,9 +704,9 @@ the Django framework. Tasks are executed asynchronously. Each job type is handle
     Once a task is finished it passes on to finalisation. All tasks follow this model. It
     is assumed that all the appropriate files are present on the server at this point and
     that the task has completed successfully. At this the output directory is scanned for
-    files recursively, new files are indexed and added to the database. The new files are then
+    files recursively and new files are indexed and added to the database. The new files are then
     added to the input files of all successor tasks. If all the dependencies of a successor
-    task is met the task  are then launched.
+    task are met the task is then launched.
 
 \subsubsection{User Interface}
 The interface was implemented using \emph{HTML} served using the View subsystem in Django.
@@ -718,8 +723,8 @@ views.
         \caption{First implementation of the task overview screen}
         \label{task_overview_impl2}
     \end{figure}
-    This view has shows a user which tasks are outstanding, as well as show what is
-    happening within the team. This also provides links to the task control page for each task.
+    This view shows a user which tasks are outstanding, as well as what is
+    happening within the team.(See Figure~\ref{task_overview_impl2}) This also provides links to the task control page for each task.
     An additional feature that was implemented allows users to filter tasks based on a choice
     of sites.
 \item[Task Control] \hfill \\
@@ -730,10 +735,10 @@ views.
         \caption{Task Control Implementation}
         \label{task_control_impl2}
     \end{figure}
-    This is the view that non-privileged users will be interacting with most often. It provides
+    This is the view that non-privileged users will be interacting with most often.(See Figure~\ref{task_control_impl2}) It provides
     a detailed overview of what is required to be done with the task. Privileged users also
     get a link to edit the task. This page also contains tools to allow users to download
-    and upload required files. Once a user is finished with the task at hand he/she can
+    and upload required files. Once a user is finished with the task at hand, he/she can
     simply click on the \emph{Finish Task} button. This triggers the transfer back routine
     and queues the task for verification. Users who are able to verify the task will use the
     same view, however the \emph{Finish Task} button is replaced with two buttons that will
@@ -742,14 +747,14 @@ views.
 
     This view is also used for server tasks. In this case the emphasis is on failure control.
     With the log visible, users can trace the source of the failure and rerun the task as soon
-    as it is has been dealt with.
+    as it has been dealt with.
 
 \item[Task Editing] \hfill \\
-    During the initial task setup the parameters of a task need to be set. This screen enables
-    the user to set who the task is assigned to, what the input files are, and what the task
-    depends on. Note that the dependencies can also be set the task interface.
-    When something goes wrong with a tasks, privileged users are also able to edit these setting
-    when the workflow is already active. The workflow should be able to dynamically adapt in this case.
+    During the initial task setup, the parameters of a task need to be set. This screen enables
+    the user to set who the task is assigned to, what the input files are and what the task
+    depends on. The dependencies can also be set the task interface.
+    When something goes wrong with a task, privileged users are also able to edit these setting
+    when the workflow is already active. The workflow should be able to dynamically adapt in this case.(See Figure~\ref{task_edit_impl2})
     \begin{figure}[!h]
         \begin{center}
             \includegraphics[scale=0.35]{figures/task_edit_impl2.png}
@@ -758,7 +763,7 @@ views.
         \label{task_edit_impl2}
     \end{figure}
 \item[Site View] \hfill \\
-    This view is dominated by the visualisation of the site. The visualisation
+    This view is dominated by the visualisation of the site.(See Figure~\ref{site_view_impl2}) The visualisation
     was implemented using \emph{jsPlumb}\footnote{jsPlumb Graph UI:
     jsPlumb.org}. This is a library that builds interactive graphs. Each node
     provides an overview of the task. Dependencies are represented with edges
@@ -788,13 +793,13 @@ views.
 \end{description}
 In addition to \emph{jsPlumb}, \emph{jQuery} and \emph{jQuery UI} is used extensively to build
 the client side interface.
+
 \subsection{Evaluation}
-To evaluate the second iteration the system was given to five Computer Science honours students.
-They were asked to critically evaluate the system. The purposes was to highlight any major
+To evaluate the second iteration, the system was given to five Computer Science honours students.
+They were asked to critically evaluate the system. The purpose was to highlight any major
 issues.
 
-This brought up a number of issues during this iteration. The issues found are
-as follows:
+The issues found are as follows:
 \begin{description}
     \item[Aesthetic Appeal]\hfill \\
     	The apparent usability is impaired by the lack of aesthetic appeal, which distracts
@@ -803,56 +808,55 @@ as follows:
         Some controls seem to be out of place, making their purpose hard to
 	figure out; this would require some reordering.
     \item[Site Filter is confusing] \hfill \\
-        The site filter appears like a button and as such its purpose is misleading.
+        The site filter appears like a button and its purpose is misleading.
     \item[Technical Namings] \hfill \\
         The use of technical language makes the system unsuited to a user without
-        a Computer Science background. Naming should be changed to be able to include
+        a Computer Science background. Naming should be changed to include
         a wider audience.
     \item[Cycles aren't being checked] \hfill \\
         The system uses a \emph{Directed Acyclic Graph} to represent the
-	workflow however; when the workflow is updated cycle checking is not done.
+	workflow. However, when the workflow is updated cycle checking is not done.
 	This could lead a workflow to enter an   unsatisfiable state.
     \item[Allow User Specified ordering] \hfill\\
-        It was noted that users cannot order tasks. This could make specific
+        It was noted that users cannot order tasks. This could make a specific
 	task very difficult to find when the list becomes increasingly large.
     \item[File Picker is too simple] \hfill \\
-        The file picker is severely lacking and would be aided by using a more standard
+        The file picker is severely lacking in functionality and would be aided by using a more standard
         tree view.
 \end{description}
 
 
 
 \section{Final Design Iteration\label{iteration3}}
-This iteration builds on Section~\ref{iteration2}, address the issues raised during the evaluation
+This iteration builds on Section~\ref{iteration2} and addresses the issues raised during the evaluation
 phase. This iterations aims to improve usability issues encountered in the previous iteration. The
-system is then evaluated for user experience by performing a user experience study with several users.
+system was then evaluated for user experience by performing a user experience study with several users.
 \subsection{Design}
-In order to improve the usability of the system the design of the system was altered to include a
-number of changes. In order to improve the overall aesthetics of the system a templated style sheet
-was used. To improve the layout of the system some components were  reordered, and
-changed to fit a more standard interface.
+The system was altered to include a number of changes that improve the usability of the system.
+A templated stylesheet was used to improve the aesthetics of the system. Some components were reordered
+to improve the logical coherency and layout of the interface.
 
 The task overview interface was reworked and the site filter was removed as it caused too
-much confusion. Sorting controls was added to the task-list, allowing tasks to be located
-easier. The user facing terminology was changed such that the terms a more general
+much confusion. Sorting controls were added to the task-list, allowing tasks to be located
+easier. The user facing terminology was changed such that the terms are more general
 and understandable to users without background in technology.
 
 The last focus of the design was to avoid unintentional user errors.
-When a user is setting up task dependencies cycle checking is be done to ensure that cycles
-are not created. To further improve the usability of the system the \emph{File
-Picker} was changed to a more intuitive component.
+Cycle checking was added during the setup of the tasks, this avoids unintentional user errors
+and ensures that the system remains in a consistent and executable state. The \emph{File Picker}
+was changed to a more intuitive component. This further improves the usability of the system.
 
 \subsection{Implementation}
 
 During this phase several features were improved upon from the previous iteration.
-These changes were all made on client side of the application and the focus was
+These changes were all made on the client side of the application and the focus was
 to increase the usability and make the system more understandable.
 
 The most noticeable change of the system is that the style-sheet was changed. The theme that
-was chosen is called is \emph{Blue Nile Admin} and was designed by \emph{Portnine}
+was chosen is called  \emph{Blue Nile Admin} and was designed by \emph{Portnine}
 \footnote{Portnine: http://www.portnine.com/bootstrap-themes}. This is a two panel design
-that roughly matches the original design. This theme also includes a range of icons which
-overall makes the system more appealing.
+that roughly matches the original design. This theme also includes a range of icons, which,
+overall makes the system more appealing(See Figure~\ref{final:overview}).
 
 \begin{figure}[!h]
     \begin{center}
@@ -863,21 +867,21 @@ overall makes the system more appealing.
 \end{figure}
 
 The task overview screen was altered to make tasks more clear. Figure~\ref{final:overview}
-shows the implementation of this. Instead of using a two table design this  esxpanded to
-using separate tables tasks that have different statuses. Since \emph{outstanding tasks}
-are the main points of action for users these tasks are placed in a large table on top.
-Task that are \emph{awaiting validation} are placed in a smaller table below, privileged
+shows the implementation of this. Instead of using a two table design, this  esxpanded to
+using separate for tables tasks that have different statuses. Since \emph{outstanding tasks}
+are the main points of action for users, these tasks are placed in a large table on top.
+Task that are \emph{awaiting validation} are placed in a smaller table below: privileged
 users will also have tasks from other users appear here in order to easily see which tasks
-needs validation. Tables for \emph{tasks with unmet dependencies}; and
-\emph{completed tasks}, are also included. The team overview task has been filtered
-to only include tasks that are currently in progress. All tables are are sortable
+needs validation. Tables for \emph{tasks with unmet dependencies} and
+\emph{completed tasks} are also included. The team overview task has been filtered
+to only include tasks that are currently in progress. All tables are sortable
 using \emph{JQuery: TableSorter}\footnote{Tablesorter: tablesorter.com}. Tasks can
 also be filtered by site.
 
 The file interface was changed to be more appealing and usable. \emph{JQuery Widgets}
 \footnote{JQWidgets http://www.jqwidgets.com/} was used for this purpose, specifically
 the \emph{JqxTree} widget. This allows users to easily select and view files in a hierarchical
-manner. Figure~\ref{final:tree_view} shows how files can be views and how files can also be
+manner. Figure~\ref{final:tree_view} shows how files can be viewed and how files can also be
 selected. The selection and view interfaces are similar to be consistent throughout the system.
 
 \begin{figure}[!h]
@@ -890,7 +894,7 @@ selected. The selection and view interfaces are similar to be consistent through
 
 The task visualisation was changed to be visible on both the site interface, as well as the
 edit interface. This allows for the removal of the unintuitive predecessor selector that
-was present in Section~\ref{iter2_impl}. In the task edit interface a
+was present in Section~\ref{iter2_impl}. In the task edit interface, a
 specific task is selected. To indicate this the selected task will be
 coloured in such a way that its stands out. The visualisation was also
 changed such that task positions are static and persistent. This allows
@@ -905,3 +909,21 @@ how the visualisation interface was changed.
     \caption{Final Implementation: Site visualisation}
     \label{final:visual}
 \end{figure}
+\newpage
+\section{Summary}
+This chapter reported on the over the design of Zamani Workflow. This
+was done in three design iterations. That covered a Feasibility Demonstration,
+a \emph{Functional Design} and a \emph{Final Design}. This was developed from 
+the requirements of the client.  The features of the final system are as follows:
+\begin{itemize}
+   \item User Management
+   \item Automated Server Tasks
+   \item Remote User Tasks
+   \item Web interface
+   \item Task Validation
+   \item Error Recovery
+   \item Task Logging
+   \item Visual Workflow Setup
+   \item Workflow execution
+\end{itemize}
+

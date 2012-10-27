@@ -45,51 +45,51 @@ mentioned in the future work session.
 
 \section{Future Work}
 During the implementation of the workflow system various possible extensions
-that could be added to the system however due to constraints on time these could
+that could be added to the system could
 not be implemented. These features would improve the system both in terms of
 performance, usability and set up time. 
 \begin{description}
 \item[Hierarchical Workflows]\hfill \\
 To allow better control and re usability over tasks, workflows should be
 abstracted to include a hierarchy. Such a hierarchy would allow entire workflows
-to be represented as singular nodes. These workflows, could then be repackaged
+to be represented as singular nodes. These workflow, could then be repackaged
 and reused in different sites, or even the same site. This would also allow the
-setup for new sites to be much faster as prepackaged workflows could easily be
-used as drop in components.
+setup for new sites to be much faster, as prepackaged workflows could easily be
+used as drop-in components.
 \item[Parameterized Scripts]\hfill \\
 Oftentimes particular parameters of a script can change from one site to
-another. This change does not necessarily affect the \emph{Task type}, however
+another. This change does not necessarily affect the \emph{Task type}; however,
 with the current implementation of the system the change would need to be made
 at this point. This can be greatly improved by allowing a \emph{Task} to send
-parameters to the job. This would require the Task Subsystem to allow parameters
-dynamically be sent to the \emph{Task Type}.
+parameters to the job. This would require the Task Subsystem to allow parameters to
+be sent dynamically to the \emph{Task Type}.
 \item[Rule Based File Filters]\hfill \\
-Currently within the system all the files in the output directory of a task is
-treated as input to successor tasks. Tasks often times only use a portion of the
+Currently within the system all the files in the output directory of are task is
+treated as input to successor tasks. Tasks often only use a portion of the
 files created by the predecessor. In order to currently facilitate this with the
-system additional a filtering task would need to be set up that filters out
+system an additional filtering, task would need to be set up that filters out
 unused files. By including a rule based filtering system much greater control
 can be placed on the output files. Such rule based filters have been
 successfully implemented in other systems\cite{conery2005rule}.
 \item[Interactive Task Feedback Options]\hfill \\
-In order to avoid one of the problems that were found in Section~\ref{eval:simple}
+In order to avoid one of the problems that were found in Section~\ref{eval:simple},
 more interactivity is required for \emph{Tasks}. This primarily includes
 real-time updates on the status of tasks. Further developments include the
 ability to do more interactive validation such as discussion integration.
-The addition of these collaborative could allow for a system that allows issues
-with tasks for be resolved in a uniform manner\cite{guimaraes1998integration}.
+The addition of these collaborative tasks could resolves issues
+with tasks in a uniform manner\cite{guimaraes1998integration}.
 \item[Transformation-based Task Support]\hfill \\
-Currently the system is built around creating derivative data items. However it
+Currently the system is built around creating derivative data items. However, it
 is often common for certain files within a site to change, without creating an
-additional copy. Although this behaviour is implicitly allowed it should be
+additional copy. Although this behaviour is implicitly allowed, it should be
 extended to be better defined within the system.
 \item[Parallel Task Processing] \hfill \\
 One of the most crucial aspects affecting the long term feasibility of the
 system is its ability to scale and handle larger and more complicated workflows.
 In this regard the server node would become a significant bottleneck in
-processing \emph{Server Tasks}. In order to alleviate this problem the system
+processing \emph{Server Tasks}. In order to alleviate this problem, the system
 would need to become distributed. This would present its own set of problems
-as data would need to be efficiently distributed between the computation nodes
+as data would need to be efficiently distributed along the computation nodes
 to ensure efficiency.
 
 \end{description}
