@@ -1,28 +1,32 @@
-\chapter{Conclusion\label{chap4}}
-This research project was concluded with the successful implementation of a
-Workflow Management System. This system can successfully manage a complex set
+\chapter{Conclusion and Future Work\label{chap4}}
+
+This system can successfully manage a complex set
 of tasks with arbitrary dependencies. Tasks could be either be fully automated
-by the system or could be completed by users. When user tasks are started the 
+by the system or could be completed by users. When user tasks are started, the
 required files are incrementally transferred to the desktop host of the user
-using \emph{rsync} to only transfer files that have not been transfered or are 
-out of date. To enforce quality and accuracy a feature was added that enforces
-that user tasks be validated by experienced members of the team before the task
+using \emph{rsync} to only transfer files that have not been transfered or are
+out of date. To enforce quality and accuracy, a feature was added that enforces
+that user tasks be validated by experienced members of the team before the tasks
 can be labelled as complete.
 
 Automated tasks are executed on the
-server due to the fact that these task operate on very large files. By executing
-them locally data does not need to be transferred which would be an expensive
-process. Tasks are automatically started when all dependencies are met. 
+server due to the fact that these tasks operate on very large files. By executing
+them locally, data does not need to be transferred, which would be an expensive
+process. Tasks are automatically started when all dependencies are met.
 
-In the event that a task fails the system also allows the user to inspect the
+In the event that a task fails, the system also allows the user to inspect the
 logging information that is generated during the execution of the task. Once the
-problem is identified the tasks can then be manually restarted.  The design and
-implementation was done in three iterations. This is was explained in depth in 
+problem is identified the tasks can then be manually restarted.
+
+\section{Conclusion}
+This research project was concluded with the successful implementation of a
+Workflow Management System.  The design and
+implementation was done in three iterations. This was explained in depth in
 Chapter~\ref{chap2}.
 
 
-The system was then successfully evaluated in Chapter~\ref{chap3} both for it's
-usability and it's effectiveness at solving the problem. The following positive
+The system was then successfully evaluated in Chapter~\ref{chap3} both for its
+usability and its effectiveness at solving the problem. The following positive
 results was obtained during the evaluation of the system:
 \begin{enumerate}
     \item The system was successfully able to implement and execute a portion of
@@ -31,23 +35,24 @@ results was obtained during the evaluation of the system:
         and user task.
     \item The system was positively evaluated using a sample group of 24 users.
         This evaluation revealed that users found the system useful, easy to
-        use and users were satisfied using the system. User responses and the 
+        use and users were satisfied using the system. User responses and the
         observations made during the test it was found that the system is
-        effective and is very easy to learn. 
+        effective and is very easy to learn.
 \end{enumerate}
 
-This system was however not implemented within the Zamani Project. This was
+This system was however not implemented within the production Zamani Project. This was
 mainly due to time constraints, caused by the scale and time required to
-implement it. Functionally the system could be implemented however this process
+implement it. Functionally the system could be implemented, however this process
 could be significantly simplified by the addition of some features. These are
 mentioned in the future work session.
 
 
 \section{Future Work}
-During the implementation of the workflow system various possible extensions
+During the implementation of the workflow system, various possible extensions
 that could be added to the system could
 not be implemented. These features would improve the system both in terms of
-performance, usability and set up time. 
+performance,
+usability and set up time.
 \begin{description}
 \item[Hierarchical Workflows]\hfill \\
 To allow better control and re usability over tasks, workflows should be
