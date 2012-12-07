@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="553.38977"
+   height="272.06122"
+   viewBox="4.443 8.647 18.275807 12.843749"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="design_cycle.svg">
+  <metadata
+     id="metadata44">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs42" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview40"
+     showgrid="false"
+     inkscape:snap-page="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.3156582"
+     inkscape:cx="323.6774"
+     inkscape:cy="171.2659"
+     inkscape:window-x="522"
+     inkscape:window-y="357"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <ellipse
+     cx="17.472"
+     cy="19.223"
+     rx="4.678"
+     ry="2.227"
+     id="ellipse4"
+     sodipodi:cx="17.472"
+     sodipodi:cy="19.223"
+     sodipodi:rx="4.678"
+     sodipodi:ry="2.227"
+     style="fill:#ffffff;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <ellipse
+     cx="17.472"
+     cy="19.223"
+     rx="4.678"
+     ry="2.227"
+     id="ellipse6"
+     sodipodi:cx="17.472"
+     sodipodi:cy="19.223"
+     sodipodi:rx="4.678"
+     sodipodi:ry="2.227"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <text
+     x="13.609143"
+     y="19.433001"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="400"
+     id="text8"
+     style="font-size:1.05999994px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Implementation</text>
+  <ellipse
+     cx="25.822001"
+     cy="10.948"
+     rx="4.678"
+     ry="2.2520001"
+     id="ellipse10"
+     sodipodi:cx="25.822001"
+     sodipodi:cy="10.948"
+     sodipodi:rx="4.678"
+     sodipodi:ry="2.2520001"
+     style="fill:#ffffff;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <ellipse
+     cx="25.822001"
+     cy="10.948"
+     rx="4.678"
+     ry="2.2520001"
+     id="ellipse12"
+     sodipodi:cx="25.822001"
+     sodipodi:cy="10.948"
+     sodipodi:rx="4.678"
+     sodipodi:ry="2.2520001"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <text
+     x="21.959145"
+     y="11.158"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="400"
+     id="text14"
+     style="font-size:1.05999994px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Evaluation</text>
+  <ellipse
+     cx="9.1219997"
+     cy="11"
+     rx="4.6279998"
+     ry="2.25"
+     id="ellipse16"
+     sodipodi:cx="9.1219997"
+     sodipodi:cy="11"
+     sodipodi:rx="4.6279998"
+     sodipodi:ry="2.25"
+     style="fill:#ffffff;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <ellipse
+     cx="9.1219997"
+     cy="11"
+     rx="4.6279998"
+     ry="2.25"
+     id="ellipse18"
+     sodipodi:cx="9.1219997"
+     sodipodi:cy="11"
+     sodipodi:rx="4.6279998"
+     sodipodi:ry="2.25"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <text
+     x="5.2591438"
+     y="11.21"
+     font-size="1.06"
+     font-style="normal"
+     font-weight="400"
+     id="text20"
+     style="font-size:1.05999994px;font-style:normal;font-weight:400;text-anchor:middle;fill:#000000;font-family:sans">Design</text>
+  <path
+     d="m 6.5441439,13.158 a 17.668,17.668 0 0 0 3.7150001,3.957"
+     id="path22"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="14.419,17.392 13.869,17.296 14.118,17.169 14.165,16.894 "
+     id="polygon24"
+     style="fill:#000000;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <polygon
+     points="14.419,17.392 13.869,17.296 14.118,17.169 14.165,16.894 "
+     id="polygon26"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <path
+     d="m 16.556143,17.405 a 17.775,17.775 0 0 0 3.843,-3.895"
+     id="path28"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="24.478,13.253 24.404,13.807 24.267,13.563 23.99,13.526 "
+     id="polygon30"
+     style="fill:#000000;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <polygon
+     points="24.478,13.253 24.404,13.807 24.267,13.563 23.99,13.526 "
+     id="polygon32"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <path
+     d="M 17.507143,10.129 A 35.362,35.362 0 0 0 10.131144,10.107"
+     id="path34"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:0.1" />
+  <polygon
+     points="13.621,10.196 14.089,9.89 13.994,10.153 14.147,10.387 "
+     id="polygon36"
+     style="fill:#000000;stroke:none"
+     transform="translate(-3.8628561,-0.04899986)" />
+  <polygon
+     points="13.621,10.196 14.089,9.89 13.994,10.153 14.147,10.387 "
+     id="polygon38"
+     style="fill:none;stroke:#000000;stroke-width:0.1"
+     transform="translate(-3.8628561,-0.04899986)" />
+</svg>

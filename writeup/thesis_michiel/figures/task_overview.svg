@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="37cm" height="30cm" viewBox="-105 5 732 598" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-104" y="7" width="730" height="595"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-104" y="7" width="730" height="595"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="261" y="308.4">
+      <tspan x="261" y="308.4"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="60" y="84">
+    <tspan x="60" y="84">Taskname</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="572" y="57">
+    <tspan x="572" y="57">Help</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-86" y="40" width="116" height="83"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-86" y="40" width="116" height="83"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-46" y="88">
+    <tspan x="-46" y="88">LOGO</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-85" y="152" width="114" height="418"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-85" y="152" width="114" height="418"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-63" y="359">
+    <tspan x="-63" y="359">Navigation</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="503" y="57">
+    <tspan x="503" y="57">User Info</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="58" y="126">
+    <tspan x="58" y="126">Time Information</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="161">
+    <tspan x="56" y="161">Task Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris </tspan>
+    <tspan x="56" y="177">tincidunt tincidunt velit, in dignissim libero auctor ut. In sit amet velit est, quis </tspan>
+    <tspan x="56" y="193">viverra augue. Nunc et ligula ac turpis euismod interdum in sit amet turpis. </tspan>
+    <tspan x="56" y="209">Link to educational material</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="466" y="84">
+    <tspan x="466" y="84">Status:</tspan>
+    <tspan x="466" y="100">Not Started</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="259" y="88">
+    <tspan x="259" y="88">Priority: 3</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="54" y="253" width="520" height="149"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="54" y="253" width="520" height="149"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="240">
+    <tspan x="56" y="240">Input Files:</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="56" y="437">
+    <tspan x="56" y="437">Output Folder:</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="55" y="447" width="523" height="25"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="55" y="447" width="523" height="25"/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="468" y="127">
+    <tspan x="468" y="127">Site</tspan>
+  </text>
+</svg>

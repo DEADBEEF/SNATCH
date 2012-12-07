@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[cm]{fullpage}
+\usepackage{paralist}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{changepage}
+\usepackage{scrextend}
+\usepackage[nottoc,chapter]{tocbibind}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\title{Workflow thing}
+
+\author{Michiel Johan Baird \\
+        Department of Computer Science \\
+        University of Cape Town
+    \\   \small{Supervisor: Dr. Hussein Suleman} }
+
+\begin{document}
+\input{title}
+\pagenumbering{roman}
+\begin{abstract}
+Workflow Management Systems have been highly successful in managing complicated
+tasks and procedures, both for business and scientific applications. This
+research project follows the development of an \emph{Automatic Workflow System}
+designed to meet the needs of the tasks that are present within the
+\emph{Zamani Project}. This is developed to handle very large files, which is a
+common within the project. The system was developed in three design iterations
+built from the requirements and considerations of the group. A Web interface
+is used to control the system. The system was built in Python using the \emph{Django}
+framework along with JQuery and other front-end libraries.
+
+Both automated and user tasks are supported in the system. For user tasks, the
+required files are automatically copied to the user's workstation. This is done
+using \emph{rsync} to reduce transfer times; as well as protect effectively
+against network failure that can occur. Once the task has been completed, the
+transfer process is initiated in the opposite direction. To improve
+the quality of the work, all user tasks require being validated by senior
+members on the team. Simple error recovery was built into the system, allowing
+users to inspect the logging information to determine the cause of the failure,
+allowing the tasks to be restarted as soon as the problem has been alleviated.
+
+The system was evaluated by implementing a subsection of the Zamani tasks.
+These tasks were successfully completed within the system. A User
+Experience evaluation was conducted that shows that users  were
+satisfied with the system. It was also found that the system was easy to use and
+easy to learn.
+
+
+\end{abstract}
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+First of all I would like to thank my supervisor in the project, Dr Hussein
+Suleman. Your advice and leadership was instrumental throughout this entire
+project. Thank you so much for the early mornings spent reviewing drafts and the
+advice given when I had no idea of the direction that I needed to go in. Your
+ability to keep conversation interesting helped me keep my sanity through this
+process. For that I thank you.
+
+To the National Research Foundation(NRF), thank you for the financial assistance
+given towards this degree and in particular the project. This made the process
+a lot more comfortable and enjoyable.
+
+To the members of the Zamani Project I
+interacted with: Professor Heinz Ruther, Stephan Wessels and Ralf Schroeder,
+thank you for the time and effort that you put in to help make this project
+possible. The use of your data is highly appreciated and valued. A special thank
+to Roshan Bhurtha, who was my main point of contact within the team. Thank you
+for the quick responses when I had any queries.
+
+To my project partner, Tim: thanks for being one of the most exceptional people I
+have ever met. I really look up to you. Your intelligence is only matched by
+your kindness. Thank you for an amazing year and I will treasure your friendship
+always. To the rest of the CS Honours class of 2012, it has been a great
+experience getting to know you guys; sharing in both the fun and hard times.
+A special thank you to Simba Nyatsanga and Marco Lawrence, for
+the long nights spent in the laboratory, the food runs, the jokes, the emotional
+support. Thank you for making this project enjoyable. To Kaitlyn Crawford and
+Henk Joubert, thank you for being the exceptional people you are. Your friendship
+during this year has been great. I look forward to working with you next year.
+
+Lastly, I would like to thank my parents: John and Wilma Baird. Without you I
+literally would not have been here. Thank you for all the support, both
+emotionally and financially. It was quite convenient being able to phone you up
+at 3am in the mornings. Thank you for being the best parents anyone could ask
+for. I am extremely proud to be called your son. I love you, and I will always
+strive to make you proud.
+
+
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\pagenumbering{arabic}
+
+
+\input{intro}
+
+
+\input{background}
+
+\input{design}
+
+\input{evaluation}
+
+\input{conclusion}
+
+
+
+\bibliography{bibliography}{}
+\bibliographystyle{apalike}
+\appendix
+\includepdf[pages=-,picturecommand*={%
+     \put(42,760){%
+              \parbox{\textwidth}{\chapter{Questionnaire}\label{appendix:questionnaire}}
+	      }}]{survey.pdf}
+
+
+\end{document}
