@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="37cm" height="30cm" viewBox="-106 5 732 598" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-104" y="7" width="730" height="595"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-104" y="7" width="730" height="595"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="261" y="308.4">
+      <tspan x="261" y="308.4"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="572" y="57">
+    <tspan x="572" y="57">Help</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-86" y="40" width="116" height="83"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-86" y="40" width="116" height="83"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-46" y="88">
+    <tspan x="-46" y="88">LOGO</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-85" y="152" width="114" height="418"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-85" y="152" width="114" height="418"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-63" y="359">
+    <tspan x="-63" y="359">Navigation</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="503" y="57">
+    <tspan x="503" y="57">User Info</tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="65" y="94">
+    <tspan x="65" y="94">Site Name</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="63" y="105" width="507" height="139"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="63" y="105" width="507" height="139"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="233" y="177">
+    <tspan x="233" y="177">Site Graph Visualisation</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffffff" points="66,257 221,257 221,288 66,288 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="66,257 221,257 221,288 66,288 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="143.5" y="276.5">
+      <tspan x="143.5" y="276.5"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="116" y="277">
+    <tspan x="116" y="277">Add Task</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="66" y="302" width="511" height="141"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="66" y="302" width="511" height="141"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="549" y1="303" x2="548" y2="444"/>
+  <g>
+    <rect style="fill: #ffffff" x="551" y="325" width="24" height="78"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="551" y="325" width="24" height="78"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="549" y="423" width="26" height="19"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="549" y="423" width="26" height="19"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="66" y="303" width="130" height="23"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="66" y="303" width="130" height="23"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="98" y="316">
+    <tspan x="98" y="316">Taskname</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="196" y1="326" x2="195" y2="443"/>
+  <g>
+    <rect style="fill: #ffffff" x="195" y="303" width="104" height="22"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="195" y="303" width="104" height="22"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="224" y="316">
+    <tspan x="224" y="316">Status</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="299" y1="325" x2="299" y2="441"/>
+  <g>
+    <rect style="fill: #ffffff" x="298" y="303" width="106" height="22"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="298" y="303" width="106" height="22"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="326" y="316">
+    <tspan x="326" y="316">Assignee</tspan>
+  </text>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="404" y1="325" x2="404" y2="441"/>
+  <g>
+    <polygon style="fill: #ffffff" points="404,303 492,303 492,325 404,325 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="404,303 492,303 492,325 404,325 "/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="448" y="318">
+      <tspan x="448" y="318">Category</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="68" y="455" width="152" height="32"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="68" y="455" width="152" height="32"/>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="116" y="475">
+    <tspan x="116" y="475">Category</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="492" y="303" width="57" height="22"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="492" y="303" width="57" height="22"/>
+  </g>
+  <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="492" y1="325" x2="491" y2="442"/>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="505" y="317">
+    <tspan x="505" y="317">Edit</tspan>
+  </text>
+</svg>

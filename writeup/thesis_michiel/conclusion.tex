@@ -1,0 +1,101 @@
+\chapter{Conclusion and Future Work\label{chap4}}
+
+This system can successfully manage a complex set
+of tasks with arbitrary dependencies. Tasks could be either be fully automated
+by the system or could be completed by users. When user tasks are started, the
+required files are incrementally transferred to the desktop host of the user
+using \emph{rsync} to only transfer files that have not been transfered or are
+out of date. To enforce quality and accuracy, a feature was added that enforces
+that user tasks be validated by experienced members of the team before the tasks
+can be labelled as complete.
+
+Automated tasks are executed on the
+server due to the fact that these tasks operate on very large files. By executing
+them locally, data does not need to be transferred, which would be an expensive
+process. Tasks are automatically started when all dependencies are met.
+
+In the event that a task fails, the system also allows the user to inspect the
+logging information that is generated during the execution of the task. Once the
+problem is identified the tasks can then be manually restarted.
+
+\section{Conclusion}
+This research project was concluded with the successful implementation of a
+Workflow Management System.  The design and
+implementation was done in three iterations. This was explained in depth in
+Chapter~\ref{chap2}.
+
+
+The system was then successfully evaluated in Chapter~\ref{chap3} both for its
+usability and its effectiveness at solving the problem. The following positive
+results was obtained during the evaluation of the system:
+\begin{enumerate}
+    \item The system was successfully able to implement and execute a portion of
+        the workflow in the modelling section of the modelling tasks that are
+        present in the Zamani-Project. This sample workflow used a mix of system
+        and user task.
+    \item The system was positively evaluated using a sample group of 24 users.
+        This evaluation revealed that users found the system useful, easy to
+        use and users were satisfied using the system. User responses and the
+        observations made during the test it was found that the system is
+        effective and is very easy to learn.
+\end{enumerate}
+
+This system was however not implemented within the production Zamani Project. This was
+mainly due to time constraints, caused by the scale and time required to
+implement it. Functionally the system could be implemented, however this process
+could be significantly simplified by the addition of some features. These are
+mentioned in the future work session.
+
+
+\section{Future Work}
+During the implementation of the workflow system, various possible extensions
+that could be added to the system could
+not be implemented. These features would improve the system both in terms of
+performance,
+usability and set up time.
+\begin{description}
+\item[Hierarchical Workflows]\hfill \\
+To allow better control and re usability over tasks, workflows should be
+abstracted to include a hierarchy. Such a hierarchy would allow entire workflows
+to be represented as singular nodes. These workflow, could then be repackaged
+and reused in different sites, or even the same site. This would also allow the
+setup for new sites to be much faster, as prepackaged workflows could easily be
+used as drop-in components.
+\item[Parameterized Scripts]\hfill \\
+Oftentimes particular parameters of a script can change from one site to
+another. This change does not necessarily affect the \emph{Task type}; however,
+with the current implementation of the system the change would need to be made
+at this point. This can be greatly improved by allowing a \emph{Task} to send
+parameters to the job. This would require the Task Subsystem to allow parameters to
+be sent dynamically to the \emph{Task Type}.
+\item[Rule Based File Filters]\hfill \\
+Currently within the system all the files in the output directory of are task is
+treated as input to successor tasks. Tasks often only use a portion of the
+files created by the predecessor. In order to currently facilitate this with the
+system an additional filtering, task would need to be set up that filters out
+unused files. By including a rule based filtering system much greater control
+can be placed on the output files. Such rule based filters have been
+successfully implemented in other systems\cite{conery2005rule}.
+\item[Interactive Task Feedback Options]\hfill \\
+In order to avoid one of the problems that were found in Section~\ref{eval:simple},
+more interactivity is required for \emph{Tasks}. This primarily includes
+real-time updates on the status of tasks. Further developments include the
+ability to do more interactive validation such as discussion integration.
+The addition of these collaborative tasks could resolves issues
+with tasks in a uniform manner\cite{guimaraes1998integration}.
+\item[Transformation-based Task Support]\hfill \\
+Currently the system is built around creating derivative data items. However, it
+is often common for certain files within a site to change, without creating an
+additional copy. Although this behaviour is implicitly allowed, it should be
+extended to be better defined within the system.
+\item[Parallel Task Processing] \hfill \\
+One of the most crucial aspects affecting the long term feasibility of the
+system is its ability to scale and handle larger and more complicated workflows.
+In this regard the server node would become a significant bottleneck in
+processing \emph{Server Tasks}. In order to alleviate this problem, the system
+would need to become distributed. This would present its own set of problems
+as data would need to be efficiently distributed along the computation nodes
+to ensure efficiency.
+
+\end{description}
+

@@ -1,0 +1,245 @@
+\chapter{Background\label{chap1}}
+    Workflow management systems define a complex process in terms well-defined
+    tasks and coordinate process completion \cite{1245778}.  Automated
+    workflow management has been in wide use across various disciplines since
+    the concept was formalised in 1996\cite{springerlink:10.1007/BF00136712}.
+    Successful systems have been implemented across various, fields including
+    banking and pharmaceuticals
+    \cite{Brahe:2007:SWW:1316624.1316661,5407993}.
+
+    It has been shown to be very successful in the sciences as the same scientific
+    process can easily be repeated on a different set of data\cite{4721191}.
+    This not only aids in reproducibility but also saves time.  This is done by
+    efficiently abstracting the operations in the flow, allowing it to be
+    automatically handled.
+
+    Geomatics is the field that concerns itself with the organisation,
+    representation and processing of geographic data, for the purpose of
+    querying it and making decissions off of the data
+    \cite{DiMartino:2007:TAG:1341012.1341081}. The workflow in Geomatics is
+    very distributed and the set of data that is operated on is large and
+    diverse.  Workflow management within Geomatics has been considered and
+    solutions have been proposed, but not implemented or
+    evaluated\cite{Migliorini:2011:WTG:1999320.1999356}. 
+ 
+    This chapter presents a discussion on Workflow Systems. Firstly presenting
+    an overview of what these systems are and briefly looking into the histories
+    of these systems. This is followed by a review of the factors that have influenced
+    the success an failure of theses systems.
+
+    Section~\ref{geo:data} does a review of the data and processing involved within
+    the field of Geomatics. 
+
+    This is then followed in Section~\ref{example:sys} by a review of existing implementations
+    of Workflow Management Systems namely: Kepler, Trident and Taverna. A variety of Case Studies
+    ar presented in Section~\ref{casestudy}.
+
+
+
+\section{Overview}
+A workflow management system consists of definitions on how a set of tasks
+should be executed \cite{springerlink:10.1007/BF00136712,vanderAalst2002125}.
+The overall procedure is defined by the following components:
+\begin{inparaenum}[(i)] \item actors, \item roles, \item responsibilities and
+obligations, \item tasks, \item activities,\item conceptual structures and
+\item resources.\end{inparaenum}
+
+A real life problem or task can then be broken up into these components in
+such a way that the tasks represent a flow network. These tasks then connect to
+the actors and resources via the other
+components\cite[p.~4]{Taylor:2006:WES:1196459}.  This allows tasks to be
+executed efficiently in a distributed manner.
+
+The initial implementations of a workflow system, however, almost
+immediately failed. The systems were too rigid and was unable to accommodate the
+high levels of change that was required by the users
+\cite{Suchman:1983:OPP:357442.357445}.
+
+These changes come from a number of sources, including: ill-specification
+of initial problems, change in actors or resources, exceptions that occurred
+and new requirements.  Adaptive workflow systems were proposed to solve this
+problem by providing a mechanism for allowing change in the
+system\cite{vanderAalst2002125}. This allows processes to be extended, replaced
+or re-ordered. It also adds the ability to change already running tasks by
+providing restart, transfer and proceed options.
+
+Scientific workflow management has also been very successful with how
+experiments are defined, and, more importantly, reused. Another benefit that was
+quickly discovered was that it also allowed researchers to trade workflows,
+making the replication of results much easier than they were
+previously\cite{4721191}. Keys to this success were: that the workflow systems
+were made to fit the researchers; quick responses to adding required features
+when needed; listening to user input and making sharing of workflows as easy as
+possible.
+
+Such a system has also been applied in fields that operate on large data
+sets, as would be the case if applied to problems in Geomatics  Workflow systems were found to
+work well in the management of getting this data processed. Applying the
+concept to Observational Astrophysics, it revealed that it could be used to
+identify bottlenecks that could be optimised \cite{Aragon:2009:WMH:1529282.1529491}.  Further, it was used to
+automatically ensure local access of large files that needed to be processed.
+
+
+\section{Geographic Data\label{geo:data}}
+Geomatics concerns itself with the collection, organisation and query of
+geographic data \\  \cite{DiMartino:2007:TAG:1341012.1341081}.  This data includes
+but  is not limited to landscapes, coordinate data, building models,
+statistics, pictures, textures and routes. This is a very broad set of data,
+varying from very large to very small.  That variation, however, means that
+there exists no uniform method to efficiently deal with the data.
+
+The processing of this data can vary from human to software processing
+\cite{DiMartino:2007:TAG:1341012.1341081}.  Various Web applications have been
+written to facilitate the tasks that need to be accomplished.  This software is
+known as WebGIS and is becoming more popular with scientists; it also means
+that even within the field there is a strong shift toward Web-based services.
+
+A key realisation with the usage of this data is that the same data is used
+across various applications, to create various amounts of
+abstractions\cite{ElAdnani:2001:MLF:512161.512177}.  The core data is seldom
+changed. Instead a new abstraction layer is added on top of it. The data can be
+thought of as a graph, where the nodes represent either a data or abstraction
+element, and the edges represent the functions/tasks required to create the
+particular abstraction as a set of topological relationships. 
+
+\section{Implementations\label{example:sys}}
+There are various products available that can compose scientific workflows.
+\emph{The Trident workbench} \cite{Simmhan:2009:BTS:1673063.1673121} is an open
+source workflow management system developed by Microsoft Research that also
+adds middleware services and a graphical composition interface. Trident builds
+workflows of control and data flows, off of built-in, user defined activities
+and nested subflows.
+The flows are represented using XOML, an XML Specification, while the
+activities are stored as a set of sub-routines\cite{Simmhan2011790}. Trident
+can be used on a local system, remote systems and even clusters.  Queries on
+the system can be performed using LINQ.
+
+
+\emph{Kepler} is another scientific workflow management system that
+provides workflow design and execution.  Actors are designed to perform
+independent tasks that can either be atomic or  composite
+\cite{Wang:2009:KHG:1645164.1645176}.  Composite actors(subflows) consist of
+multiple   atomic actors bundled together. Actors can consume data and produce
+output, called tokens. Actors communicate tokens with each other via links. The
+order of execution and the links are defined by an independent entity called
+the director. As a consequence, the workflow can either be executed in a
+sequential or parallel manner. Kepler effectively separates the workflow from
+its execution, allowing for easy batch execution. Actors can easily be exported
+and shared.  Kepler is very popular due to its adaptability and easy
+integration.
+
+    \emph{Taverna} is a scientific workbench that supports application-level
+workflow and does not focus on scheduling as much as others\cite{4721191}. Taverna
+has a strong focus on workflow sharing. Taverna is quite popular, since there
+exists a social network designed to facilitate workflow sharing among
+scientists(\emph{myExperiment}). Services are linked to the model to execute
+the various tasks. Taverna can be used in such a way that it can utilize all
+the services a client has to facilitate the flow by easily adding services. The
+Taverna language is a simple data-flow language called the Simple Conceptual
+Unified Flow Language(SCUFL), that can be encoded in XML.
+
+In order for these workbenches to be successful, there needs to exist a
+high level of interoperability between the workflow management and the services
+that are required \cite{Shegalov:2001:XWM:767132.767139}.  However, due to the
+fact that there is a relatively high chance of failure when building this
+interoperability into the services as a core component. It is an extremely high
+risk and therefore is not typically done. A cheaper way of doing this is
+providing middleware that can wrap around the service to provide the required
+interfaces.
+
+This need for interoperability has led to the popularisation of SOA(Service
+Orientated Architecture) \cite{Sanders:2008:SSA:1400549.1400595}.  It should be
+noted that SOA is \emph{not} an implementation, but rather an
+\emph{Architectural Model}; SOA refers to a collection of loosely coupled
+services, that individually carry out a particular process. Each service should
+have a well defined interface with self-contained functionality. It should
+allow other applications or services to use this functionality without knowing
+the underlying technical details. These services should be hidden from the
+end-user and their usage should preferably be platform-independent.
+
+Although the concept has been around since the 1970s, it has only recently
+gained favour due to Web services.  Web services are software components that run on the
+Internet through XML standards-based
+interfaces\cite{Tai:2004:CCW:1045658.1045680}.  Each service provides a
+functional description using the \emph{Web Services Description Language}(WSDL).
+This description provides the supported operations, as well as the definition
+of the input and output messages.
+
+By using these concepts, a workflow system can be built that automatically uses
+these Web Services to facilitate both the data and control flow using well-defined
+interfaces in standards such as XML/JSON \cite{Shegalov:2001:XWM:767132.767139}. 
+With the advancement of WebGIS, a lot
+of Web Services that facilitate Geomatics processing already exist.
+
+
+\section{Case Studies\label{casestudy}}
+The next section will look at two instances where workflow management systems
+were implemented and used.  These case studies will look at both a business and
+a scientific application.
+    \subsection*{Danske Bank}
+      The workflow management system at \emph{Danske bank} was incrementally
+      implemented as their system moved from a manual
+      system\cite{Brahe:2007:SWW:1316624.1316661}.
+
+      This system was developed as an in-house solution when the manual system
+      could not cope any longer.  Several lessons were learnt that are applicable
+      to other workflow systems. When work was divided purely from an
+      efficiency point of view, the workers became complacent as they felt that
+      they did not understand the overall mechanism and felt that they were not
+      involved. They discovered that the system did not handle change very
+      well. This change was expensive and inevitable. Their system had to be
+      adapted to handle this change. The success of the system is mainly
+      attributed to the interoperability and close relationship between the
+      users and the developers
+
+    \subsection*{OrthoSearch}
+      \emph{OrophoSearch} is a workflow, built on \emph{Kepler}, that is
+      designed to work on data in the field of Bioinformatics.
+      \cite{daCruz:2008:OSW:1363686.1363983}
+
+      A workflow system was implemented in \emph{Kepler} as it addressed the
+      requirements they had, including: \begin{inparaenum}[(i)] \item workflow
+      definition and design; \item workflow execution control; \item fault
+      tolerance; \item intermediate data management; and \item data provenance
+      support.  \end{inparaenum}
+
+      Although the system was not without its hiccups and changes, the
+      integration with Kepler provided the workflow with increased overall
+      productivity.
+
+    \subsection*{Sunfall}
+      \emph{Sunfall} is a workflow system that was created to assist in locating
+      supernovas from large amount of telescope data\cite{Aragon:2009:WMH:1529282.1529491}.
+       
+      Sunfall consists of four components: \begin{inparaenum}[(i)]\item Search, \item 
+      Workflow Status Monitor, \item Data Forklift and \item Supernova Warehouse.\end{inparaenum} 
+      
+      The Search component is responsible for coordinating the tasks responsible for 
+      coordinating tasks involved in finding supernovas, within the data. The system
+      is also tasked with dealing with an enormous amount of data, up to 100TB. The
+      data movement is carried out using the \emph{Data Forklift} component.
+
+      This project used a Parallel File system, to aid in data replication within the
+      project and used middle ware to interface with legacy software.
+
+      Sunfall was deemed a great success as it not only successfully improved the
+      efficiency and identified bottlenecks within the process
+
+
+\section{Summary}
+This chapter reviewed the appropriate literature for Workflow Management Systems
+and the data variety and processing within Geomatics. This has provided the necessary
+insight to determine what components would be required in order to build such a Workflow
+System for the Zamani Project.
+
+The process to create the heritage artifacts from the raw-scans and photographs
+generates a large amount of varied data. A Workflow Management System would need
+to be able to specifically cater for this constraint similarly to the large scaled
+data involved in the implementation of both \emph{OrthoSearch} and \emph{Sunfall}.
+
+
+Since the tasks are however a mixture between automated and manual tasks. Such a
+system would be able to map to a more grid-based approach and was shown to be done
+at \emph{Danske Bank}. Middleware would need to be provided in order for the system 
+to uniformly integrate with applications required throughout the process\cite{Montella:2007:UGC:1272980.1272995}.
+The model has been shown to be able to be effectively automated using a Workflow Management System\cite{Withana:2010:VWE:1851476.1851586}. 

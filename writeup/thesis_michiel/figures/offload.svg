@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="21cm" height="8cm" viewBox="48 56 403 145" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="200.336" y1="111.421" x2="297.539" y2="87.7991"/>
+    <polygon style="fill: #000000" points="304.827,86.028 296.291,93.2481 297.539,87.7991 293.929,83.5309 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="304.827,86.028 296.291,93.2481 297.539,87.7991 293.929,83.5309 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="203.384" y1="142.091" x2="296.421" y2="158.247"/>
+    <polygon style="fill: #000000" points="303.81,159.53 293.102,162.745 296.421,158.247 294.813,152.893 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="303.81,159.53 293.102,162.745 296.421,158.247 294.813,152.893 "/>
+  </g>
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="128" cy="129" rx="78" ry="43"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="128" cy="129" rx="78" ry="43"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="74" y="134">
+      <tspan x="74" y="134">Workflow System</tspan>
+    </text>
+  </g>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="307" y="58" width="142" height="55"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307" y="58" width="142" height="55"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="361" y="90.5">
+      <tspan x="361" y="90.5">rsync</tspan>
+    </text>
+  </g>
+  <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="222" y="129">
+    <tspan x="222" y="129">Task Offload</tspan>
+  </text>
+  <g>
+    <g>
+      <rect style="fill: #ffffff" x="307" y="145" width="143" height="55"/>
+      <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307" y="145" width="143" height="55"/>
+    </g>
+    <text style="fill: #000000;text-anchor:start;font-size:12.7998;font-family:sanserif;font-style:normal;font-weight:normal" x="315.5" y="176.5">
+      <tspan x="315.5" y="176.5">Native Applications</tspan>
+    </text>
+  </g>
+</svg>
